@@ -1,0 +1,23 @@
+.hero-search-results {
+  width: 100%;
+  min-height: 350px;
+
+  .container {
+    position: relative;
+    margin: 0 auto;
+    width: 75%;
+    z-index: z(block);
+  }
+
+  h1 {
+    padding-top: 10rem;
+    text-align: center;
+    font-weight: fw(regular);
+    font-size: 48px;
+    line-height: 56px;
+
+    &:after {
+      content: '';
+    }
+  }
+}

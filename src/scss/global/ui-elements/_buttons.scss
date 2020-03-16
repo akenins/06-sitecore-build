@@ -1,0 +1,55 @@
+%button {
+  display: inline-block;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  white-space: nowrap;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1.25px;
+  transition: all 0.4s ease;
+}
+
+%primary-button {
+  @extend %button;
+  height: 40px;
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid $inspire-red;
+  color: $black;
+  line-height: 40px;
+  padding: 0 45px;
+  &:hover {
+    color: $inspire-red;
+  }
+}
+
+%text-button {
+  @extend %button;
+  border: none;
+  color: $black;
+  &::after {
+    display: inline-block;
+    color: $inspire-red;
+    content: '';
+    width: 8px;
+    height: 11px;
+    margin-left: 10px;
+    background-size: contain; //copied from grunticon/dist/icons.data.svg.css .icon-chevron
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%205.52%209.22%22%3E%3Ctitle%20fill%3D%22%232458de%22%3Earrow-button-meganav%3C%2Ftitle%3E%3Cpath%20d%3D%22M1.29%209.22L0%207.93l3.32-3.32L0%201.29%201.29%200l4%204a.91.91%200%200%201%200%201.29z%22%20fill%3D%22%23ED1B34%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+  }
+  &:hover {
+    color: color(a-color);
+  }
+}
+
+.button,
+a.button {
+  @extend %primary-button;
+}
+
+.text-button,
+a.text-button {
+  @extend %text-button;
+}

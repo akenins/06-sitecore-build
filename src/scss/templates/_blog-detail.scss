@@ -1,0 +1,126 @@
+.blog-post {
+  width: 100%;
+  padding: 0 1rem;
+
+  .container {
+    width: 100%;
+    margin: 60px auto 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+    }
+  }
+
+  .post-banner {
+    margin-bottom: 1.5rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .tag-container {
+    .chip {
+      background-color: transparent;
+      border: 1px solid color(borders);
+      margin: 0.5rem 0.25rem 0 0;
+    }
+  }
+
+  .post-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+
+    &:after {
+      content: '';
+    }
+  }
+
+  .post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
+
+    .post-body {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      @include respond-to(desktop) {
+        width: calc(80% - 20px);
+      }
+    }
+
+    .post-share {
+      width: 100%;
+      align-self: start;
+      position: sticky;
+      top: calc(1rem + 60px);
+
+      @include respond-to(desktop) {
+        width: calc(20% - 20px);
+        position: relative;
+      }
+
+      .h3 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: fw(regular);
+        letter-spacing: 1.25px;
+        border-bottom: 1px solid color(borders);
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0;
+
+        li {
+          padding: 0.5rem 0;
+          width: 100%;
+          font-size: 1rem;
+          letter-spacing: 0.25px;
+
+          &:before {
+            position: relative;
+            content: '';
+            margin: 0;
+          }
+
+          a {
+            color: $black;
+            font-weight: fw(regular);
+            transition: opacity 0.3s ease-out;
+            opacity: 0.75;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+
+          svg {
+            width: 16px;
+            height: 16px;
+            position: relative;
+            top: 0.25rem;
+            fill: $black;
+          }
+
+          svg + span {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .cta-container {
+  }
+}

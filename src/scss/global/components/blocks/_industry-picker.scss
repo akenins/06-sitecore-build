@@ -1,0 +1,58 @@
+.industry-picker {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to(desktop) {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .heading-container {
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .industry-container {
+    display: none;
+    margin-top: 1.2rem;
+  }
+
+  .industry-dropdown {
+    margin-top: 1rem;
+    border: 1px solid color(borders);
+    outline: none;
+    width: auto;
+    position: relative;
+    background-color: $white;
+    color: $blue-700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    font-weight: fw(bold);
+    padding: 0.75rem 1rem;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%205.52%209.22%22%3E%3Ctitle%20fill%3D%22%23edb134%22%3Earrow-button-meganav%3C%2Ftitle%3E%3Cpath%20d%3D%22M1.29%2C9.22%2C0%2C7.93%2C3.32%2C4.61%2C0%2C1.29%2C1.29%2C0l4%2C4a.91.91%2C0%2C0%2C1%2C0%2C1.29Z%22%20fill%3D%22%23ed1b34%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, white 0%, white 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right 1rem top 50%, 0 0;
+    background-size: 0.4rem auto, 100%;
+
+    @include respond-to(desktop) {
+      width: 300px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.three-columns-list {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond-to(desktop) {
+      margin: 0 auto;
+      max-width: 1000px;
+      flex-direction: row;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .card-container {
+    width: 100%;
+
+    @include respond-to(desktop) {
+      width: 25%;
+    }
+
+    .hr {
+      width: 100%;
+      border-bottom: 2px solid color(borders);
+    }
+
+    h3 {
+      margin: 0 0 1rem 1rem;
+    }
+  }
+}

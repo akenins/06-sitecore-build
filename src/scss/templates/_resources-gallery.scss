@@ -1,0 +1,219 @@
+.resources-gallery {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    @include respond-to(medium) {
+      max-width: 768px;
+    }
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .resources-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond-to(medium) {
+      flex-flow: row wrap;
+    }
+  }
+
+  .resource-card {
+    width: 100%;
+    border: 1px solid color(borders);
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(17, 17, 17, 0.1);
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include respond-to(desktop) {
+      width: calc(50% - 10px);
+    }
+
+    @include respond-to(large-desktop) {
+      width: calc(33.333% - 10px);
+    }
+
+    .image-container {
+      img {
+        box-shadow: 0 4px 16px rgba(17, 17, 17, 0.2);
+      }
+      margin-right: 20px;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: flex-end;
+
+      .resource-heading {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: fw(bold);
+        letter-spacing: 0.25px;
+      }
+      .resource-title {
+        font-size: 0.825rem;
+        margin-top: 0;
+        color: $grey-700;
+      }
+
+      .resource-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+        text-align: right;
+      }
+    }
+  }
+
+  .pgn-button-row {
+    .pgn-button {
+      display: inline-block;
+      padding: 10px 16px;
+      margin: 0 4px;
+      font-size: 1rem;
+      border: 0;
+      background-color: transparent;
+      line-height: 0.825rem;
+      color: $grey-500;
+      transition: color 0.2s ease-out;
+
+      &:hover {
+        cursor: pointer;
+        color: color(brand);
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:disabled {
+        .arrow {
+          fill: $grey-500;
+        }
+      }
+
+      &.is-selected {
+        border: 1px solid color(borders);
+        color: $black;
+      }
+
+      svg {
+        width: 0.825rem;
+        height: 0.825rem;
+
+        .arrow {
+          fill: color(brand);
+        }
+      }
+    }
+
+    .pgn-button-group {
+      display: inline-block;
+      vertical-align: bottom;
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+
+    .pgn-button-row {
+      text-align: center;
+
+      @include respond-to(desktop) {
+        position: absolute;
+        top: -10px;
+        right: 0;
+      }
+
+      .pgn-button--previous,
+      .pgn-button--next {
+        font-weight: fw(bold);
+        color: color(brand);
+      }
+    }
+  }
+}
+
+.resource-filter-bar {
+  width: 100%;
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .filter-bar-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
+  }
+
+  .filter-column {
+    width: 100%;
+
+    @include respond-to(desktop) {
+      width: calc(33.333% - 10px);
+    }
+
+    .search-wrapper {
+      border: 1px solid color(borders);
+      position: relative;
+      margin-bottom: 2rem;
+      height: 40px;
+
+      input {
+        border: none;
+        display: block;
+        color: $black;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 2.75rem 0 1rem;
+        outline: none;
+        font-size: 0.9375rem;
+        width: 100%;
+      }
+
+      .icon {
+        position: absolute;
+        top: 0.7rem;
+        right: 1rem;
+      }
+    }
+  }
+}

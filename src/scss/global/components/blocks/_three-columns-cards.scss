@@ -1,0 +1,51 @@
+.three-columns-cards {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond-to(desktop) {
+      margin: 0 auto;
+      max-width: 1000px;
+      flex-direction: row;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .card {
+    width: 75%;
+    margin: 0.5rem auto;
+    border: solid 1px $blue-100;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px $blue-100;
+    padding: 1.25rem 3rem;
+    text-align: center;
+
+    @include respond-to(desktop) {
+      width: calc(33.333% - 20px);
+      margin: 0;
+    }
+
+    img {
+      width: 58px;
+      height: 58px;
+    }
+
+    h3 {
+      margin-top: 1rem;
+    }
+
+    p {
+      color: $grey-700;
+      font-size: 0.825rem;
+    }
+  }
+}

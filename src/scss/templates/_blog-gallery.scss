@@ -1,0 +1,308 @@
+.blog-gallery {
+  margin-bottom: 6rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+      max-width: 1000px;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .card-container {
+    width: 100%;
+    margin-bottom: 4rem;
+
+    @include respond-to(desktop) {
+      width: calc(75% - 20px);
+      margin-bottom: 0;
+    }
+  }
+
+  .blog-card {
+    margin-bottom: 4rem;
+
+    img {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .tag-share-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.5rem 0 1rem;
+
+      .post-tags {
+        .chip {
+          background-color: transparent;
+          border: 1px solid color(borders);
+          margin: 0 1rem 0 0;
+        }
+      }
+
+      .share {
+        position: relative;
+
+        .share-label {
+          text-transform: uppercase;
+          font-weight: fw(bold);
+          letter-spacing: 1.25px;
+        }
+
+        a {
+          color: $black;
+          display: flex;
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+          margin: 0 0.5rem 0 0;
+        }
+
+        .share-popover {
+          display: none;
+          position: absolute;
+          bottom: 180%;
+          right: -10px;
+          background-color: $white;
+          border-radius: 4px;
+          width: 250px;
+          border: 1px solid color(borders);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
+
+          .share-popover-caret {
+            position: relative;
+            left: 210px;
+
+            &:before,
+            &:after {
+              border: 9px solid transparent;
+              border-top-color: color(borders);
+              content: '';
+              display: block;
+              height: 0;
+              width: 0;
+              position: absolute;
+            }
+            &:before {
+              left: -2px;
+            }
+            &:after {
+              border-width: 7px;
+              border-top-color: $white;
+            }
+          }
+
+          .popover-heading {
+            padding: 1rem 1rem 0.5rem;
+            color: $grey-900;
+            font-weight: fw(light);
+            font-size: 0.75rem;
+
+            .share-heading {
+              text-transform: uppercase;
+              display: block;
+              margin-bottom: 0.5rem;
+              letter-spacing: 1.25px;
+            }
+
+            .share-blog-title {
+              font-size: 1rem;
+            }
+          }
+
+          ul {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 0.5rem 1rem;
+
+            li {
+              margin-right: 3%;
+              padding: 0.5rem 0;
+              width: 46%;
+              letter-spacing: 0.25px;
+
+              &:before {
+                position: relative;
+                content: '';
+                margin: 0;
+              }
+
+              a {
+                font-weight: fw(regular);
+                transition: opacity 0.3s ease-out;
+
+                &:hover {
+                  opacity: 0.75;
+                }
+              }
+
+              svg {
+                width: 16px;
+                height: 16px;
+              }
+
+              svg + span {
+                margin-left: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .post-description {
+      h2 {
+        margin-top: 0.5rem;
+        color: $black;
+      }
+    }
+  }
+
+  .pgn-button-row {
+    .pgn-button {
+      display: inline-block;
+      padding: 10px 16px;
+      margin: 0 4px;
+      font-size: 1rem;
+      border: 0;
+      background-color: transparent;
+      line-height: 0.825rem;
+      color: $grey-500;
+      transition: color 0.2s ease-out;
+
+      &:hover {
+        cursor: pointer;
+        color: color(brand);
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:disabled {
+        .arrow {
+          fill: $grey-500;
+        }
+      }
+
+      &.is-selected {
+        border: 1px solid color(borders);
+        color: $black;
+      }
+
+      svg {
+        width: 0.825rem;
+        height: 0.825rem;
+
+        .arrow {
+          fill: color(brand);
+        }
+      }
+    }
+
+    .pgn-button-group {
+      display: inline-block;
+      vertical-align: bottom;
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+
+    .pgn-button-row {
+      text-align: center;
+
+      @include respond-to(desktop) {
+        position: absolute;
+        top: -10px;
+        right: 0;
+      }
+
+      .pgn-button--previous,
+      .pgn-button--next {
+        font-weight: fw(bold);
+        color: color(brand);
+      }
+    }
+  }
+
+  .blog-menu {
+    width: 100%;
+    align-self: flex-start;
+    position: sticky;
+    top: 1rem;
+
+    @include respond-to(desktop) {
+      width: calc(25% - 20px);
+    }
+
+    .search-wrapper {
+      border: 1px solid color(borders);
+      position: relative;
+      margin-bottom: 2rem;
+      height: 40px;
+
+      input {
+        border: none;
+        display: block;
+        color: $black;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 2.75rem 0 1rem;
+        outline: none;
+        font-size: 0.9375rem;
+        width: 100%;
+      }
+
+      .icon {
+        position: absolute;
+        top: 0.7rem;
+        right: 1rem;
+      }
+    }
+
+    .browse-by {
+      margin-bottom: 2rem;
+
+      h3 {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid color(borders);
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+
+        li {
+          font-size: 1rem;
+          padding: 0 0 0.75rem;
+
+          &:before {
+            content: '';
+          }
+        }
+
+        a {
+          color: $blue-700;
+        }
+      }
+    }
+  }
+}

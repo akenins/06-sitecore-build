@@ -1,0 +1,50 @@
+.three-columns-stats {
+  width: 100%;
+  margin-bottom: 6rem;
+  background-color: $blue-50;
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 3rem 1rem;
+    flex-direction: column;
+    text-align: center;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
+
+    .column {
+      width: 75%;
+      margin: 0.5rem auto;
+      padding: 1.25rem;
+
+      p.statistic {
+        font-size: 60px;
+        line-height: 68px;
+        font-weight: fw(light);
+      }
+
+      @include respond-to(desktop) {
+        width: calc(33.333% - 20px);
+        margin: 0;
+      }
+    }
+  }
+}

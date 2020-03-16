@@ -1,0 +1,86 @@
+.testimonial {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    margin: 0;
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      border: 1px solid color(borders);
+      border-radius: 8px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include respond-to(medium) {
+        flex-direction: row;
+      }
+    }
+
+    .logo {
+      width: calc(10% - 10px);
+      margin-bottom: 1rem;
+
+      img {
+        max-width: 100px;
+
+        @include respond-to(medium) {
+          width: 100%;
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+
+      @include respond-to(medium) {
+        width: calc(90% - 10px);
+      }
+
+      .quote {
+        color: $grey-600;
+        font-style: italic;
+        font-size: 24px;
+        line-height: 36px;
+
+        @include respond-to(medium) {
+          font-size: 34px;
+          line-height: 51px;
+        }
+      }
+
+      .quote-author {
+        color: $grey-600;
+        font-weight: fw(regular);
+        margin-top: 1rem;
+      }
+
+      a.text-button {
+        display: block;
+        text-align: right;
+      }
+    }
+
+    .chip-container {
+      .chip {
+        margin: 0 0.5rem 1rem 0;
+      }
+    }
+  }
+}

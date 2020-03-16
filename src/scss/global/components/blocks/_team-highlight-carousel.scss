@@ -1,0 +1,127 @@
+.team-highlight-carousel {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 75%;
+    margin: 0 auto;
+
+    @include respond-to(desktop) {
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .highlights {
+    .highlight {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding: 3.5rem 3.5rem 4.5rem;
+      background-color: $blue-50;
+      border-radius: 16px;
+
+      @include respond-to(desktop) {
+        padding: 3.5rem 8rem 4.5rem;
+        flex-direction: row;
+      }
+
+      .image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0.5rem 0;
+
+        @include respond-to(desktop) {
+          padding: 0;
+          width: calc(33.333% - 20px);
+        }
+
+        .headshot {
+          display: inline-block;
+          border-radius: 50%;
+          height: 200px;
+          width: 200px;
+
+          @include respond-to(large-desktop) {
+            height: 265px;
+            width: 265px;
+          }
+
+          img {
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.5rem 0;
+        text-align: center;
+
+        @include respond-to(desktop) {
+          text-align: left;
+          padding: 0;
+          width: calc(66.666% - 20px);
+        }
+
+        p {
+          &.blurb {
+            font-size: 20px;
+            font-weight: fw(medium);
+          }
+
+          &.name {
+            font-size: 20px;
+          }
+
+          &.title {
+            margin: 0.5rem 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .flickity-prev-next-button {
+    z-index: z(block);
+    height: 16px;
+    width: 16px;
+  }
+  .flickity-prev-next-button.previous {
+    top: 90.25%;
+    left: 40%;
+    @include respond-to(desktop) {
+      top: 88%;
+      left: 44%;
+    }
+  }
+  .flickity-prev-next-button.next {
+    top: 90.25%;
+    right: 40%;
+    @include respond-to(desktop) {
+      top: 88%;
+      right: 44%;
+    }
+  }
+  .flickity-page-dots {
+    bottom: 9%;
+    @include respond-to(desktop) {
+      bottom: 10.75%;
+    }
+
+    .dot {
+      width: 3px;
+      height: 3px;
+    }
+  }
+}

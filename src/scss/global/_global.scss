@@ -1,0 +1,208 @@
+@import 'helpers/animation';
+@import 'helpers/magnific';
+@import 'helpers/reset';
+
+/* Breakpoints */
+$mobile: 480px;
+$medium: 760px;
+$desktop: 1000px;
+$large-desktop: 1200px;
+
+$breakpoints: (
+  mobile: $mobile,
+  medium: $medium,
+  desktop: $desktop,
+  large-desktop: $large-desktop,
+);
+
+// Takes either a map value or a unit value
+// @include respond-to(mobile) & @include respond-to(599px, max)
+// are both valid
+
+@mixin respond-to($breakpoint, $minmax: 'min') {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (#{$minmax}-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @media screen and (#{$minmax}-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+// !respond-between: for those times when you have some weird element
+// !that just happens to break between two odd breakpoints
+
+@mixin respond-between($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+/* Colors */
+
+// Primary
+$white: #fff;
+$black: #111;
+$midnight: #16214b;
+$hitachi-deep-red: #991b1f;
+$inspire-red: #ed1b34;
+
+// Secondary
+$orange-900: #a53e23;
+$orange-700: #f26722;
+$orange-500: #fbaa23;
+$orange-300: #ffd500;
+$orange-100: #fee180;
+$orange-50: #fff7df;
+$green-900: #1f4a23;
+$green-700: #429644;
+$green-500: #82c341;
+$green-300: #b7d433;
+$green-100: #e1ebae;
+$green-50: #f7faeb;
+$blue-900: #111;
+$blue-700: #16214b;
+$blue-500: #1e4799;
+$blue-300: #2aa9e0;
+$blue-100: #e2e5e7;
+$blue-50: #f8f8f9;
+$purple-900: #3a1126;
+$purple-700: #891d5a;
+$purple-500: #9c4a70;
+$purple-300: #f493ad;
+$purple-100: #f5d7d6;
+$purple-50: #fcf5f5;
+
+// Grey
+
+$grey-900: #303030;
+$grey-700: #707070;
+$grey-600: #a2a2a2;
+$grey-500: #c2c2c2;
+$grey-300: #e5e5e5;
+$grey-100: #f5f5f5;
+
+// TO-DO: ADD ALL COLOR TOKENS
+$colors: (
+  body-bg: $white,
+  body-color: $black,
+  selection-bg: $blue-500,
+  selection-color: $white,
+  brand: $inspire-red,
+  a-color: $blue-500,
+  a-hover: $blue-700,
+  nav: $grey-900,
+  borders: $grey-500,
+  divider: $grey-100,
+  select: $blue-700,
+);
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn unquote('"Unknown "#{$key}" in $colors."');
+  @return null;
+}
+
+/* Fonts */
+
+$base-stack: 'Fira Sans', 'Trebuchet MS', 'Arial', sans-serif;
+$mono-stack: 'Courier New', monospace;
+
+$fonts: (
+  base: $base-stack,
+  mono: $mono-stack,
+);
+
+@function family($key) {
+  @if map-has-key($fonts, $key) {
+    @return map-get($fonts, $key);
+  }
+
+  @warn unquote('"Unknown "#{$key}" in $fonts."');
+  @return null;
+}
+
+/* Font Weights */
+
+$weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+);
+
+@function fw($key) {
+  @if map-has-key($weights, $key) {
+    @return map-get($weights, $key);
+  }
+
+  @warn unquote('"Unknown "#{$key}" in $weights."');
+  @return null;
+}
+
+/* z-index */
+
+$z-index: (
+  mount-everest: 99999,
+  overlay-content: 80,
+  overlay: 70,
+  header-nav: 60,
+  header: 50,
+  block-content-floating: 40,
+  block-content: 30,
+  block: 20,
+  body: 10,
+  bottomless-pit: -99999,
+);
+
+@function z($key) {
+  @if map-has-key($z-index, $key) {
+    @return map-get($z-index, $key);
+  }
+
+  @warn unquote('"Unknown "#{$key}" in $z-index."');
+  @return null;
+}
+
+/* Global Styles */
+
+::selection {
+  background: color(selection-bg);
+  color: color(selection-color);
+  text-shadow: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: color(body-bg);
+  color: color(body-color);
+  font-family: family(base);
+  font-style: normal;
+  font-weight: fw(regular);
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+  font-weight: fw(medium);
+  color: color(a-color);
+
+  &:hover {
+    color: color(a-hover);
+  }
+}

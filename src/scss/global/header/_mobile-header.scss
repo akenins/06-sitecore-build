@@ -1,0 +1,66 @@
+.global-header {
+  .mobile-nav {
+    @include respond-to(desktop) {
+      display: none;
+    }
+
+    .mobile-nav-item {
+      position: relative;
+      text-transform: uppercase;
+      padding: 1rem 1.5rem;
+      border-top: 1px solid color(borders);
+
+      &:last-child {
+        border: 0;
+        padding-top: 0;
+        text-align: center;
+      }
+
+      &.jcina {
+        text-align: center;
+      }
+
+      .button {
+        margin: 0;
+      }
+
+      a {
+        color: $black;
+        font-weight: fw(regular);
+      }
+
+      .mobile-nav-toggle {
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        right: 1.5rem;
+        top: 35%;
+        border: 0;
+        background-color: transparent;
+        transition: all 0.3s ease-out;
+
+        &.active {
+          transform: rotate(90deg);
+        }
+
+        .icon {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    .search-submit {
+      border: 0;
+      background-color: transparent;
+      font-size: 1.5rem;
+    }
+
+    .search-input {
+      width: 90%;
+      font-size: 1rem;
+      border: 0;
+      outline: 0;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.hero-level-3 {
+  width: 100%;
+  margin-top: 90px;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6rem;
+    background-image: url('../images/png/level-3-hero-pattern.png');
+    background-repeat: no-repeat;
+    background-position: 100% 88%;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .heading-container {
+    background-color: $grey-100;
+    padding: 2rem 4rem;
+    width: calc(60% - 20px);
+    align-self: center;
+
+    h1 {
+      max-width: 75%;
+
+      @include respond-to(desktop) {
+        line-height: 72px;
+      }
+    }
+
+    p.subheading {
+      font-size: 1.25rem;
+      line-height: 30px;
+      font-weight: fw(medium);
+    }
+  }
+
+  .solution-icon-container {
+    width: calc(40% - 20px);
+
+    .solution-icon {
+      background-color: $blue-500;
+      height: 300px;
+      width: 300px;
+      border-radius: 150px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

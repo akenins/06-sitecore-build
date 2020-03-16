@@ -1,0 +1,30 @@
+.featured-image {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include respond-to(desktop) {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .heading-container {
+  }
+
+  .button-container {
+  }
+
+  .image-container {
+  }
+}

@@ -1,0 +1,104 @@
+.hero-resource {
+  width: 100%;
+  min-height: 450px;
+
+  @include respond-to(desktop) {
+    min-height: 650px;
+  }
+
+  .container {
+    min-height: 450px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    padding: 0 1rem;
+
+    @include respond-to(desktop) {
+      min-height: 650px;
+    }
+  }
+
+  .heading-container {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin-top: 60px;
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+      margin: -60px auto 0;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .heading {
+    border-bottom: 8px solid color(brand);
+    background-color: $white;
+    padding: 2rem;
+    z-index: z(block-content-floating);
+
+    @include respond-to(medium) {
+      padding: 4rem;
+    }
+
+    @include respond-to(desktop) {
+      width: calc(50% - 20px);
+    }
+
+    @include respond-to(large-desktop) {
+      width: 45%;
+    }
+
+    h2.resource-type {
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.25px;
+      color: $grey-700;
+      font-weight: fw(bold);
+    }
+
+    h1.resource-title {
+      margin-top: 0.5rem;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0.25px;
+      color: $grey-900;
+      font-weight: fw(regular);
+
+      &:after {
+        content: '';
+      }
+    }
+  }
+
+  .resource-hero-image {
+    z-index: 100;
+    display: flex;
+    width: calc(50% - 20px);
+
+    img {
+      align-self: center;
+    }
+  }
+
+  .gradient-container {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    z-index: z(block-content);
+
+    @include respond-to(desktop) {
+      display: block;
+      width: 825px;
+      height: 464px;
+      background: linear-gradient(to top right, $blue-700, $blue-500);
+    }
+  }
+}

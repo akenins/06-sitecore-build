@@ -1,0 +1,95 @@
+.feature-carousel {
+  width: 100%;
+  margin-bottom: 6rem;
+  padding-top: 2rem;
+  background: linear-gradient(to bottom, $blue-50 0%, $white 100%);
+
+  .feature-container {
+    @include respond-to(desktop) {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+
+    .feature-cell {
+      width: 100%;
+      margin: 0;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include respond-to(medium) {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .image {
+        width: 100%;
+
+        @include respond-to(medium) {
+          width: calc(50% - 20px);
+          text-align: center;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .content {
+        width: 100%;
+
+        @include respond-to(medium) {
+          width: calc(50% - 20px);
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      .image,
+      .content {
+        padding: 0.5rem 0;
+
+        @include respond-to(desktop) {
+          padding: 0;
+        }
+      }
+    }
+    .flickity-prev-next-button {
+      z-index: z(block);
+      height: 16px;
+      width: 16px;
+      top: auto;
+      transform: translateY(0);
+    }
+    .flickity-prev-next-button.previous {
+      bottom: 0;
+      left: 40%;
+    }
+    .flickity-prev-next-button.next {
+      bottom: 0;
+      right: 40%;
+    }
+
+    .flickity-prev-next-button.previous,
+    .flickity-prev-next-button.next {
+      @include respond-to(desktop) {
+        bottom: -1%;
+      }
+    }
+    .flickity-page-dots {
+      bottom: 0;
+    }
+
+    .dot {
+      width: 3px;
+      height: 3px;
+    }
+  }
+}

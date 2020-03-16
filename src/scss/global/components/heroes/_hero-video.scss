@@ -1,0 +1,83 @@
+.hero-video {
+  width: 100%;
+  min-height: 450px;
+
+  @include respond-to(desktop) {
+    min-height: 650px;
+  }
+
+  .container {
+    min-height: 450px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    padding: 0 1rem;
+
+    @include respond-to(desktop) {
+      min-height: 650px;
+    }
+  }
+
+  .heading-container {
+    display: flex;
+    align-self: center;
+    width: 100%;
+    padding: 0;
+    margin-top: 60px;
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+      margin: -60px auto 0;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .heading {
+    border-bottom: 8px solid color(brand);
+    background-color: $white;
+    padding: 2rem;
+    z-index: z(block-content-floating);
+
+    @include respond-to(medium) {
+      padding: 4rem;
+    }
+
+    @include respond-to(desktop) {
+      width: 50%;
+    }
+
+    h2.subheading {
+      font-size: 20px;
+      line-height: 31px;
+      letter-spacing: 0.25px;
+      color: $grey-900;
+    }
+  }
+
+  .video-container {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    z-index: z(block-content);
+
+    @include respond-to(desktop) {
+      display: block;
+      width: 825px;
+      height: 464px;
+    }
+
+    .color-overlay {
+      height: 114px;
+      width: 293px;
+      background-color: color(brand);
+      mix-blend-mode: multiply;
+      margin: -10% 0 0 50%;
+    }
+  }
+}

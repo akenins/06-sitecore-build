@@ -1,0 +1,104 @@
+/*
+
+    TABLE OF CONTENTS
+
+    1. Reset & Global
+    2. Core Layout
+    3. Core Elements & Typography
+        3.1 Headings
+        3.2 Paragraph and Emphasis
+        3.3 Lists
+        3.4 Tables
+        3.6 Images
+        3.7 Captions
+        3.7 Galleries
+        3.8 Miscellaneous
+        3.9 Alignment
+        3.10 Marketo Forms
+        3.11 ClickDimensions Forms
+    4. UI Elements
+    5. Header
+    6. Footer
+    7. Components
+    8. Templates
+
+*/
+
+//  ===================================
+//  1. RESET & GLOBAL
+//  ===================================
+
+@import 'global/fonts'; // global/_fonts.scss
+@import 'global/global'; // global/_global.scss
+
+//  ===================================
+//  2. CORE LAYOUT
+//  ===================================
+
+@import 'global/core/layout'; // global/core/_layout.scss
+
+//  ===================================
+//  3. CORE STYLES & TYPOGRAPHY
+//  ===================================
+
+@import 'global/core/core-styles'; // global/core/_core-styles.scss
+@import 'global/core/marketo'; // global/core/_marketo.scss
+@import 'global/core/clickdimensions'; // global/core/_clickdimensions.scss
+
+//  ===================================
+//  4. UI ELEMENTS
+//  ===================================
+
+@import 'global/ui-elements/buttons'; // global/ui-elements/_buttons.scss
+@import 'global/ui-elements/chips'; // global/ui-elements/_chips.scss
+@import 'global/ui-elements/cards'; // global/ui-elements/_cards.scss
+@import 'global/ui-elements/dropdowns'; // global/ui-elements/_dropdowns.scss
+@import 'global/ui-elements/flickity'; // global/ui-elements/_flickity.scss
+@import 'global/ui-elements/icons'; // global/ui-elements/_icons.scss
+
+//  ===================================
+//  5. HEADER
+//  ===================================
+
+@import 'global/header/header'; // global/header/_header.scss
+@import 'global/header/mobile-header'; // global/mobile-header/_header.scss
+
+//  ===================================
+//  6. Footer
+//  ===================================
+
+@import 'global/footer/footer'; // global/footer/_footer.scss
+
+//  ===================================
+//  7. Components
+//  ===================================
+
+@import 'global/components/blocks/business-challenges'; // global/components/blocks/_business-challenges.scss
+@import 'global/components/blocks/feature-carousel'; // global/components/blocks/_feature-carousel.scss
+@import 'global/components/blocks/featured-image'; // global/components/blocks/_featured-image.scss
+@import 'global/components/blocks/featured-ip-cards'; // global/components/blocks/_featured-ip-cards.scss
+@import 'global/components/blocks/featured-resource'; // global/components/blocks/_featured-resource.scss
+@import 'global/components/blocks/footer-cta'; // global/components/blocks/_footer-cta.scss
+@import 'global/components/blocks/industry-picker'; // global/components/blocks/_industry-picker.scss
+@import 'global/components/blocks/logo-bar'; // global/components/blocks/_footer-cta.scss
+@import 'global/components/blocks/related-solutions-cards'; // global/components/blocks/_related-solutions-cards.scss
+@import 'global/components/blocks/solution-picker'; // global/components/blocks/_solution-picker.scss
+@import 'global/components/blocks/team-highlight-carousel'; // global/components/blocks/_team-highlight-carousel.scss
+@import 'global/components/blocks/testimonial'; // global/components/blocks/_testimonial.scss
+@import 'global/components/blocks/three-columns-stats'; // global/components/blocks/_three-columns-stats.scss
+@import 'global/components/blocks/three-columns-list'; // global/components/blocks/_three-columns-list.scss
+@import 'global/components/blocks/three-columns-cards'; // global/components/blocks/_three-columns-cards.scss
+@import 'global/components/blocks/two-columns-offset'; // global/components/blocks/_two-columns-offset.scss
+@import 'global/components/blocks/two-columns-even'; // global/components/blocks/_two-columns-even.scss
+@import 'global/components/blocks/two-columns-w-carousel'; // global/components/blocks/_two-columns-w-carousel.scss
+@import 'global/components/heroes/heroes'; // global/components/heroes/_heroes.scss
+
+//  ===================================
+//  8. Templates
+//  ===================================
+
+@import 'templates/blog-gallery'; // templates/_blog-gallery.scss
+@import 'templates/blog-detail'; // templates/_blog-detail.scss
+@import 'templates/search-results'; //templates/_search-results.scss
+@import 'templates/resources-gallery'; //templates/_resources-gallery.scss
+@import 'templates/resources-detail'; //templates/_resources-detail.scss

@@ -1,0 +1,161 @@
+footer.body-footer {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 4px color(brand);
+
+  .nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    margin: 1rem 0.625rem;
+
+    @include respond-to(medium) {
+      max-width: 760px;
+      margin: 4rem auto 3rem;
+    }
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+    }
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+
+    .nav-column {
+      width: 50%;
+
+      @include respond-to(desktop) {
+        width: 25%;
+      }
+
+      a.nav-heading {
+        font-weight: fw(bold);
+        color: color(body-color);
+        display: block;
+
+        + a {
+          margin-top: 0.75rem;
+        }
+
+        &:hover {
+          color: color(body-color);
+        }
+      }
+    }
+  }
+
+  ul.menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    li {
+      font-size: 1rem;
+      padding: 0 0 0.25rem;
+
+      &:before {
+        content: '';
+      }
+    }
+
+    @include respond-to(medium) {
+      margin-top: 1.5rem;
+    }
+
+    .menu-item > a {
+      color: $grey-700;
+      font-weight: fw(regular);
+
+      &:hover {
+        color: $grey-900;
+      }
+    }
+  }
+
+  .separator {
+    border-top: solid 1px $grey-300;
+  }
+
+  #secondary-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1rem;
+    padding-bottom: 0.5rem;
+
+    @include respond-to(desktop) {
+      padding: 0;
+    }
+
+    .link {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      margin-right: 0.25rem;
+      text-align: center;
+
+      &#facebook {
+        background-color: #1e4799;
+      }
+
+      &#twitter {
+        background-color: #68c6ef;
+      }
+
+      &#youtube {
+        background-color: #ed1b34;
+      }
+
+      &#instagram {
+        background-color: #ff608a;
+      }
+
+      &#linkedin {
+        background-color: #2d4f6f;
+      }
+    }
+  }
+
+  .copyright-tos {
+    color: $grey-500;
+    line-height: 1.5rem;
+    font-size: 0.825rem;
+    padding-bottom: 0.5rem;
+
+    @include respond-to(desktop) {
+      padding: 0;
+    }
+
+    a {
+      font-weight: fw(regular);
+      color: $grey-500;
+
+      &:hover {
+        color: $grey-700;
+      }
+    }
+  }
+
+  .footer-logo-container {
+    @include respond-to(desktop) {
+      margin-left: auto;
+    }
+
+    img {
+      width: 170px;
+      height: 20px;
+    }
+  }
+}

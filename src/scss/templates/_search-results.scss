@@ -1,0 +1,23 @@
+.search-results {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 3rem 1rem;
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .search-result {
+    margin-bottom: 4rem;
+  }
+}

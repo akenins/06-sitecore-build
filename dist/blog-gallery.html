@@ -1,0 +1,237 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Stylesheet Example</title>
+  </head>
+  <body>
+    <section class="hero hero-text">
+      <div class="container">
+        <h1>Thought Leadership</h1>
+        <p>
+          This is something impactful that will make people want to read the
+          blog.
+        </p>
+      </div>
+      <div class="hero-fader"></div>
+    </section>
+
+    <section class="blog-gallery">
+      <div class="container">
+        <div class="card-container">
+          <!-- Begin Repeater - Automatically generated when a new blog page is created, maximum 5 posts per page -->
+          <article class="blog-card">
+            <a href="[blog-url]" title="[blog-title]">
+              <!-- Source: Banner from blog page -->
+              <img src="https://picsum.photos/870/310" alt="placeholder" />
+            </a>
+            <div class="tag-share-container">
+              <div class="post-tags">
+                <!-- Blog post tags, maximum 3 chips -->
+                <div class="chip">[blog-post-tag]</div>
+              </div>
+              <div class="share">
+                <a href="javascript:void(0)">
+                  <img src="./assets/images/svg/share.svg" alt="share-icon" />
+                  <!-- Hard Coded Text-->
+                  <span class="share-label">Share</span>
+                </a>
+                <div class="share-popover">
+                  <div class="popover-heading">
+                    <!-- Hard Coded Text-->
+                    <span class="share-heading">Share</span>
+                    <span class="share-blog-title">[blog-title]</span>
+                  </div>
+                  <div class="popover-share-options">
+                    <ul>
+                      <li>
+                        <a
+                          class="social-share-link"
+                          href="http://www.facebook.com/sharer.php?u=[post-url]"
+                        >
+                          <svg viewBox="0 0 20 20">
+                            <path
+                              fill="#2b5998"
+                              d="M11.344,5.71c0-0.73,0.074-1.122,1.199-1.122h1.502V1.871h-2.404c-2.886,0-3.903,1.36-3.903,3.646v1.765h-1.8V10h1.8v8.128h3.601V10h2.403l0.32-2.718h-2.724L11.344,5.71z"
+                            ></path>
+                          </svg>
+                          <span>Facebook</span>
+                        </a>
+                      </li>
+                      <li>
+                        <!-- Field on blog post for hashtags, comma separated, if none are specified remove "&hashtags="" -->
+                        <!-- Field on blog post for Twitter handle, populated in url string with out @ symbol -->
+                        <a
+                          class="social-share-link"
+                          href="http://www.twitter.com/share?url=[post-url]&via=[author-twitter-handle]&hashtags=[hashtags]"
+                        >
+                          <svg viewBox="0 0 20 20">
+                            <path
+                              fill="#0084b4"
+                              d="M15.7,2.9c-0.4,0.2-0.7,0.3-1.1,0.4c0.4-0.4,0.7-0.9,0.9-1.4l0,0c0.1-0.2-0.1-0.3-0.3-0.2l0,0
+                            c-0.5,0.3-1.1,0.5-1.7,0.7h-0.1c-0.1,0-0.2,0-0.3-0.1c-0.6-0.6-1.4-0.9-2.3-0.9c-0.4,0-0.7,0.1-1.1,0.2C8.6,1.9,7.7,2.9,7.4,4
+                            c0.1,0.3,0,0.8,0.1,1.2v0.1H7.4l0,0C4.9,5.1,2.7,3.9,1.1,2l0,0c0-0.1-0.2-0.1-0.3,0l0,0C0.5,2.6,0.4,3.2,0.4,3.8
+                            c0,0.9,0.4,1.8,1,2.5C1.1,6.2,0.9,6.1,0.6,5.9l0,0c-0.1-0.1-0.3,0-0.3,0.2l0,0c0,1.4,0.8,2.6,2,3.2c0,0,0,0-0.1,0
+                            c-0.2,0-0.4,0-0.6-0.1l0,0c-0.1,0-0.2,0.1-0.2,0.2l0,0c0.4,1.2,1.5,2.1,2.7,2.4c-1.1,0.7-2.3,1.1-3.6,1.1H0.1c0,0-0.1,0.1-0.1,0.2
+                            s0,0.2,0.1,0.3c1.4,0.8,3.1,1.3,4.8,1.3c1.5,0,2.8-0.3,4.1-0.9c1.1-0.5,2.1-1.3,3-2.2c0.8-0.9,1.4-1.9,1.8-3.1
+                            c0.4-1.1,0.6-2.2,0.6-3.3V5.1c0-0.2,0.1-0.3,0.2-0.5c0.5-0.4,1-0.9,1.4-1.5l0,0C16.1,3,15.9,2.8,15.7,2.9L15.7,2.9z"
+                            />
+                          </svg>
+                          <span>Twitter</span>
+                        </a>
+                      </li>
+                      <li>
+                        <!-- [blog-details] are the first 100 characters of the blog post -->
+                        <a
+                          class="social-share-link"
+                          href="http://www.linkedin.com/shareArticle?source=Hitachi+Solutions&summary=[blog-details]&title=[post-title]&url=[post-url]"
+                        >
+                          <svg viewBox="0 0 20 20">
+                            <path
+                              fill="#0072b1"
+                              d="M3.4,5.3H1.1c-0.3,0-0.5,0.2-0.5,0.5v9.6c0,0.3,0.2,0.5,0.5,0.5h2.3c0.3,0,0.5-0.2,0.5-0.5V5.8
+                            C3.9,5.5,3.7,5.3,3.4,5.3z"
+                            />
+                            <path
+                              fill="#0072b1"
+                              d="M12,5.1c-1.8,0-2.6,0.7-3.2,1.5V5.8c0-0.3-0.2-0.5-0.5-0.5H5.9c-0.3,0-0.5,0.2-0.5,0.5v9.7
+                            c0,0.3,0.2,0.5,0.5,0.5h2.4c0.3,0,0.5-0.2,0.5-0.5v-5.2C8.9,9.6,9.2,8,10.7,8c2,0,1.8,2.3,1.8,3v4.5c0,0.3,0.2,0.5,0.5,0.5h2.5
+                            c0.3,0,0.5-0.2,0.5-0.5v-4.7C15.9,8.8,16,5.1,12,5.1z"
+                            />
+                            <circle fill="#0072b1" cx="2.2" cy="2.2" r="2.2" />
+                          </svg>
+                          <span>LinkedIn</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="share-social-link"
+                          href="mailto:?subject=Check out this post from Hitachi Solutions&body=[post-url]"
+                        >
+                          <svg viewBox="0 0 20 20">
+                            <path
+                              fill="#111111"
+                              d="M10.5,10.7c-0.2,0.1-0.3,0.2-0.5,0.2c-0.2,0-0.4-0.1-0.5-0.2L1.8,5.1L0,3.8l0,12.9c0,0.5,0.4,0.9,0.9,0.9
+                            l18.2,0c0.5,0,0.9-0.4,0.9-0.9V3.8l-1.8,1.3L10.5,10.7z"
+                            />
+                            <polygon
+                              fill="#111111"
+                              points="10,8.9 18.8,2.4 1.2,2.4"
+                            />
+                          </svg>
+                          <span>Email</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <span class="share-popover-caret"></span>
+                </div>
+              </div>
+            </div>
+            <div class="post-description">
+              <a href="#url-of-blog-post">
+                <h2>[blog-title]</h2>
+              </a>
+              <!-- First 100 characters of blog post, end text with ellipsis "..." -->
+              <p>
+                [blog-description]
+              </p>
+              <a href="[blog-url]" class="text-button">Read More</a>
+            </div>
+          </article>
+
+          <!-- Pagination -->
+          <div class="pgn-button-row">
+            <button class="pgn-button pgn-button--previous" disabled>
+              <svg viewBox="0 0 100 100">
+                <path
+                  d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                  class="arrow"
+                ></path>
+              </svg>
+            </button>
+            <div class="pgn-button-group">
+              <div class="pgn-button is-selected">1</div>
+              <div class="pgn-button">2</div>
+              <div class="pgn-button">3</div>
+              <div class="pgn-button">4</div>
+              <div class="pgn-button">5</div>
+              <div class="pgn-button">6</div>
+              <div class="pgn-button">...</div>
+              <div class="pgn-button">201</div>
+            </div>
+            <button class="pgn-button pgn-button--next">
+              <svg viewBox="0 0 100 100">
+                <path
+                  d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                  class="arrow"
+                  transform="translate(100, 100) rotate(180) "
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="blog-menu">
+          <div class="search-wrapper">
+            <input placeholder="Search Blog" />
+            <i class="icon icon-search"></i>
+          </div>
+          <div class="browse-by">
+            <h3>Category</h3>
+            <ul>
+              <!-- Repeater, solution/technology tags, only show tags with 10 or more posts -->
+              <!-- Clicking on tags shows search results page, only posts with clicked tag are displayed -->
+              <li><a href="">Awards</a></li>
+              <li><a href="">Azure</a></li>
+              <li><a href="">Business Intelligence</a></li>
+              <li><a href="">Cloud Computing</a></li>
+              <li><a href="">Customer Relationship Management</a></li>
+              <li><a href="">Digital Transformation</a></li>
+              <li><a href="">Enterprise Resource Planning</a></li>
+            </ul>
+          </div>
+          <div class="browse-by">
+            <h3>Industry</h3>
+            <ul>
+              <!-- Hard Coded Tags -->
+              <!-- Clicking on tags shows search results page, only posts with clicked tag are displayed -->
+              <li><a href="">Banking &amp; Capital Markets</a></li>
+              <li>
+                <a href="">Engineering, &amp; Construction</a>
+              </li>
+              <li><a href="">Healthcare</a></li>
+              <li><a href="">Insurance</a></li>
+              <li><a href="">Manufacturing</a></li>
+              <li><a href="">Oil &amp; Gas</a></li>
+              <li><a href="">Retail</a></li>
+              <li><a href="">Transportation &amp; Distribution</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Footer CTA -->
+    <section class="footer-cta">
+      <div class="container">
+        <h3>Sign Up For Your FREE Cloud Readiness Assessment</h3>
+        <!-- Single Line Text -->
+        <a href="#" class="button">Learn More</a>
+        <!-- Link selectable from list of Resource Center pages, Label is Single Line Text -->
+      </div>
+    </section>
+  </body>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/headroom.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/flickity.pkgd.min.js"
+  ></script>
+  <script type="text/javascript" src="./assets/scripts/site/main.js"></script>
+</html>

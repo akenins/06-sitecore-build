@@ -1,0 +1,70 @@
+.featured-ip-cards {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    margin: 0;
+
+    @include respond-to(desktop) {
+      margin: 0 auto;
+      max-width: 1000px;
+      flex-direction: row;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .heading-container {
+    width: 50%;
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin: 0.5rem auto;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      background-color: $blue-50;
+
+      @include respond-to(desktop) {
+        width: calc(25% - 20px);
+      }
+
+      &.featured {
+        transform: scale(1.04, 1.04);
+        box-shadow: 0px 8px 16px $blue-100;
+        border-top: 8px solid color(brand);
+      }
+
+      .content {
+        flex: 1 0 auto;
+      }
+
+      ul {
+        text-align: left;
+
+        li {
+          &:before {
+            color: $green-500;
+          }
+        }
+      }
+    }
+  }
+}

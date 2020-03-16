@@ -1,0 +1,85 @@
+.two-columns-offset {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  &.left {
+    background: linear-gradient(
+      to right,
+      $blue-50 0%,
+      $blue-50 80%,
+      $white 80%,
+      $white 100%
+    );
+
+    @include respond-to(desktop) {
+      .container .image {
+        order: 2;
+      }
+    }
+  }
+
+  &.right {
+    background: linear-gradient(
+      to left,
+      $blue-50 0%,
+      $blue-50 80%,
+      $white 80%,
+      $white 100%
+    );
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to(desktop) {
+      margin: 0 auto;
+      max-width: 1000px;
+      flex-direction: row;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+
+    .image {
+      width: 100%;
+
+      @include respond-to(desktop) {
+        width: calc(37.5% - 20px);
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .content {
+      width: 100%;
+
+      @include respond-to(desktop) {
+        width: calc(62.5% - 20px);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+    }
+
+    .image,
+    .content {
+      padding: 0.5rem 0;
+
+      @include respond-to(desktop) {
+        padding: 0;
+      }
+    }
+  }
+}

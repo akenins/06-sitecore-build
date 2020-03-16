@@ -1,0 +1,203 @@
+//  3.1 HEADINGS
+
+h1 {
+  font-weight: fw(semi-bold);
+
+  &:after {
+    content: '.';
+    color: color(brand);
+  }
+}
+
+h2 {
+  font-weight: fw(light);
+}
+
+h4,
+h6 {
+  font-weight: fw(regular);
+}
+
+h3,
+h5 {
+  font-weight: fw(medium);
+}
+
+h1,
+.h1 {
+  margin: 1.67rem 0 0.5rem;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -1px;
+
+  @include respond-to(desktop) {
+    font-size: 72px;
+    line-height: 80px;
+  }
+}
+
+h2,
+.h2 {
+  margin: 1.2rem 0 0.4rem;
+  font-weight: fw(medium);
+  font-size: 34px;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+}
+
+h3,
+.h3 {
+  margin: 1.8rem 0 0.4rem;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h4,
+.h4 {
+  margin: 1.8rem 0 0.4rem;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.25px;
+}
+
+h5,
+.h5 {
+  margin: 1.8rem 0 0.4rem;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+
+h6,
+.h6 {
+  margin: 1.8rem 0 0.4rem;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+//  3.2 Paragraph and Emphasis
+
+p,
+address {
+  margin: 1rem 0 0;
+}
+
+p {
+  line-height: 1.5;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+code,
+pre {
+  font-family: family(mono);
+  border: 1px solid color(borders);
+  padding: 24px 30px;
+  margin: 50px 0 0;
+  position: relative;
+  display: block;
+
+  &:before {
+    content: 'CODE';
+    position: absolute;
+    top: -31px;
+    left: -1px;
+    background: $midnight;
+    color: $white;
+    font-family: base;
+    font-weight: fw(bold);
+    font-size: 14px;
+    padding: 8px 20px 5px;
+  }
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+sub {
+  bottom: -0.25em;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+abbr {
+  cursor: help;
+}
+
+address {
+  line-height: 1.5;
+}
+
+//  3.3 LISTS
+
+section {
+  ul {
+    list-style: none;
+    padding-top: 1rem;
+
+    li {
+      padding: 0.5rem 0.5rem 0.5rem 3rem;
+      position: relative;
+      font-size: 0.825rem;
+
+      &:before {
+        position: absolute;
+        content: '\2022'; /* \2022 is the CSS Code/unicode for a bullet */
+        color: color(brand);
+        font-size: 3rem;
+        line-height: 1rem;
+        margin-left: -2rem;
+      }
+    }
+
+    li.check {
+      &:before {
+        content: '';
+        font-size: 1rem;
+        height: 1rem;
+        width: 1rem;
+        background-image: url('../images/png/green-check.png'); // PNG Fallback
+        background-image: url('../images/svg/green-check.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+//  3.4 TABLES
+
+//  3.5 IMAGES
+
+//  3.6 CAPTIONS
+
+//  3.7 GALLERIES
+
+//  3.8 MISCELLANEOUS
+
+//  3.9 ALIGNMENT

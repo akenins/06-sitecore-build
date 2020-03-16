@@ -1,0 +1,23 @@
+.footer-cta {
+  width: 100%;
+  position: relative;
+
+  .container {
+    width: 75%;
+    margin: 0 auto 6rem;
+    padding: 2rem;
+    background-color: $blue-50;
+    border-radius: 16px;
+    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+    @include respond-to(desktop) {
+      margin: 0 auto;
+      transform: translateY(1.75rem);
+    }
+
+    a.button {
+      margin: 0.5rem 0 0;
+    }
+  }
+}
