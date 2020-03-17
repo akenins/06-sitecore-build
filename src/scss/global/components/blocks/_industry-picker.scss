@@ -24,11 +24,68 @@
   .heading-container {
     max-width: 50%;
     text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .stat-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
+
+    .column {
+      width: 100%;
+      border-radius: 16px;
+      padding: 1.25rem 3rem;
+      text-align: center;
+
+      @include respond-to(desktop) {
+        width: calc(26.4% - 20px);
+      }
+
+      p.stats {
+        font-size: 48px;
+        font-weight: fw(bold);
+        line-height: 1;
+        margin: 0;
+      }
+    }
   }
 
   .industry-container {
     display: none;
     margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond-to(desktop) {
+      flex-flow: row wrap;
+    }
+
+    .industry-card {
+      width: 100%;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 16px;
+      border: 1px solid color(borders);
+      box-shadow: 0 4px 8px $blue-100;
+      text-align: center;
+
+      @include respond-to(desktop) {
+        width: calc(25% - 10px);
+      }
+
+      a {
+        display: block;
+        white-space: normal;
+      }
+    }
   }
 
   .industry-dropdown {
