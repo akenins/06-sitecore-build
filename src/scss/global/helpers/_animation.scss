@@ -82,3 +82,19 @@
     transform: scale3d(1.6, 1.6, 1);
   }
 }
+
+[data-aos-offset='100'] {
+  transition-delay: 0.1s;
+}
+
+[data-aos-offset='200'] {
+  transition-delay: 0.2s;
+}
+
+[data-aos-offset='300'] {
+  transition-delay: 0.3s;
+}
+
+[data-aos-offset='400'] {
+  transition-delay: 0.4s;
+}
