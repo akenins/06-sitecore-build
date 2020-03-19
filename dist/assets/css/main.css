@@ -901,15 +901,31 @@ address {
   line-height: 1.5;
 }
 
-section ul {
-  list-style: none;
+section ul,
+section ol {
   padding-top: 1rem;
 }
 
-section ul li {
-  padding: 0.5rem 0.5rem 0.5rem 3rem;
-  position: relative;
+section ul li,
+section ol li {
   font-size: 0.825rem;
+}
+
+section ol {
+  padding-left: 2rem;
+}
+
+section ol li {
+  padding: 0.5rem 0.5rem 0 1rem;
+}
+
+section ul {
+  list-style: none;
+}
+
+section ul li {
+  position: relative;
+  padding: 0.5rem 0.5rem 0 3rem;
 }
 
 section ul li:before {
@@ -934,7 +950,7 @@ section ul li.check:before {
 }
 
 .mktoForm {
-  padding: 0 16px 8px 16px;
+  padding: 0;
   max-width: 680px !important;
   width: 100% !important;
   font-family: 'Fira Sans', 'Trebuchet MS', 'Arial', sans-serif !important;
@@ -947,7 +963,7 @@ section ul li.check:before {
 
 .mktoForm .mktoGutter {
   float: none;
-  height: 0;
+  height: 0 !important;
 }
 
 .mktoForm .mktoOffset {
@@ -971,7 +987,8 @@ section ul li.check:before {
 .mktoForm input[type='text'],
 .mktoForm input[type='email'],
 .mktoForm input[type='tel'],
-.mktoForm select {
+.mktoForm select,
+.mktoForm textarea {
   font-size: 1rem;
   line-height: 1;
   padding: 1.5rem 0.75rem 0.5rem !important;
@@ -984,33 +1001,34 @@ section ul li.check:before {
   max-width: 680px !important;
 }
 
+.mktoForm textarea {
+  min-height: 150px;
+}
+
 .mktoForm .mktoLabel {
   float: none;
   line-height: 1.5;
   color: #999;
-  font-size: 1rem;
+  font-size: 0.75rem;
   letter-spacing: 0.15px;
   position: absolute;
-  top: 25%;
+  top: 5%;
   left: 12px;
   width: 100% !important;
   transition: all 0.1s ease-out;
 }
 
-.mktoForm .mktoLabel.mktoFieldFocused, .mktoForm .mktoLabel.mktoFieldContainsData {
-  top: 10%;
-  font-size: 0.75rem;
-}
-
 .mktoForm input[type='text']:focus,
 .mktoForm input[type='email']:focus,
-.mktoForm input[type='tel']:focus {
+.mktoForm input[type='tel']:focus,
+.mktoForm textarea:focus {
   border: 1px solid #16214b !important;
 }
 
 .mktoForm .mktoButtonRow {
   width: 100%;
   max-width: 680px;
+  margin-top: 1rem;
 }
 
 .mktoForm .mktoButtonWrap {
@@ -1039,7 +1057,7 @@ section ul li.check:before {
   color: #ed1b34 !important;
 }
 
-.mktoForm label[for='Unsubscribed'] {
+.mktoForm label[for='donotpostalmail'] {
   left: 24px;
 }
 
@@ -3631,6 +3649,82 @@ footer.body-footer .footer-logo-container img {
   }
 }
 
+.two-columns-form {
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.two-columns-form .container {
+  width: 100%;
+  margin: 0;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 760px) {
+  .two-columns-form .container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .two-columns-form .container {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .two-columns-form .container {
+    max-width: 1200px;
+  }
+}
+
+.two-columns-form .container .form {
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .two-columns-form .container .form {
+    width: calc(50% - 20px);
+    text-align: center;
+  }
+}
+
+.two-columns-form .container .form h4 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.two-columns-form .container .content {
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .two-columns-form .container .content {
+    width: calc(50% - 20px);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.two-columns-form .container .form,
+.two-columns-form .container .content {
+  padding: 0.5rem 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .two-columns-form .container .form,
+  .two-columns-form .container .content {
+    padding: 0;
+  }
+}
+
 .two-columns-w-carousel {
   width: 100%;
   margin-bottom: 6rem;
@@ -4993,18 +5087,25 @@ footer.body-footer .footer-logo-container img {
 }
 
 .resources-detail .container {
-  max-width: 100%;
-  padding: 0 1rem;
+  width: 100%;
+  margin: 0;
+  padding: 3rem 1rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 760px) {
+  .resources-detail .container {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   .resources-detail .container {
-    max-width: 1000px;
     margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-between;
+    max-width: 1000px;
   }
 }
 
@@ -5014,14 +5115,44 @@ footer.body-footer .footer-logo-container img {
   }
 }
 
-.resources-detail .body-container,
-.resources-detail .form-container {
+.resources-detail .container .form {
   width: 100%;
 }
 
-@media screen and (min-width: 1000px) {
-  .resources-detail .body-container,
-  .resources-detail .form-container {
+@media screen and (min-width: 760px) {
+  .resources-detail .container .form {
     width: calc(50% - 20px);
+    text-align: center;
+  }
+}
+
+.resources-detail .container .form h4 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.resources-detail .container .content {
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .resources-detail .container .content {
+    width: calc(50% - 20px);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.resources-detail .container .form,
+.resources-detail .container .content {
+  padding: 0.5rem 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .resources-detail .container .form,
+  .resources-detail .container .content {
+    padding: 0;
   }
 }

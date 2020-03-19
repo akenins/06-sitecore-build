@@ -156,14 +156,29 @@ address {
 //  3.3 LISTS
 
 section {
-  ul {
-    list-style: none;
+  ul,
+  ol {
     padding-top: 1rem;
 
     li {
-      padding: 0.5rem 0.5rem 0.5rem 3rem;
-      position: relative;
       font-size: 0.825rem;
+    }
+  }
+
+  ol {
+    padding-left: 2rem;
+
+    li {
+      padding: 0.5rem 0.5rem 0 1rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      position: relative;
+      padding: 0.5rem 0.5rem 0 3rem;
 
       &:before {
         position: absolute;

@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Stylesheet Example</title>
+  </head>
+  <body>
+    <section class="two-columns-form">
+      <div class="container">
+        <div class="content">
+          <!-- Rich Text Starts-->
+          <h2>Form Section Title</h2>
+          <p>
+            Due to an inconsistent overall customer experience, they often lose
+            customers, who perceive their product or service as unsatisfying.
+            For fear of this turnover, internal teams face immense pressure to
+            develop highly
+          </p>
+          <ul>
+            <li>Line Item 1</li>
+            <li>Line Item 2</li>
+            <li>Line Item 3</li>
+          </ul>
+          <ol>
+            <li>Numbered Item 1</li>
+            <li>Numbered Item 2</li>
+            <li>Numbered Item 3</li>
+          </ol>
+          <!-- Rich Text Ends -->
+        </div>
+        <div class="form">
+          <!-- Text - Single Line -->
+          <h4>Continue the Conversation</h4>
+          <!-- Form embed begins -->
+          <script src="//app-ab35.marketo.com/js/forms2/js/forms2.min.js"></script>
+          <form id="mktoForm_1074"></form>
+          <script>
+            MktoForms2.loadForm(
+              '//app-ab35.marketo.com',
+              '786-IUV-128',
+              1074,
+              function(form) {
+                let checkboxElement = document.getElementById('donotpostalmail')
+                console.log(checkboxElement)
+                let checkbox = document.createElement('span')
+                checkbox.className += 'checkmark'
+                checkboxElement.insertAdjacentElement('afterend', checkbox)
+              }
+            )
+          </script>
+          <!-- Form embed ends-->
+        </div>
+      </div>
+    </section>
+  </body>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/headroom.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/flickity.pkgd.min.js"
+  ></script>
+  <script type="text/javascript" src="./assets/scripts/site/main.js"></script>
+</html>

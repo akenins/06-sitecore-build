@@ -1,5 +1,5 @@
 .mktoForm {
-  padding: 0 16px 8px 16px;
+  padding: 0;
   max-width: 680px !important;
   width: 100% !important;
   font-family: 'Fira Sans', 'Trebuchet MS', 'Arial', sans-serif !important;
@@ -12,7 +12,7 @@
 
   .mktoGutter {
     float: none;
-    height: 0;
+    height: 0 !important;
   }
 
   .mktoOffset {
@@ -36,7 +36,8 @@
   input[type='text'],
   input[type='email'],
   input[type='tel'],
-  select {
+  select,
+  textarea {
     font-size: 1rem;
     line-height: 1;
     padding: 1.5rem 0.75rem 0.5rem !important;
@@ -49,34 +50,40 @@
     max-width: 680px !important;
   }
 
+  textarea {
+    min-height: 150px;
+  }
+
   .mktoLabel {
     float: none;
     line-height: 1.5;
     color: #999;
-    font-size: 1rem;
+    font-size: 0.75rem;
     letter-spacing: 0.15px;
     position: absolute;
-    top: 25%;
+    top: 5%;
     left: 12px;
     width: 100% !important;
     transition: all 0.1s ease-out;
 
-    &.mktoFieldFocused,
-    &.mktoFieldContainsData {
-      top: 10%;
-      font-size: 0.75rem;
-    }
+    // &.mktoFieldFocused,
+    // &.mktoFieldContainsData {
+    //   top: 5%;
+    //   font-size: 0.75rem;
+    // }
   }
 
   input[type='text']:focus,
   input[type='email']:focus,
-  input[type='tel']:focus {
+  input[type='tel']:focus,
+  textarea:focus {
     border: 1px solid #16214b !important;
   }
 
   .mktoButtonRow {
     width: 100%;
     max-width: 680px;
+    margin-top: 1rem;
   }
 
   .mktoButtonWrap {
@@ -105,7 +112,7 @@
     color: #ed1b34 !important;
   }
 
-  label[for='Unsubscribed'] {
+  label[for='donotpostalmail'] {
     left: 24px;
   }
 

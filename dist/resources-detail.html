@@ -12,18 +12,23 @@
       <div class="container">
         <div class="heading-container">
           <div class="heading">
+            <!-- Pulled from selected Tag in back-end-->
             <h2 class="resource-type">Webinar</h2>
+            <!-- Text - Multi Line -->
             <h1 class="resource-title">
               Opening Doors with Power Platform: Why you should be using Power
               Apps and Automate in your Dynamics 365 deployment
             </h1>
+            <!-- Is link a YouTube link? Add 'video-link' class -->
+            <!-- Text - Allow to enter a URL -->
             <a
               href="https://www.youtube.com/watch?v=PenWyrBeBCA"
-              class="text-button video-link"
+              class="text-button [video-link]"
               >Watch Now</a
             >
           </div>
           <div class="resource-hero-image">
+            <!-- Image, selectable from Media Library-->
             <img
               src="./assets/images/png/webinar-hero-image.png"
               alt="placeholder"
@@ -35,9 +40,10 @@
       <div class="hero-fader"></div>
     </section>
 
-    <div class="resources-detail">
+    <section class="resources-detail">
       <div class="container">
-        <div class="body-container">
+        <div class="content">
+          <!-- Rich Text -->
           <p>
             Thank you for requesting to watch our webinar,
             <strong
@@ -58,17 +64,32 @@
             We look forward to helping you implement new, positive initiatives
             in your company.
           </p>
+          <!-- End Rich Text-->
         </div>
-        <div class="form-container">
-          <h3 style="padding: 0 1rem;">Continue the Conversation</h3>
+        <div class="form">
+          <!-- Text - Single Line -->
+          <h4>Continue the Conversation</h4>
+          <!-- Embed form starts -->
           <script src="//app-ab35.marketo.com/js/forms2/js/forms2.min.js"></script>
           <form id="mktoForm_1074"></form>
           <script>
-            MktoForms2.loadForm('//app-ab35.marketo.com', '786-IUV-128', 1074)
+            MktoForms2.loadForm(
+              '//app-ab35.marketo.com',
+              '786-IUV-128',
+              1074,
+              function(form) {
+                let checkboxElement = document.getElementById('donotpostalmail')
+                console.log(checkboxElement)
+                let checkbox = document.createElement('span')
+                checkbox.className += 'checkmark'
+                checkboxElement.insertAdjacentElement('afterend', checkbox)
+              }
+            )
           </script>
+          <!-- Embed Script Ends -->
         </div>
       </div>
-    </div>
+    </section>
   </body>
   <script
     type="text/javascript"
