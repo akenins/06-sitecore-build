@@ -3121,6 +3121,7 @@ footer.body-footer .footer-logo-container img {
 
 .team-highlight-carousel .highlights .highlight .image .headshot img {
   width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
