@@ -1895,10 +1895,8 @@ a.text-button {
   background-color: #fff;
 }
 
-@media screen and (min-width: 1000px) {
-  .global-header .mobile-nav {
-    display: none;
-  }
+.global-header .mobile-nav {
+  display: none;
 }
 
 .global-header .mobile-nav .mobile-nav-item {
@@ -1934,6 +1932,8 @@ a.text-button {
   right: 1.5rem;
   top: 18px;
   border: 0;
+  outline: 0;
+  padding: 0;
   background-color: transparent;
   transition: all 0.3s ease-out;
 }
@@ -1945,6 +1945,33 @@ a.text-button {
 .global-header .mobile-nav .mobile-nav-item .mobile-nav-arrow .icon {
   width: 12px;
   height: 12px;
+}
+
+.global-header .mobile-nav .mobile-nav-item .mobile-subnav-arrow {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  right: 1.5rem;
+  top: 18px;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+}
+
+.global-header .mobile-nav .mobile-nav-item .mobile-subnav-arrow.active {
+  transform: rotate(90deg);
+}
+
+.global-header .mobile-nav .mobile-nav-item .mobile-subnav-arrow .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.global-header .mobile-nav .mobile-dropdown {
+  position: relative;
+  display: none;
 }
 
 .global-header .mobile-nav .mobile-dropdown .mobile-nav-subitem {

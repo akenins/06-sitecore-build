@@ -1,82 +1,98 @@
-// $(document).ready(function() {
-//   let mobileNav,
-//     mobileNavSelector = '#mobile-nav',
-//     mobileNavToggleButton,
-//     mobileNavToggleButtonSelector = '#mobile-nav-toggle',
-//     mobileNavActiveAreaSelector = '.mobile-nav-dropdown',
-//     itemToggleSelector = '.mobile-nav-arrow',
-//     openClass = 'mobile-nav-open',
-//     body = $(document.body)
+let MobileNavController = (function($) {
+  let mobileNav,
+    mobileNavSelector = '#mobile-nav',
+    mobileNavToggleButton,
+    mobileNavToggleButtonSelector = '#mobile-nav-toggle',
+    mobileNavActiveAreaSelector = '.mobile-nav',
+    itemToggleSelector = '.mobile-nav-arrow',
+    subitemToggleSelector = '.mobile-subnav-arrow',
+    openClass = 'mobile-nav-open'
 
-//   function onDocumentReady() {
-//     mobileNav = $(mobileNavSelector)
-//     mobileNavToggleButton = $(mobileNavToggleButtonSelector)
-//     console.log('running')
-//   }
+  function onDocumentReady() {
+    mobileNav = $(mobileNavSelector)
+    mobileNavToggleButton = $(mobileNavToggleButtonSelector)
+    itemToggleSelector = $(itemToggleSelector)
+    subitemToggleSelector = $(subitemToggleSelector)
+  }
 
-//   function activate() {
-//     listenForEvents()
-//   }
+  function activate() {
+    listenForEvents()
+  }
 
-//   function deactivate() {
-//     close()
-//     ignoreEvents()
-//   }
+  function deactivate() {
+    close()
+    ignoreEvents()
+  }
 
-//   function listenForEvents() {
-//     mobileNavToggleButton.on('click', onClickMenuToggle)
-//     mobileNav.on('click', itemToggleSelector, onClickMenuItemToggle)
-//   }
+  function listenForEvents() {
+    mobileNavToggleButton.on('click', onClickMenuToggle)
+    mobileNav.on('click', itemToggleSelector, onClickMenuItemToggle)
+    mobileNav.on('click', subitemToggleSelector, onClickMenuSubitemToggle)
+  }
 
-//   function ignoreEvents() {
-//     mobileNavToggleButton.off('click', onClickMenuToggle)
-//     mobileNav.off('click', itemToggleSelector, onClickMenuItemToggle)
-//   }
+  function ignoreEvents() {
+    mobileNavToggleButton.off('click', onClickMenuToggle)
+    mobileNav.off('click', itemToggleSelector, onClickMenuItemToggle)
+  }
 
-//   function onDocumentClick(e) {
-//     let clicked = $(e.target)
+  function onDocumentClick(e) {
+    let clicked = $(e.target)
 
-//     // Clicking outside the menu immediately closes it
-//     if (clicked.closest(mobileNavActiveAreaSelector).length === 0) {
-//       close()
-//     }
-//   }
+    // Clicking outside the menu immediately closes it
+    if (clicked.closest(mobileNavActiveAreaSelector).length === 0) {
+      close()
+      mobileNav.removeClass('mobile-nav-open')
+    }
+    console.log(mobileNavActiveAreaSelector.length)
+  }
 
-//   function onClickMenuItemToggle(e) {
-//     let clicked = $(e.target),
-//       menuItem = clicked.closest('.menu-item'),
-//       subMenu = menuItem.find('> .sub-menu')
+  function onClickMenuItemToggle(e) {
+    let clicked = $(e.target),
+      menuItem = clicked.closest('.mobile-nav-item'),
+      subMenu = menuItem.find('> .mobile-dropdown'),
+      itemToggle = menuItem.find('> .mobile-nav-arrow')
 
-//     menuItem.toggleClass('open')
-//     subMenu.stop(true, false).slideToggle
-//   }
+    itemToggle.toggleClass('active')
+    subMenu.stop(true, false).slideToggle()
+  }
 
-//   function onClickMenuToggle(e) {
-//     if (body.hasClass(openClass)) {
-//       close()
-//     } else {
-//       open()
-//     }
+  function onClickMenuSubitemToggle(e) {
+    let clicked = $(e.target),
+      menuItem = clicked.closest('.mobile-nav-subitem'),
+      subMenu = menuItem.find('> .mobile-dropdown'),
+      itemToggle = menuItem.find('> .mobile-subnav-arrow')
 
-//     e.stopImmediatePropagation()
-//   }
+    itemToggle.toggleClass('active')
+    subMenu.stop(true, false).slideToggle()
+  }
 
-//   function open() {
-//     $(document).on('click', onDocumentClick)
-//     body.addClass(openClass)
-//   }
+  function onClickMenuToggle(e) {
+    if (mobileNav.hasClass(openClass)) {
+      mobileNav.removeClass('mobile-nav-open')
+      close()
+    } else {
+      mobileNav.addClass('mobile-nav-open')
+      open()
+    }
 
-//   function close() {
-//     $(document).off('click', onDocumentClick)
-//     body.removeClass(openClass)
-//     $('.sub-menu', mobileNav).slideUp()
-//     $('.menu-item', mobileNav).removeClass('open')
-//   }
+    e.stopImmediatePropagation()
+  }
 
-//   document.addEventListener('DOMContentLoaded', onDocumentReady)
+  function open() {
+    $(document).on('click', onDocumentClick)
+    mobileNav.slideDown()
+  }
 
-//   return {
-//     activate,
-//     deactivate,
-//   }
-// })
+  function close() {
+    $(document).off('click', onDocumentClick)
+    mobileNav.slideUp()
+    $('.sub-menu', mobileNav).slideUp()
+    $('.menu-item', mobileNav).removeClass('open')
+  }
+
+  document.addEventListener('DOMContentLoaded', onDocumentReady)
+
+  $(activate)
+})(jQuery)
+
+export default MobileNavController
