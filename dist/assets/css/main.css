@@ -4295,13 +4295,13 @@ footer.body-footer .footer-logo-container img {
   }
 }
 
-.blog-gallery .card-container {
+.blog-gallery .body-container {
   width: 100%;
   margin-bottom: 4rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .blog-gallery .card-container {
+  .blog-gallery .body-container {
     width: calc(75% - 20px);
     margin-bottom: 0;
   }
@@ -4472,7 +4472,15 @@ footer.body-footer .footer-logo-container img {
   fill: #c2c2c2;
 }
 
-.blog-gallery .pgn-button-row .pgn-button.is-selected {
+.blog-gallery .pgn-button-row .pgn-button:first-child {
+  padding: 10px 0;
+}
+
+.blog-gallery .pgn-button-row .pgn-button:last-child {
+  padding: 10px 0;
+}
+
+.blog-gallery .pgn-button-row .pgn-button.current {
   border: 1px solid #c2c2c2;
   color: #111;
 }
