@@ -1,12 +1,9 @@
 $(document).ready(function() {
   let inputFieldSelector = $('input.mktoField'),
-    textareaFieldSelector = document.getElementsByTagName('textarea'),
     selectFields = document.getElementsByTagName('select')
 
   inputFieldSelector.on('focus blur', toggleFocus)
   inputFieldSelector.on('change keyup', checkForMktoFieldValue)
-  textareaFieldSelector.on('focus blur', toggleFocus)
-  textareaFieldSelector.on('change keyup', checkForMktoFieldValue)
   checkForChildNodes()
 
   function toggleFocus(e) {
