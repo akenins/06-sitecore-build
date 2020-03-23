@@ -4030,7 +4030,7 @@ footer.body-footer .footer-logo-container img {
 .hero-level-2 .container {
   min-height: 450px;
   width: 100%;
-  margin: 60px auto 0;
+  margin: 0 auto;
   max-width: 1200px;
   position: relative;
   display: flex;
