@@ -1348,6 +1348,7 @@ a.text-button {
   display: inline-block;
   margin: 0 8px;
   opacity: 0.25;
+  padding: 0;
 }
 
 .flickity-page-dots .dot.is-selected {
@@ -2509,6 +2510,10 @@ footer.body-footer .footer-logo-container img {
   }
 }
 
+.featured-image .button-container {
+  margin-bottom: 2rem;
+}
+
 .featured-ip-cards {
   width: 100%;
   margin-bottom: 6rem;
@@ -2643,6 +2648,7 @@ footer.body-footer .footer-logo-container img {
 
 .featured-resource .container .logo img {
   max-width: 100px;
+  height: auto;
 }
 
 @media screen and (min-width: 760px) {

@@ -46,6 +46,7 @@
 
       img {
         max-width: 100px;
+        height: auto;
 
         @include respond-to(medium) {
           width: 100%;
