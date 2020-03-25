@@ -740,12 +740,6 @@ a:hover {
   color: #16214b;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 1rem;
-}
-
 h1 {
   font-weight: 600;
 }
@@ -1014,8 +1008,12 @@ section ul li.check:before {
   position: absolute;
   top: 5%;
   left: 12px;
-  width: 100% !important;
+  width: auto !important;
   transition: all 0.1s ease-out;
+}
+
+.mktoForm .mktoForm .mktoRequiredField label.mktoLabel {
+  font-weight: 400;
 }
 
 .mktoForm input[type='text']:focus,
@@ -1065,6 +1063,7 @@ section ul li.check:before {
   display: block;
   position: relative;
   user-select: none;
+  padding: 0 !important;
 }
 
 .mktoForm .mktoCheckboxList input {
@@ -2421,7 +2420,7 @@ footer.body-footer .footer-logo-container img {
 }
 
 .feature-carousel .feature-container .feature-cell .image img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .feature-carousel .feature-container .feature-cell .content {
@@ -2492,6 +2491,7 @@ footer.body-footer .footer-logo-container img {
 .featured-image .container {
   width: 100%;
   margin: 0;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -2512,6 +2512,10 @@ footer.body-footer .footer-logo-container img {
 
 .featured-image .button-container {
   margin-bottom: 2rem;
+}
+
+.featured-image .image-container img {
+  max-width: 100%;
 }
 
 .featured-ip-cards {
@@ -2685,11 +2689,12 @@ footer.body-footer .footer-logo-container img {
 
 .footer-cta {
   width: 100%;
+  padding: 0 1rem;
   position: relative;
 }
 
 .footer-cta .container {
-  width: 75%;
+  width: 100%;
   margin: 0 auto 6rem;
   padding: 2rem;
   background-color: #f8f8f9;
@@ -2700,13 +2705,49 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .footer-cta .container {
+    max-width: 968px;
     margin: 0 auto;
     transform: translateY(1.75rem);
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-cta .container {
+    max-width: 1168px;
+  }
+}
+
 .footer-cta .container a.button {
   margin: 0.5rem 0 0;
+}
+
+.full-width-image {
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.full-width-image .container {
+  width: 100%;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .full-width-image .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .full-width-image .container {
+    max-width: 1200px;
+  }
+}
+
+.full-width-image .container img {
+  max-width: 100%;
+  height: auto;
 }
 
 .industry-picker {
@@ -2874,6 +2915,33 @@ footer.body-footer .footer-logo-container img {
   max-width: 100%;
 }
 
+.one-column-content {
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.one-column-content .container {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .one-column-content .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .one-column-content .container {
+    max-width: 1200px;
+  }
+}
+
+.one-column-content .content {
+  max-width: 100%;
+}
+
 .related-solutions-cards {
   width: 100%;
   margin-bottom: 6rem;
@@ -2893,10 +2961,10 @@ footer.body-footer .footer-logo-container img {
 .related-solutions-cards .card-container {
   width: 100%;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0 1rem;
+  justify-content: center;
 }
 
 @media screen and (min-width: 760px) {
@@ -2925,7 +2993,7 @@ footer.body-footer .footer-logo-container img {
   align-items: center;
   padding: 2.5rem;
   text-align: center;
-  margin: 0 1rem 2rem;
+  margin: 0 1rem 1rem;
   border-radius: 8px;
   border: 1px solid #c2c2c2;
   transition: background-color 0.3s ease-out;
@@ -2934,7 +3002,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 760px) {
   .related-solutions-cards .card-container .card {
     width: calc(50% - 20px);
-    margin: 0 0 2rem;
+    margin: 0 10px 20px;
   }
 }
 
@@ -3012,7 +3080,7 @@ footer.body-footer .footer-logo-container img {
 }
 
 .solution-picker .container .image img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .solution-picker .container .content {
@@ -3081,7 +3149,7 @@ footer.body-footer .footer-logo-container img {
 }
 
 .team-highlight-carousel .container {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -3110,7 +3178,7 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .team-highlight-carousel .highlights .highlight {
-    padding: 3.5rem 8rem 4.5rem;
+    padding: 3.5rem 4rem 4.5rem;
     flex-direction: row;
   }
 }
@@ -3232,6 +3300,7 @@ footer.body-footer .footer-logo-container img {
 .testimonial .container {
   width: 100%;
   margin: 0;
+  padding: 0 1rem;
 }
 
 @media screen and (min-width: 1000px) {
@@ -3434,9 +3503,10 @@ footer.body-footer .footer-logo-container img {
 .three-columns-cards .container {
   width: 100%;
   margin: 0;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 @media screen and (min-width: 1000px) {
@@ -3454,11 +3524,11 @@ footer.body-footer .footer-logo-container img {
 }
 
 .three-columns-cards .card {
-  width: 75%;
+  width: 100%;
   margin: 0.5rem auto;
-  border: solid 1px #e2e5e7;
-  border-radius: 16px;
-  box-shadow: 0 4px 8px #e2e5e7;
+  border: solid 1px #c2c2c2;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px #f5f5f5;
   padding: 1.25rem 3rem;
   text-align: center;
 }
@@ -3466,7 +3536,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .three-columns-cards .card {
     width: calc(33.333% - 20px);
-    margin: 0;
+    margin: 10px;
   }
 }
 
@@ -3539,7 +3609,7 @@ footer.body-footer .footer-logo-container img {
 }
 
 .two-columns-offset .container .image img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .two-columns-offset .container .content {
@@ -3626,7 +3696,7 @@ footer.body-footer .footer-logo-container img {
 }
 
 .two-columns-even .container .image img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .two-columns-even .container .content {
@@ -3739,6 +3809,7 @@ footer.body-footer .footer-logo-container img {
 .two-columns-w-carousel .container {
   width: 100%;
   margin: 0;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3760,7 +3831,7 @@ footer.body-footer .footer-logo-container img {
 
 .two-columns-w-carousel .content {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -3773,7 +3844,7 @@ footer.body-footer .footer-logo-container img {
 
 .two-columns-w-carousel .carousel-container {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
 }
 
 @media screen and (min-width: 1000px) {

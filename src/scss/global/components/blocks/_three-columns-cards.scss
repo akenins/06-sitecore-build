@@ -5,9 +5,10 @@
   .container {
     width: 100%;
     margin: 0;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 
     @include respond-to(desktop) {
       margin: 0 auto;
@@ -21,17 +22,17 @@
   }
 
   .card {
-    width: 75%;
+    width: 100%;
     margin: 0.5rem auto;
-    border: solid 1px $blue-100;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px $blue-100;
+    border: solid 1px color(borders);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px $grey-100;
     padding: 1.25rem 3rem;
     text-align: center;
 
     @include respond-to(desktop) {
       width: calc(33.333% - 20px);
-      margin: 0;
+      margin: 10px;
     }
 
     img {

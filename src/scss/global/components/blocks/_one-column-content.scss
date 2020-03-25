@@ -1,0 +1,22 @@
+.one-column-content {
+  width: 100%;
+  margin-bottom: 6rem;
+
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .content {
+    max-width: 100%;
+  }
+}

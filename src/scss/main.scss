@@ -35,8 +35,6 @@
 //  2. CORE LAYOUT
 //  ===================================
 
-@import 'global/core/layout'; // global/core/_layout.scss
-
 //  ===================================
 //  3. CORE STYLES & TYPOGRAPHY
 //  ===================================
@@ -79,8 +77,10 @@
 @import 'global/components/blocks/featured-ip-cards'; // global/components/blocks/_featured-ip-cards.scss
 @import 'global/components/blocks/featured-resource'; // global/components/blocks/_featured-resource.scss
 @import 'global/components/blocks/footer-cta'; // global/components/blocks/_footer-cta.scss
+@import 'global/components/blocks/full-width-image'; // global/components/blocks/_full-width-image.scss
 @import 'global/components/blocks/industry-picker'; // global/components/blocks/_industry-picker.scss
-@import 'global/components/blocks/logo-bar'; // global/components/blocks/_footer-cta.scss
+@import 'global/components/blocks/logo-bar'; // global/components/blocks/_logo-bar.scss
+@import 'global/components/blocks/one-column-content'; // global/components/blocks/_one-column-content.scss
 @import 'global/components/blocks/related-solutions-cards'; // global/components/blocks/_related-solutions-cards.scss
 @import 'global/components/blocks/solution-picker'; // global/components/blocks/_solution-picker.scss
 @import 'global/components/blocks/team-highlight-carousel'; // global/components/blocks/_team-highlight-carousel.scss

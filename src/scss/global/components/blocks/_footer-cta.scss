@@ -1,9 +1,10 @@
 .footer-cta {
   width: 100%;
+  padding: 0 1rem;
   position: relative;
 
   .container {
-    width: 75%;
+    width: 100%;
     margin: 0 auto 6rem;
     padding: 2rem;
     background-color: $blue-50;
@@ -12,8 +13,13 @@
     text-align: center;
 
     @include respond-to(desktop) {
+      max-width: 968px;
       margin: 0 auto;
       transform: translateY(1.75rem);
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1168px;
     }
 
     a.button {

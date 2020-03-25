@@ -594,94 +594,141 @@
           <ul class="mobile-nav-items">
             <li class="mobile-nav-item">
               <form role="search" method="get" class="search-form" action="#">
-                <button
-                  type="submit"
-                  class="search-submit"
-                  aria-label="Search"
-                ><i class="icon icon-search"></i></button>
-                <input type="search" class="search-input" value placeholder="Search..." required />
+                <button type="submit" class="search-submit" aria-label="Search">
+                  <i class="icon icon-search"></i>
+                </button>
+                <input
+                  type="search"
+                  class="search-input"
+                  value
+                  placeholder="Search..."
+                  required
+                />
               </form>
-              <li class="mobile-nav-item has-mobile-dropdown">
-                <a href="/">Industries</a>
-                <button class="mobile-nav-arrow">
-                  <i class="icon icon-chevron-1"></i>
-                </button>
-                <div class="mobile-dropdown">
-                  <ul>
-                    <li class="mobile-nav-subitem"><a href="#">Construction</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Financial Services</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Insurance</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Healthcare</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Retail</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Manufacturing</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Oil &amp; Gas</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Transportation &amp; Distribution</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mobile-nav-item">
-                <a href="/">Solutions</a>
-                <button class="mobile-nav-arrow">
-                  <i class="icon icon-chevron-1"></i>
-                </button>
-                <div class="mobile-dropdown">
-                  <ul>
-                    <li class="mobile-nav-subitem"><a href="#">Information</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Experience</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Infrastructure Modernization</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Operational Excellence</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Collaboration</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Innovation</a></li>
-                  </ul>
-                </div>
-              </li>
-              </li>
-              <li class="mobile-nav-item">
-                <a href="/">Technology</a>
-                <button class="mobile-nav-arrow">
-                  <i class="icon icon-chevron-1"></i>
-                </button>
-                <div class="mobile-dropdown">
-                  <ul>
-                    <li class="mobile-nav-subitem"><a href="#">Microsoft Azure</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Microsoft Dynamics 365</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Microsoft Power Platform</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Microsoft Office 365</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">IP Accelerators</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Strategic Alliances</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mobile-nav-item">
-                <a href="/">Community</a>
-                <button class="mobile-nav-arrow">
-                  <i class="icon icon-chevron-1"></i>
-                </button>
-                <div class="mobile-dropdown">
-                  <ul>
-                    <li class="mobile-nav-subitem"><a href="#">Thought Leadership</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Events</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Resource Center</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mobile-nav-item">
-                <a href="/">About Us</a>
-                <button class="mobile-nav-arrow">
-                  <i class="icon icon-chevron-1"></i>
-                </button><div class="mobile-dropdown">
-                  <ul>
-                    <li class="mobile-nav-subitem"><a href="#">Our Culture</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Our Story</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Our Team</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Our Approach</a></li>
-                    <li class="mobile-nav-subitem"><a href="#">Careers</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="mobile-nav-item jcina">
-                <a href="/">日本語</li></a>
-              <li class="mobile-nav-item"><a href="/" class="button">Contact Us</a></li>
+            </li>
+
+            <li class="mobile-nav-item has-mobile-dropdown">
+              <a href="/">Industries</a>
+              <button class="mobile-nav-arrow">
+                <i class="icon icon-chevron-1"></i>
+              </button>
+              <div class="mobile-dropdown">
+                <ul>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Construction</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Financial Services</a>
+                  </li>
+                  <li class="mobile-nav-subitem"><a href="#">Insurance</a></li>
+                  <li class="mobile-nav-subitem"><a href="#">Healthcare</a></li>
+                  <li class="mobile-nav-subitem"><a href="#">Retail</a></li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Manufacturing</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Oil &amp; Gas</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Transportation &amp; Distribution</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="/">Solutions</a>
+              <button class="mobile-nav-arrow">
+                <i class="icon icon-chevron-1"></i>
+              </button>
+              <div class="mobile-dropdown">
+                <ul>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Information</a>
+                  </li>
+                  <li class="mobile-nav-subitem"><a href="#">Experience</a></li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Infrastructure Modernization</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Operational Excellence</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Collaboration</a>
+                  </li>
+                  <li class="mobile-nav-subitem"><a href="#">Innovation</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="mobile-nav-item">
+              <a href="/">Technology</a>
+              <button class="mobile-nav-arrow">
+                <i class="icon icon-chevron-1"></i>
+              </button>
+              <div class="mobile-dropdown">
+                <ul>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Microsoft Azure</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Microsoft Dynamics 365</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Microsoft Power Platform</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Microsoft Office 365</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">IP Accelerators</a>
+                  </li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Strategic Alliances</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="/">Community</a>
+              <button class="mobile-nav-arrow">
+                <i class="icon icon-chevron-1"></i>
+              </button>
+              <div class="mobile-dropdown">
+                <ul>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Thought Leadership</a>
+                  </li>
+                  <li class="mobile-nav-subitem"><a href="#">Events</a></li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Resource Center</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="/">About Us</a>
+              <button class="mobile-nav-arrow">
+                <i class="icon icon-chevron-1"></i>
+              </button>
+              <div class="mobile-dropdown">
+                <ul>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Our Culture</a>
+                  </li>
+                  <li class="mobile-nav-subitem"><a href="#">Our Story</a></li>
+                  <li class="mobile-nav-subitem"><a href="#">Our Team</a></li>
+                  <li class="mobile-nav-subitem">
+                    <a href="#">Our Approach</a>
+                  </li>
+                  <li class="mobile-nav-subitem"><a href="#">Careers</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mobile-nav-item jcina">
+              <a href="/">日本語</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a href="/" class="button">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -859,6 +906,66 @@
       </div>
       <div class="card-container">
         <!-- Begin Repeater -->
+        <div class="card">
+          <div class="content">
+            <!-- Single Line Text -->
+            <h3>Information</h3>
+            <!-- Selectable from media library, alt text editable-->
+            <img src="https://picsum.photos/120/120" alt="placeholder" />
+            <!-- Multiline Text-->
+            <p>
+              Collect and leverage all data and information in the organization
+              regardless of source system, business function, structured data,
+              or unstructured content
+            </p>
+          </div>
+          <a href="#" class="button">Learn More</a>
+        </div>
+        <div class="card">
+          <div class="content">
+            <!-- Single Line Text -->
+            <h3>Information</h3>
+            <!-- Selectable from media library, alt text editable-->
+            <img src="https://picsum.photos/120/120" alt="placeholder" />
+            <!-- Multiline Text-->
+            <p>
+              Collect and leverage all data and information in the organization
+              regardless of source system, business function, structured data,
+              or unstructured content
+            </p>
+          </div>
+          <a href="#" class="button">Learn More</a>
+        </div>
+        <div class="card">
+          <div class="content">
+            <!-- Single Line Text -->
+            <h3>Information</h3>
+            <!-- Selectable from media library, alt text editable-->
+            <img src="https://picsum.photos/120/120" alt="placeholder" />
+            <!-- Multiline Text-->
+            <p>
+              Collect and leverage all data and information in the organization
+              regardless of source system, business function, structured data,
+              or unstructured content
+            </p>
+          </div>
+          <a href="#" class="button">Learn More</a>
+        </div>
+        <div class="card">
+          <div class="content">
+            <!-- Single Line Text -->
+            <h3>Information</h3>
+            <!-- Selectable from media library, alt text editable-->
+            <img src="https://picsum.photos/120/120" alt="placeholder" />
+            <!-- Multiline Text-->
+            <p>
+              Collect and leverage all data and information in the organization
+              regardless of source system, business function, structured data,
+              or unstructured content
+            </p>
+          </div>
+          <a href="#" class="button">Learn More</a>
+        </div>
         <div class="card">
           <div class="content">
             <!-- Single Line Text -->
@@ -1236,6 +1343,26 @@
             </p>
             <a href="#" class="button">Learn More</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="full-width-image">
+      <div class="container">
+        <img src="https://picsum.photos/1200/300" alt="placeholder" />
+      </div>
+    </section>
+
+    <section class="one-column-content">
+      <div class="container">
+        <div class="content">
+          <h2 style="text-align: center;">Heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            quisquam est deserunt dicta eius labore maxime possimus tenetur
+            beatae vero, blanditiis corporis minima animi qui reiciendis ipsum
+            odit enim optio?
+          </p>
         </div>
       </div>
     </section>

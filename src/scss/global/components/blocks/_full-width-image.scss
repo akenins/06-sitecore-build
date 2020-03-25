@@ -1,35 +1,24 @@
-.featured-image {
+.full-width-image {
   width: 100%;
   margin-bottom: 6rem;
 
   .container {
     width: 100%;
-    margin: 0;
     padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
     text-align: center;
 
     @include respond-to(desktop) {
-      margin: 0 auto;
       max-width: 1000px;
+      margin: 0 auto;
     }
 
     @include respond-to(large-desktop) {
       max-width: 1200px;
     }
-  }
 
-  .heading-container {
-  }
-
-  .button-container {
-    margin-bottom: 2rem;
-  }
-
-  .image-container {
     img {
       max-width: 100%;
+      height: auto;
     }
   }
 }

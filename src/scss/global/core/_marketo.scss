@@ -63,7 +63,7 @@
     position: absolute;
     top: 5%;
     left: 12px;
-    width: 100% !important;
+    width: auto !important;
     transition: all 0.1s ease-out;
 
     // &.mktoFieldFocused,
@@ -71,6 +71,9 @@
     //   top: 5%;
     //   font-size: 0.75rem;
     // }
+  }
+  .mktoForm .mktoRequiredField label.mktoLabel {
+    font-weight: fw(regular);
   }
 
   input[type='text']:focus,
@@ -120,6 +123,7 @@
     display: block;
     position: relative;
     user-select: none;
+    padding: 0 !important;
 
     input {
       position: absolute;
