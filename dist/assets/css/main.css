@@ -2480,8 +2480,8 @@ footer.body-footer .footer-logo-container img {
 }
 
 .feature-carousel .feature-container .dot {
-  width: 3px;
-  height: 3px;
+  width: 5px;
+  height: 5px;
 }
 
 .featured-image {
@@ -3220,8 +3220,8 @@ footer.body-footer .footer-logo-container img {
 }
 
 .team-highlight-carousel .flickity-page-dots .dot {
-  width: 3px;
-  height: 3px;
+  width: 5px;
+  height: 5px;
 }
 
 .testimonial {
