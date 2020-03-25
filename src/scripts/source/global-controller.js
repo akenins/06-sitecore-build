@@ -44,6 +44,6 @@ const globalController = (function($) {
   return global
 })(jQuery)
 
-jQuery(document).ready(function() {
+$(window).on('load', function() {
   globalController.init()
 })

@@ -2032,6 +2032,7 @@ footer.body-footer .nav-container {
   flex-direction: row;
   width: 100%;
   margin: 1rem 0.625rem;
+  padding: 0 1rem;
 }
 
 @media screen and (min-width: 760px) {

@@ -9,6 +9,7 @@ footer.body-footer {
     flex-direction: row;
     width: 100%;
     margin: 1rem 0.625rem;
+    padding: 0 1rem;
 
     @include respond-to(medium) {
       max-width: 760px;
