@@ -2,6 +2,7 @@ $(document).ready(function() {
   $('.main-carousel').flickity({
     cellAlign: 'left',
     contain: true,
+    autoPlay: true,
   })
 
   $('.highlights').flickity({
@@ -26,7 +27,7 @@ $(document).ready(function() {
   const $pagers = $('.button-group.button-group--cells')
 
   // generate numbered buttons equal to the number of slides
-  for (let i = 1; i <= $carousel.children.length; i++) {
+  for (let i = 1; i <= $carousel.find('.carousel-cell').length; i++) {
     $pagers.append('<button class="button">' + i + '</button>')
   }
 
