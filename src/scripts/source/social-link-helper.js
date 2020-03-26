@@ -34,12 +34,12 @@ let SocialLinkHelper = (function($) {
   }
 
   function showSocialLinkPopover() {
-    popoverLink.children('.share-popover').fadeToggle(100)
+    popoverLink.find('.share-popover').fadeToggle(100)
   }
 
   jQuery(document).mouseup(function(e) {
     if (!popoverLink.is(e.target) && popoverLink.has(e.target).length === 0) {
-      popoverLink.children('.share-popover').fadeOut(100)
+      popoverLink.find('.share-popover').fadeOut(100)
     }
   })
 
