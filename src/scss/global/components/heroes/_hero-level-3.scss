@@ -1,6 +1,6 @@
 .hero-level-3 {
   width: 100%;
-  margin-top: 90px;
+  //margin-top: 90px;
   margin-bottom: 6rem;
 
   .container {
@@ -24,6 +24,7 @@
   }
 
   .heading-container {
+    margin-top: 90px;
     background-color: $grey-100;
     padding: 2rem 4rem;
     width: calc(60% - 20px);
@@ -45,6 +46,7 @@
   }
 
   .solution-icon-container {
+    margin-top: 90px;
     width: calc(40% - 20px);
 
     .solution-icon {

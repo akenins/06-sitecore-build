@@ -93,7 +93,8 @@ address {
 }
 
 p {
-  line-height: 1.5;
+  letter-spacing: 0.1px;
+  line-height: 1.75;
 
   &:first-child {
     margin-top: 0;
@@ -161,7 +162,9 @@ section {
     padding-top: 1rem;
 
     li {
-      font-size: 0.825rem;
+      font-size: 0.925rem;
+      letter-spacing: 0.1px;
+      line-height: 1.75;
     }
   }
 
@@ -185,7 +188,7 @@ section {
         content: '\2022'; /* \2022 is the CSS Code/unicode for a bullet */
         color: color(brand);
         font-size: 3rem;
-        line-height: 1rem;
+        line-height: 1.5rem;
         margin-left: -2rem;
       }
     }
