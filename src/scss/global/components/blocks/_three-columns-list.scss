@@ -5,6 +5,7 @@
   .container {
     width: 100%;
     margin: 0;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,11 +21,12 @@
     }
   }
 
-  .card-container {
+  .card {
     width: 100%;
 
     @include respond-to(desktop) {
-      width: 25%;
+      width: calc(33% - 20px);
+      margin: 0 10px;
     }
 
     .hr {

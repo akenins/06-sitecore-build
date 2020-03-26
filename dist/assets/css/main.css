@@ -3458,6 +3458,7 @@ footer.body-footer .footer-logo-container img {
 .three-columns-list .container {
   width: 100%;
   margin: 0;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3477,22 +3478,23 @@ footer.body-footer .footer-logo-container img {
   }
 }
 
-.three-columns-list .card-container {
+.three-columns-list .card {
   width: 100%;
 }
 
 @media screen and (min-width: 1000px) {
-  .three-columns-list .card-container {
-    width: 25%;
+  .three-columns-list .card {
+    width: calc(33% - 20px);
+    margin: 0 10px;
   }
 }
 
-.three-columns-list .card-container .hr {
+.three-columns-list .card .hr {
   width: 100%;
   border-bottom: 2px solid #c2c2c2;
 }
 
-.three-columns-list .card-container h3 {
+.three-columns-list .card h3 {
   margin: 0 0 1rem 1rem;
 }
 
