@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Gulp workflow for Hitachi Solutions",
   "author": "Aleks Kenins",
+  "email": "alekskenins@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akenins/06-sitecore-build"
+  },
   "config": {
     "dist": "dist",
     "scripts": "src/scripts/source",
