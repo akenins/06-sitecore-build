@@ -43,7 +43,6 @@ let MobileNavController = (function($) {
       close()
       mobileNav.removeClass('mobile-nav-open')
     }
-    console.log(mobileNavActiveAreaSelector.length)
   }
 
   function onClickMenuItemToggle(e) {
