@@ -5,7 +5,7 @@
   "author": "Aleks Kenins <alekskenins@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akenins/06-sitecore-build"
+    "url": "https://github.com/akenins/06-sitecore-build.git"
   },
   "config": {
     "dist": "dist",

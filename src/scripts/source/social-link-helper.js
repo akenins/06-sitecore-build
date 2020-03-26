@@ -1,10 +1,7 @@
-$(function() {
+let SocialLinkHelper = (function($) {
   const popupWidth = 768
   const popupHeight = popupWidth / (16 / 9)
   let sharePopoverLink = $('.share')
-
-  jQuery(document).on('click', '.social-share-link', onClickSocialLink)
-  jQuery(document).on('click', '.share', showSocialLinkPopover)
 
   function onClickSocialLink(e) {
     let clicked = e.currentTarget
@@ -23,6 +20,8 @@ $(function() {
     sharePopoverLink.children('.share-popover').fadeToggle(100)
   }
 
+  jQuery(document).on('click', '.social-share-link', onClickSocialLink)
+  jQuery(document).on('click', '.share', showSocialLinkPopover)
   jQuery(document).mouseup(function(e) {
     if (
       !sharePopoverLink.is(e.target) &&
@@ -31,4 +30,6 @@ $(function() {
       sharePopoverLink.children('.share-popover').fadeOut(100)
     }
   })
-})
+})(jQuery)
+
+export default SocialLinkHelper

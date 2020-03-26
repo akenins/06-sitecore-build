@@ -2588,6 +2588,7 @@ footer.body-footer .footer-logo-container img {
 }
 
 .featured-ip-cards .card-container .card .content {
+  width: 100%;
   flex: 1 0 auto;
 }
 
@@ -4839,14 +4840,14 @@ footer.body-footer .footer-logo-container img {
 .blog-post .post-content .post-share {
   width: 100%;
   align-self: start;
-  position: sticky;
+  position: relative;
   top: calc(1rem + 60px);
 }
 
 @media screen and (min-width: 1000px) {
   .blog-post .post-content .post-share {
     width: calc(20% - 20px);
-    position: relative;
+    position: sticky;
   }
 }
 

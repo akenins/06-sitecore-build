@@ -64,12 +64,12 @@
     .post-share {
       width: 100%;
       align-self: start;
-      position: sticky;
+      position: relative;
       top: calc(1rem + 60px);
 
       @include respond-to(desktop) {
         width: calc(20% - 20px);
-        position: relative;
+        position: sticky;
       }
 
       .h3 {
