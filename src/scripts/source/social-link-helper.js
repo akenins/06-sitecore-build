@@ -43,6 +43,8 @@ let SocialLinkHelper = (function($) {
     }
   })
 
+  thing.on('click', popoverLink, showSocialLinkPopover)
+
   document.addEventListener('DOMContentLoaded', onDocumentReady)
   $(activate)
 })(jQuery)
