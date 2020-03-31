@@ -9,6 +9,7 @@
   .container {
     min-height: 450px;
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -42,6 +43,7 @@
     background-color: $white;
     padding: 2rem;
     z-index: z(block-content-floating);
+    width: 100%;
 
     @include respond-to(medium) {
       padding: 4rem;
@@ -79,8 +81,12 @@
 
   .resource-hero-image {
     z-index: 100;
-    display: flex;
-    width: calc(50% - 20px);
+    display: none;
+
+    @include respond-to(desktop) {
+      display: flex;
+      width: calc(50% - 20px);
+    }
 
     img {
       align-self: center;

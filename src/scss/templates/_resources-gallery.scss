@@ -23,7 +23,7 @@
   .resources-grid {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     @include respond-to(medium) {
       flex-flow: row wrap;
@@ -33,7 +33,7 @@
   .resource-card {
     width: 100%;
     border: 1px solid color(borders);
-    margin-bottom: 3rem;
+    margin: 0 10px 3rem;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(17, 17, 17, 0.1);
