@@ -23,7 +23,7 @@
   .resources-grid {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     @include respond-to(medium) {
       flex-flow: row wrap;
@@ -33,7 +33,7 @@
   .resource-card {
     width: 100%;
     border: 1px solid color(borders);
-    margin: 0 10px 3rem;
+    margin: 0 0 3rem;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(17, 17, 17, 0.1);
@@ -46,13 +46,11 @@
       width: calc(50% - 10px);
     }
 
-    @include respond-to(large-desktop) {
-      width: calc(33.333% - 10px);
-    }
-
     .image-container {
       img {
         box-shadow: 0 4px 16px rgba(17, 17, 17, 0.2);
+        max-height: 150px;
+        max-width: 225px;
       }
       margin-right: 20px;
     }
@@ -64,14 +62,14 @@
       justify-content: flex-end;
 
       .resource-heading {
-        text-transform: uppercase;
+        line-height: 1.5rem;
         font-size: 1.25rem;
         font-weight: fw(bold);
         letter-spacing: 0.25px;
       }
       .resource-title {
         font-size: 0.825rem;
-        margin-top: 0;
+        margin-top: 0.5rem;
         color: $grey-700;
       }
 
