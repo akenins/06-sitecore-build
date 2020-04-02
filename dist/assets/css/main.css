@@ -1749,12 +1749,16 @@ a.text-button {
 
 .global-header .dropdown .dropdown-title {
   display: block;
-  margin: 0 0 1.5rem 1.5rem;
-  text-transform: uppercase;
+  margin: 1rem 0 0.5rem 1.5rem;
   font-size: 0.75rem;
   color: #303030;
   font-weight: 700;
-  letter-spacing: 1.25px;
+  letter-spacing: 0.25px;
+  transition: color 0.3s ease-out;
+}
+
+.global-header .dropdown .dropdown-title:hover {
+  color: #1e4799;
 }
 
 .global-header .dropdown .dropdown-inner {

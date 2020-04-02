@@ -120,12 +120,16 @@
 
     .dropdown-title {
       display: block;
-      margin: 0 0 1.5rem 1.5rem;
-      text-transform: uppercase;
+      margin: 1rem 0 0.5rem 1.5rem;
       font-size: 0.75rem;
       color: $grey-900;
       font-weight: fw(bold);
-      letter-spacing: 1.25px;
+      letter-spacing: 0.25px;
+      transition: color 0.3s ease-out;
+
+      &:hover {
+        color: $blue-500;
+      }
     }
 
     .dropdown-inner {
