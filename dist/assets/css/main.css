@@ -4861,6 +4861,7 @@ footer.body-footer .footer-logo-container img {
   display: block;
   margin: 1rem auto;
   max-width: 100%;
+  height: auto !important;
 }
 
 .blog-post .post-content .post-share {
