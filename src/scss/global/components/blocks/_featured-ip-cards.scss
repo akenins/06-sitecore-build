@@ -61,6 +61,8 @@
         text-align: left;
 
         li {
+          padding: 0.5rem 0.5rem 0 2rem;
+
           &:before {
             color: $green-500;
           }

@@ -2598,6 +2598,10 @@ footer.body-footer .footer-logo-container img {
   text-align: left;
 }
 
+.featured-ip-cards .card-container .card ul li {
+  padding: 0.5rem 0.5rem 0 2rem;
+}
+
 .featured-ip-cards .card-container .card ul li:before {
   color: #82c341;
 }
@@ -4851,6 +4855,12 @@ footer.body-footer .footer-logo-container img {
   .blog-post .post-content .post-body {
     width: calc(80% - 20px);
   }
+}
+
+.blog-post .post-content .post-body img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
 }
 
 .blog-post .post-content .post-share {

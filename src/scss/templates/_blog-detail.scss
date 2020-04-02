@@ -59,6 +59,12 @@
       @include respond-to(desktop) {
         width: calc(80% - 20px);
       }
+
+      img {
+        display: block;
+        margin: 1rem auto;
+        max-width: 100%;
+      }
     }
 
     .post-share {
