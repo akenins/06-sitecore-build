@@ -284,6 +284,7 @@
 
   &.animated.headroom--pinned.headroom--not-top {
     animation-name: headerSlideDown;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
   }
 
   &.headroom--not-top {
