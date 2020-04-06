@@ -1,7 +1,5 @@
 .hero-level-3 {
   width: 100%;
-  //margin-top: 90px;
-  margin-bottom: 6rem;
 
   .container {
     width: 100%;
@@ -50,13 +48,17 @@
     width: calc(40% - 20px);
 
     .solution-icon {
+      position: relative;
       background-color: $blue-500;
       height: 300px;
       width: 300px;
       border-radius: 150px;
 
       img {
+        position: absolute;
         max-width: 100%;
+        top: 50px;
+        left: 50px;
       }
     }
   }
