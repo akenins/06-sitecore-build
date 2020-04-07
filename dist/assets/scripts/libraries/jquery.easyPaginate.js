@@ -1,5 +1,5 @@
-;(function($) {
-  $.fn.easyPaginate = function(options) {
+;(function ($) {
+  $.fn.easyPaginate = function (options) {
     var defaults = {
       paginateElement: 'li',
       hashPage: 'page',
@@ -16,7 +16,7 @@
       nextButtonText: '>',
     }
 
-    return this.each(function(instance) {
+    return this.each(function (instance) {
       var plugin = {}
       plugin.el = $(this)
       plugin.el.addClass('easyPaginateList')
@@ -27,13 +27,13 @@
         currentPage: 1,
       }
 
-      var getNbOfPages = function() {
+      var getNbOfPages = function () {
         return Math.ceil(
           plugin.settings.objElements.length / plugin.settings.elementsPerPage
         )
       }
 
-      var displayNav = function() {
+      var displayNav = function () {
         htmlNav = '<div class="easyPaginateNav">'
 
         if (plugin.settings.firstButton) {
@@ -52,19 +52,31 @@
             '</a>'
         }
 
-        for (i = 1; i <= plugin.settings.pages; i++) {
-          htmlNav +=
-            '<a href="#' +
-            plugin.settings.hashPage +
-            ':' +
-            i +
-            '" title="Page ' +
-            i +
-            '" rel="' +
-            i +
-            '" class="page">' +
-            i +
-            '</a>'
+        if (plugin.settings.pages < 10) {
+          for (i = 1; i <= plugin.settings.pages; i++) {
+            htmlNav +=
+              '<a href="#' +
+              plugin.settings.hashPage +
+              ':' +
+              i +
+              '" title="Page ' +
+              i +
+              '" rel="' +
+              i +
+              '" class="page">' +
+              i +
+              '</a>'
+          }
+        } else {
+          for (i = 1; i <= plugin.settings.pages; i++) {
+            if (i <= 6 || i >= plugin.settings.pages - 1) {
+              htmlNav.append(
+                `<a href="#${plugin.settings.hashPage}:${i}" title="${i}" rel="${i}" class="page>${i}</a>`
+              )
+            } else if (i === 7) {
+              htmlNav.append(`<a href="javascript:void(0)>&hellip;</a>`)
+            }
+          }
         }
 
         if (plugin.settings.nextButton) {
@@ -102,12 +114,12 @@
             ' .easyPaginateNav a.first,' +
             elSelector +
             ' .easyPaginateNav a.last'
-        ).on('click', function(e) {
+        ).on('click', function (e) {
           e.preventDefault()
           displayPage($(this).attr('rel'))
         })
 
-        $(elSelector + ' .easyPaginateNav a.prev').on('click', function(e) {
+        $(elSelector + ' .easyPaginateNav a.prev').on('click', function (e) {
           e.preventDefault()
           page =
             plugin.settings.currentPage > 1
@@ -116,7 +128,7 @@
           displayPage(page)
         })
 
-        $(elSelector + ' .easyPaginateNav a.next').on('click', function(e) {
+        $(elSelector + ' .easyPaginateNav a.next').on('click', function (e) {
           e.preventDefault()
           page =
             plugin.settings.currentPage < plugin.settings.pages
@@ -126,7 +138,7 @@
         })
       }
 
-      var displayPage = function(page, forceEffect) {
+      var displayPage = function (page, forceEffect) {
         if (plugin.settings.currentPage != page) {
           plugin.settings.currentPage = parseInt(page)
           offsetStart = (page - 1) * plugin.settings.elementsPerPage
@@ -178,7 +190,7 @@
         }
       }
 
-      var transition_default = function(offsetStart, offsetEnd) {
+      var transition_default = function (offsetStart, offsetEnd) {
         plugin.currentElements.hide()
         plugin.currentElements = plugin.settings.objElements
           .slice(offsetStart, offsetEnd)
@@ -187,7 +199,7 @@
         plugin.currentElements.show()
       }
 
-      var transition_fade = function(offsetStart, offsetEnd) {
+      var transition_fade = function (offsetStart, offsetEnd) {
         plugin.currentElements.fadeOut()
         plugin.currentElements = plugin.settings.objElements
           .slice(offsetStart, offsetEnd)
@@ -196,13 +208,13 @@
         plugin.currentElements.fadeIn()
       }
 
-      var transition_slide = function(offsetStart, offsetEnd) {
+      var transition_slide = function (offsetStart, offsetEnd) {
         plugin.currentElements.animate(
           {
             'margin-left': plugin.settings.slideOffset * -1,
             opacity: 0,
           },
-          function() {
+          function () {
             $(this).remove()
           }
         )
@@ -223,16 +235,16 @@
         })
       }
 
-      var transition_climb = function(offsetStart, offsetEnd) {
-        plugin.currentElements.each(function(i) {
+      var transition_climb = function (offsetStart, offsetEnd) {
+        plugin.currentElements.each(function (i) {
           var $objThis = $(this)
-          setTimeout(function() {
+          setTimeout(function () {
             $objThis.animate(
               {
                 'margin-left': plugin.settings.slideOffset * -1,
                 opacity: 0,
               },
-              function() {
+              function () {
                 $(this).remove()
               }
             )
@@ -249,9 +261,9 @@
           'min-width': plugin.el.width() / 2,
         })
         plugin.el.html(plugin.currentElements)
-        plugin.currentElements.each(function(i) {
+        plugin.currentElements.each(function (i) {
           var $objThis = $(this)
-          setTimeout(function() {
+          setTimeout(function () {
             $objThis.animate({
               'margin-left': 0,
               opacity: 1,
