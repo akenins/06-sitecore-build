@@ -2148,9 +2148,9 @@ footer.body-footer .social-links {
 }
 
 footer.body-footer .social-links .link {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
   margin-right: 0.25rem;
   text-align: center;
 }
@@ -2173,6 +2173,15 @@ footer.body-footer .social-links .link#instagram {
 
 footer.body-footer .social-links .link#linkedin {
   background-color: #2d4f6f;
+}
+
+footer.body-footer .social-links .link#medium {
+  background-color: #12100e;
+}
+
+footer.body-footer .social-links .link img {
+  width: 12px;
+  margin-top: 5px;
 }
 
 footer.body-footer .copyright-tos {
@@ -3670,7 +3679,7 @@ footer.body-footer .footer-logo-container img {
 
 .two-columns-even {
   width: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .two-columns-even.section-gradient {
@@ -4332,7 +4341,7 @@ footer.body-footer .footer-logo-container img {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 6rem;
+  padding: 0 1rem 6rem;
   background-image: url("../images/png/level-3-hero-pattern.png");
   background-repeat: no-repeat;
   background-position: 100% 88%;
@@ -4361,7 +4370,7 @@ footer.body-footer .footer-logo-container img {
 }
 
 .hero-level-3 .heading-container h1 {
-  max-width: 75%;
+  max-width: 100%;
 }
 
 @media screen and (min-width: 1000px) {
@@ -4801,31 +4810,8 @@ footer.body-footer .footer-logo-container img {
   fill: #ed1b34;
 }
 
-.blog-gallery .pgn-button-row .pgn-button-group {
-  display: inline-block;
-  vertical-align: bottom;
-}
-
-.blog-gallery .pgn-button-row .pgn-button-group:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.blog-gallery .pgn-button-row .pgn-button-row {
-  text-align: center;
-}
-
-@media screen and (min-width: 1000px) {
-  .blog-gallery .pgn-button-row .pgn-button-row {
-    position: absolute;
-    top: -10px;
-    right: 0;
-  }
-}
-
-.blog-gallery .pgn-button-row .pgn-button-row .pgn-button--previous,
-.blog-gallery .pgn-button-row .pgn-button-row .pgn-button--next {
+.blog-gallery .pgn-button-row .pgn-button--previous,
+.blog-gallery .pgn-button-row .pgn-button--next {
   font-weight: 700;
   color: #ed1b34;
 }

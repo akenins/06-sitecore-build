@@ -5,7 +5,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 6rem;
+    padding: 0 1rem 6rem;
     background-image: url('../images/png/level-3-hero-pattern.png');
     background-repeat: no-repeat;
     background-position: 100% 88%;
@@ -29,7 +29,7 @@
     align-self: center;
 
     h1 {
-      max-width: 75%;
+      max-width: 100%;
 
       @include respond-to(desktop) {
         line-height: 72px;

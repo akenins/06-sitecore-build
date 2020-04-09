@@ -14,6 +14,7 @@
       prevButtonText: '<',
       nextButton: true,
       nextButtonText: '>',
+      condense: false,
     }
 
     return this.each(function (instance) {
@@ -34,54 +35,41 @@
       }
 
       var displayNav = function () {
-        htmlNav = '<div class="easyPaginateNav">'
+        htmlNav = '<div class="easyPaginateNav pgn-button-row">'
 
         if (plugin.settings.firstButton) {
           htmlNav +=
             '<a href="#' +
             plugin.settings.hashPage +
-            ':1" title="First page" rel="1" class="first">' +
+            ':1" title="First page" rel="1" class="first pgn-button pgn-button--previous">' +
             plugin.settings.firstButtonText +
             '</a>'
         }
 
         if (plugin.settings.prevButton) {
           htmlNav +=
-            '<a href="" title="Previous" rel="" class="prev">' +
+            '<a href="" title="Previous" rel="" class="prev pgn-button pgn-button--previous">' +
             plugin.settings.prevButtonText +
             '</a>'
         }
 
-        if (plugin.settings.pages < 10) {
+        if (plugin.settings.condense && plugin.settings.pages >= 10) {
           for (i = 1; i <= plugin.settings.pages; i++) {
-            htmlNav +=
-              '<a href="#' +
-              plugin.settings.hashPage +
-              ':' +
-              i +
-              '" title="Page ' +
-              i +
-              '" rel="' +
-              i +
-              '" class="page">' +
-              i +
-              '</a>'
+            if (i <= 6 || i >= plugin.settings.pages - 1) {
+              htmlNav += `<a href="#${plugin.settings.hashPage}:${i}" title="Page ${i}" rel="${i}" class="page pgn-button">${i}</a>`
+            } else if (i === 7) {
+              htmlNav += `<a href="javascript:void(0);" class="pgn-button">&hellip;</a>`
+            }
           }
         } else {
           for (i = 1; i <= plugin.settings.pages; i++) {
-            if (i <= 6 || i >= plugin.settings.pages - 1) {
-              htmlNav.append(
-                `<a href="#${plugin.settings.hashPage}:${i}" title="${i}" rel="${i}" class="page>${i}</a>`
-              )
-            } else if (i === 7) {
-              htmlNav.append(`<a href="javascript:void(0)>&hellip;</a>`)
-            }
+            htmlNav += `<a href="#${plugin.settings.hashPage}:${i}" title="Page ${i}" rel="${i}" class="page pgn-button">${i}</a>`
           }
         }
 
         if (plugin.settings.nextButton) {
           htmlNav +=
-            '<a href="" title="Next" rel="" class="next">' +
+            '<a href="" title="Next" rel="" class="next pgn-button pgn-button--next">' +
             plugin.settings.nextButtonText +
             '</a>'
         }
@@ -94,7 +82,7 @@
             plugin.settings.pages +
             '" title="Last page" rel="' +
             plugin.settings.pages +
-            '" class="last">' +
+            '" class="last  pgn-button pgn-button--next">' +
             plugin.settings.lastButtonText +
             '</a>'
         }

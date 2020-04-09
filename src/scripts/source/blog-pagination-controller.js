@@ -1,8 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $('#easyPaginate').easyPaginate({
     paginateElement: 'article',
-    elementsPerPage: 5,
-    effect: 'climb',
+    elementsPerPage: 1,
+    effect: 'default',
+    condense: true,
   })
 
   $('.easyPaginateNav').appendTo('#easyPagenatNav')

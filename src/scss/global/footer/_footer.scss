@@ -101,9 +101,9 @@ footer.body-footer {
     }
 
     .link {
-      width: 20px;
-      height: 20px;
-      border-radius: 10px;
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
       margin-right: 0.25rem;
       text-align: center;
 
@@ -125,6 +125,15 @@ footer.body-footer {
 
       &#linkedin {
         background-color: #2d4f6f;
+      }
+
+      &#medium {
+        background-color: #12100e;
+      }
+
+      img {
+        width: 12px;
+        margin-top: 5px;
       }
     }
   }
