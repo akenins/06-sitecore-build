@@ -2155,35 +2155,6 @@ footer.body-footer .social-links .link {
   text-align: center;
 }
 
-footer.body-footer .social-links .link#facebook {
-  background-color: #1e4799;
-}
-
-footer.body-footer .social-links .link#twitter {
-  background-color: #68c6ef;
-}
-
-footer.body-footer .social-links .link#youtube {
-  background-color: #ed1b34;
-}
-
-footer.body-footer .social-links .link#instagram {
-  background-color: #ff608a;
-}
-
-footer.body-footer .social-links .link#linkedin {
-  background-color: #2d4f6f;
-}
-
-footer.body-footer .social-links .link#medium {
-  background-color: #12100e;
-}
-
-footer.body-footer .social-links .link img {
-  width: 12px;
-  margin-top: 5px;
-}
-
 footer.body-footer .copyright-tos {
   color: #c2c2c2;
   line-height: 1.5rem;
@@ -2861,7 +2832,7 @@ footer.body-footer .footer-logo-container img {
 .industry-picker .industry-container .industry-card {
   width: 100%;
   padding: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 16px;
   border: 1px solid #c2c2c2;
   box-shadow: 0 4px 8px #e2e5e7;
@@ -2870,7 +2841,7 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .industry-picker .industry-container .industry-card {
-    width: calc(25% - 10px);
+    width: calc(33.333% - 15px);
   }
 }
 

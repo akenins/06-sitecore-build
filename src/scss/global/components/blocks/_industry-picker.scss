@@ -72,14 +72,14 @@
     .industry-card {
       width: 100%;
       padding: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       border-radius: 16px;
       border: 1px solid color(borders);
       box-shadow: 0 4px 8px $blue-100;
       text-align: center;
 
       @include respond-to(desktop) {
-        width: calc(25% - 10px);
+        width: calc(33.333% - 15px);
       }
 
       a {
