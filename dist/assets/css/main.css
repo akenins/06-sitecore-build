@@ -4438,6 +4438,7 @@ footer.body-footer .footer-logo-container img {
 .hero-resource .heading-container {
   display: flex;
   align-self: center;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 0;
