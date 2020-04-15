@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Stylesheet Example</title>
+  </head>
+  <body>
+    <style>
+      @keyframes swipe {
+        0% {
+          opacity: 0;
+          transform: translateX(80px) rotate(10deg);
+        }
+        11% {
+          opacity: 1;
+        }
+        22% {
+          opacity: 1;
+        }
+        33% {
+          opacity: 0;
+          transform: translateX(0) rotate(-10deg);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(0);
+        }
+      }
+      img {
+        animation-name: swipe;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.17, 0.67, 0.5, 1);
+      }
+    </style>
+    <section style="margin: 5rem; padding: 2rem; background-color: #f8f8f9;">
+      <img
+        src="./assets/images/svg/swipeable.svg"
+        alt="placeholder"
+        style="height: 32px;"
+      />
+    </section>
+  </body>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/headroom.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/flickity.pkgd.min.js"
+  ></script>
+  <script type="text/javascript" src="./assets/scripts/site/main.js"></script>
+</html>

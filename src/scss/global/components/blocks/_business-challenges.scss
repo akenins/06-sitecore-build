@@ -90,43 +90,6 @@
     }
   }
 
-  .button {
-    display: inline-block;
-    padding: 0 0.25rem;
-    margin: 0 4px;
-    font-size: 0.825rem;
-    border: 0;
-    border-radius: 6px;
-    background-color: transparent;
-    line-height: 0.825rem;
-    color: $grey-500;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    &:disabled {
-      opacity: 0.3;
-    }
-
-    &.is-selected {
-      color: $black;
-    }
-
-    svg {
-      width: 0.5rem;
-      height: 0.5rem;
-
-      .arrow {
-        fill: color(brand);
-      }
-    }
-  }
-
   .button-group {
     display: inline-block;
     vertical-align: bottom;
@@ -153,10 +116,59 @@
       right: 0;
     }
 
+    .button {
+      display: inline-block;
+      padding: 0 0.25rem;
+      margin: 0 4px;
+      font-size: 0.825rem;
+      border: 0;
+      border-radius: 6px;
+      background-color: transparent;
+      line-height: 0.825rem;
+      color: $grey-500;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:disabled {
+        opacity: 0.3;
+      }
+
+      &.is-selected {
+        color: $black;
+      }
+
+      svg {
+        width: 0.5rem;
+        height: 0.5rem;
+
+        .arrow {
+          fill: color(brand);
+        }
+      }
+    }
+
     .button--previous,
     .button--next {
       font-weight: fw(bold);
       color: color(brand);
     }
+  }
+
+  img.carousel-swipe {
+    position: absolute;
+    top: -64px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    animation-name: carousel-swipe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.5, 1);
   }
 }

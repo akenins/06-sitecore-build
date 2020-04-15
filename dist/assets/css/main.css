@@ -108,6 +108,27 @@
   }
 }
 
+@keyframes carousel-swipe {
+  0% {
+    opacity: 0;
+    transform: translateX(0) rotate(20deg);
+  }
+  16% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 0;
+    transform: translateX(-80px) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-80px) rotate(0deg);
+  }
+}
+
 [data-aos-offset='100'] {
   transition-delay: 0.1s;
 }
@@ -2289,43 +2310,6 @@ footer.body-footer .footer-logo-container img {
   border-bottom: 1px solid #c2c2c2;
 }
 
-.business-challenges .button {
-  display: inline-block;
-  padding: 0 0.25rem;
-  margin: 0 4px;
-  font-size: 0.825rem;
-  border: 0;
-  border-radius: 6px;
-  background-color: transparent;
-  line-height: 0.825rem;
-  color: #c2c2c2;
-}
-
-.business-challenges .button:hover {
-  cursor: pointer;
-}
-
-.business-challenges .button:focus {
-  outline: none;
-}
-
-.business-challenges .button:disabled {
-  opacity: 0.3;
-}
-
-.business-challenges .button.is-selected {
-  color: #111;
-}
-
-.business-challenges .button svg {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-.business-challenges .button svg .arrow {
-  fill: #ed1b34;
-}
-
 .business-challenges .button-group {
   display: inline-block;
   vertical-align: bottom;
@@ -2355,10 +2339,59 @@ footer.body-footer .footer-logo-container img {
   }
 }
 
+.business-challenges .button-row .button {
+  display: inline-block;
+  padding: 0 0.25rem;
+  margin: 0 4px;
+  font-size: 0.825rem;
+  border: 0;
+  border-radius: 6px;
+  background-color: transparent;
+  line-height: 0.825rem;
+  color: #c2c2c2;
+}
+
+.business-challenges .button-row .button:hover {
+  cursor: pointer;
+}
+
+.business-challenges .button-row .button:focus {
+  outline: none;
+}
+
+.business-challenges .button-row .button:disabled {
+  opacity: 0.3;
+}
+
+.business-challenges .button-row .button.is-selected {
+  color: #111;
+}
+
+.business-challenges .button-row .button svg {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.business-challenges .button-row .button svg .arrow {
+  fill: #ed1b34;
+}
+
 .business-challenges .button-row .button--previous,
 .business-challenges .button-row .button--next {
   font-weight: 700;
   color: #ed1b34;
+}
+
+.business-challenges img.carousel-swipe {
+  position: absolute;
+  top: -64px;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  animation-name: carousel-swipe;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.17, 0.67, 0.5, 1);
 }
 
 .feature-carousel {
