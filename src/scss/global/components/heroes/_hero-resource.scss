@@ -61,7 +61,7 @@
       font-size: 20px;
       text-transform: uppercase;
       letter-spacing: 1.25px;
-      color: $grey-700;
+      line-height: 1.25;
       font-weight: fw(bold);
     }
 
@@ -90,6 +90,8 @@
 
     img {
       align-self: center;
+      max-width: 450px;
+      max-height: 360px;
     }
   }
 

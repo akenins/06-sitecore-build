@@ -2382,7 +2382,7 @@ footer.body-footer .footer-logo-container img {
   color: #ed1b34;
 }
 
-.business-challenges img.carousel-swipe {
+.business-challenges .carousel-swipe {
   position: absolute;
   top: -64px;
   right: 0;
@@ -2728,7 +2728,7 @@ footer.body-footer .footer-logo-container img {
   padding: 2rem;
   background-color: #f8f8f9;
   border-radius: 16px;
-  box-shadow: 0 15px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   text-align: center;
 }
 
@@ -4487,7 +4487,7 @@ footer.body-footer .footer-logo-container img {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1.25px;
-  color: #707070;
+  line-height: 1.25;
   font-weight: 700;
 }
 
@@ -4518,6 +4518,8 @@ footer.body-footer .footer-logo-container img {
 
 .hero-resource .resource-hero-image img {
   align-self: center;
+  max-width: 450px;
+  max-height: 360px;
 }
 
 .hero-resource .gradient-container {
