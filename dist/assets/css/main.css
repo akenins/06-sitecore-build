@@ -4484,15 +4484,7 @@ footer.body-footer .footer-logo-container img {
   }
 }
 
-.hero-resource .heading h2.resource-type {
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1.25px;
-  line-height: 1.25;
-  font-weight: 700;
-}
-
-.hero-resource .heading h1.resource-title {
+.hero-resource .heading h2.resource-title {
   margin-top: 0.5rem;
   font-size: 24px;
   line-height: 32px;
@@ -4501,7 +4493,7 @@ footer.body-footer .footer-logo-container img {
   font-weight: 400;
 }
 
-.hero-resource .heading h1.resource-title:after {
+.hero-resource .heading h2.resource-title:after {
   content: '';
 }
 
