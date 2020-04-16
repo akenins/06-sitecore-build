@@ -30,7 +30,7 @@
       background-color: $white;
       border: 1px solid color(borders);
       border-radius: 16px;
-      padding: 2rem;
+      padding: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -41,16 +41,14 @@
     }
 
     .logo {
-      width: calc(10% - 10px);
-      margin-bottom: 1rem;
+      margin-right: 1.25rem;
 
       img {
-        max-width: 100px;
+        max-width: 225px;
+        max-height: 150px;
+        width: auto;
         height: auto;
-
-        @include respond-to(medium) {
-          width: 100%;
-        }
+        box-shadow: 0 4px 16px rgba(17, 17, 17, 0.1);
       }
     }
 

@@ -42,6 +42,7 @@
     background-color: $white;
     padding: 2rem;
     z-index: z(block-content-floating);
+    box-shadow: 0 12px 24px rgba(0, 0, 50, 0.25);
 
     @include respond-to(medium) {
       padding: 4rem;

@@ -1,31 +1,11 @@
 .chip {
   display: inline-block;
-  height: 30px;
-  border-radius: 15px;
+  height: 24px;
+  border-radius: 12px;
   margin: 1.5rem 1rem 0 0;
-  padding: 0 1.25rem;
-  font-size: 14px;
-  line-height: 30px;
+  padding: 0 1rem;
+  font-size: 12px;
+  line-height: 24px;
   color: $grey-900;
   background-color: $grey-300;
-
-  &.orange {
-    color: $orange-500;
-    background-color: $orange-50;
-  }
-
-  &.green {
-    color: $green-900;
-    background-color: $green-100;
-  }
-
-  &.blue {
-    color: $blue-700;
-    background-color: $blue-100;
-  }
-
-  &.red {
-    color: color(brand);
-    background-color: $purple-100;
-  }
 }

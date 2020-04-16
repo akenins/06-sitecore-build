@@ -24,9 +24,10 @@
   .heading-container {
     margin-top: 90px;
     background-color: $grey-100;
-    padding: 2rem 4rem;
+    padding: 4rem;
     width: calc(60% - 20px);
     align-self: center;
+    box-shadow: 0 12px 24px rgba(0, 0, 40, 0.12);
 
     h1 {
       max-width: 100%;

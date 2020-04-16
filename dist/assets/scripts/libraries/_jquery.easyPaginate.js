@@ -35,6 +35,7 @@
 
       var displayNav = function () {
         htmlNav = '<div class="easyPaginateNav pgn-button-row">'
+
         const {
           firstButton,
           firstButtonText,
@@ -46,6 +47,7 @@
           nextButtonText,
           lastButton,
           lastButtonText,
+          currentPage,
         } = plugin.settings
 
         if (firstButton) {
@@ -56,8 +58,18 @@
           htmlNav += `<a href="" title="Previous" class="prev pgn-button pgn-button--previous">${prevButtonText}</a>`
         }
 
-        for (i = 1; i <= pages; i++) {
-          htmlNav += `<a href="#${hashPage}:${i}" title="Page ${i}" rel="${i}" class="page pgn-button">${i}</a>`
+        if (pages >= 10) {
+          for (i = 1; i <= pages; i++) {
+            if (i <= 6 || i >= pages - 1) {
+              htmlNav += `<a href="#${hashPage}:${i}" title="Page ${i}" rel="${i}" class="page pgn-button">${i}</a>`
+            } else if (i === 7) {
+              htmlNav += `<a href="javascript:void(0);" class="pgn-button">&hellip;</a>`
+            }
+          }
+        } else {
+          for (i = 1; i <= pages; i++) {
+            htmlNav += `<a href="#${hashPage}:${i}" title="Page ${i}" rel="${i}" class="page pgn-button">${i}</a>`
+          }
         }
 
         if (nextButton) {
@@ -90,19 +102,17 @@
 
         $(elSelector + ' .easyPaginateNav a.prev').on('click', function (e) {
           e.preventDefault()
-          page =
-            plugin.settings.currentPage > 1
-              ? parseInt(plugin.settings.currentPage) - 1
-              : 1
+          page = currentPage > 1 ? parseInt(currentPage) - 1 : 1
           displayPage(page)
+          console.log(currentPage)
         })
 
         $(elSelector + ' .easyPaginateNav a.next').on('click', function (e) {
           e.preventDefault()
           page =
-            plugin.settings.currentPage < pages
-              ? parseInt(plugin.settings.currentPage) + 1
-              : pages
+            currentPage < plugin.settings.pages
+              ? parseInt(currentPage) + 1
+              : plugin.settings.pages
           displayPage(page)
         })
       }
