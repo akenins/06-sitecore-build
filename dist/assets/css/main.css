@@ -1783,6 +1783,9 @@ a.text-button {
 
 .global-header .dropdown .featured-item {
   padding: 1rem 0.5rem 1rem 3rem;
+}
+
+.global-header .dropdown .featured-item img {
   max-width: 100%;
 }
 
@@ -2685,7 +2688,6 @@ footer.body-footer .footer-logo-container img {
 
 .featured-resource .container .content .description {
   color: #a2a2a2;
-  font-size: 14px;
   line-height: 26px;
   letter-spacing: 0.25px;
 }
