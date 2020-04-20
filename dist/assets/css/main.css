@@ -1621,7 +1621,7 @@ a.text-button {
 .global-header {
   background-color: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
-  z-index: 50;
+  z-index: 60;
   position: fixed;
   width: 100%;
 }
@@ -5091,7 +5091,7 @@ footer.body-footer .footer-logo-container img {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(17, 17, 17, 0.1);
-  z-index: 100;
+  z-index: 30;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
