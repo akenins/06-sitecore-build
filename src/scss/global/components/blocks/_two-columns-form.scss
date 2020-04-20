@@ -58,5 +58,11 @@
         padding: 0;
       }
     }
+
+    .form {
+      align-self: flex-start;
+      position: sticky;
+      top: 60px;
+    }
   }
 }

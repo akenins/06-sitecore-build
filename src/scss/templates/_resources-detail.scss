@@ -25,6 +25,9 @@
     }
 
     .form {
+      align-self: flex-start;
+      position: sticky;
+      top: 60px;
       width: 100%;
 
       @include respond-to(medium) {
