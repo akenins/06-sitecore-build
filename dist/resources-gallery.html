@@ -18,23 +18,69 @@
             Learn everything about everything from tips and tricks, product
             info, to viewpoints from the team.
           </p>
+          <div class="search-wrapper">
+            <input placeholder="Search by keyword..." />
+            <i class="icon icon-search"></i>
+          </div>
         </div>
       </div>
       <div class="hero-fader"></div>
     </section>
 
-    <div class="resource-filter-bar">
+    <section class="resource-filter-bar">
+      <div class="container">
+        <div class="heading">
+          <h4 class="h5">Filter by:</h4>
+        </div>
+      </div>
       <div class="container">
         <div class="filter-bar-grid">
           <div class="filter-column">
-            <div class="search-wrapper">
-              <input placeholder="Search Resources" />
-              <i class="icon icon-search"></i>
-            </div>
+            <select class="filter-dropdown">
+              <option value="ResourceType" selected="">Resource Type</option>
+              <option value="Article">Article</option>
+              <option value="CaseStudy">Customer Story</option>
+              <option value="DataSheet">Data Sheet</option>
+              <option value="eBook">eBook</option>
+              <option value="Event">Event</option>
+              <option value="Infographic">Infographic</option>
+              <option value="Offer">Offer</option>
+              <option value="Webinar">Webinar</option>
+              <option value="Whitepaper">Whitepaper</option>
+            </select>
+          </div>
+          <div class="filter-column">
+            <select class="filter-dropdown">
+              <option value="Industry" selected="">Industry</option>
+              <option value="Information">Consumer Packaged Goods</option>
+              <option value="Financial Services">Financial Services</option>
+              <option value="Health">Health Plans &amp; Providers</option>
+              <option value="Insurance">Insurance</option>
+              <option value="Manufacturing">Manufacturing</option>
+              <option value="Retail">Retail</option>
+            </select>
+          </div>
+          <div class="filter-column">
+            <select class="filter-dropdown">
+              <option value="Solution" selected="">Solution</option>
+              <option value="Information">Information</option>
+              <option value="Experience">Experience</option>
+              <option value="InfrastructureModernization"
+                >Infrastructure Modernization</option
+              >
+              <option value="Innovation">Innovation</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="OperationalExcellence"
+                >Operational Excellence</option
+              >
+            </select>
+          </div>
+          <div class="filter-column">
+            <a href="/resources-gallery" class="chip">Clear Filters</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <section class="resources-gallery">
       <div class="container">

@@ -9,7 +9,7 @@
     padding: 2rem;
     background-color: $blue-50;
     border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 30, 0.25);
+    box-shadow: 0 24px 24px -24px rgba(0, 0, 30, 0.25);
     text-align: center;
 
     @include respond-to(desktop) {

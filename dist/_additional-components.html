@@ -8,45 +8,79 @@
     <title>Stylesheet Example</title>
   </head>
   <body>
-    <section class="full-width-image">
+    <section class="logo-bar">
       <div class="container">
-        <!-- Image - Selectable from Media Library -->
-        <img src="https://picsum.photos/1200/300" alt="placeholder" />
+        <!-- Repeater Start -->
+        <div class="logo">
+          <!-- Add link wrapper to image -->
+          <a href="/"
+            ><img src="https://picsum.photos/120/60" alt="placeholder"
+          /></a>
+        </div>
+        <!-- Repeater End -->
       </div>
     </section>
 
-    <section class="one-column-content">
+    <section class="three-columns-cards">
       <div class="container">
-        <div class="content">
-          <!-- Rich Text Start -->
-          <h2 style="text-align: center;">Heading</h2>
+        <!-- Select link from list of existing Solution pages on the site, text hardcoded -->
+        <a href="" class="card">
+          <!-- Uploadable from Media Library, alt attribute editable -->
+          <img src="https://picsum.photos/58/58" alt="placeholder" />
+          <!-- Single Line -->
+          <h3>User Experience</h3>
+          <!-- Single Line -->
+          <p>How users interact with your company, services, and products.</p>
+          <span href="#" class="text-button">Learn More</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured IP Cards -->
+    <section class="featured-ip-cards">
+      <div class="container">
+        <div class="heading-container">
+          <!-- Single Line Text-->
+          <h2>How We Can Help</h2>
+          <!-- Multi Line Text -->
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-            quisquam est deserunt dicta eius labore maxime possimus tenetur
-            beatae vero, blanditiis corporis minima animi qui reiciendis ipsum
-            odit enim optio?
+            Hitachi Solutions helps insurance organizations transform their
+            businesses to drive growth, better meet policyholder demands, and
+            provide a competitive edge.
           </p>
-          <!-- Rich Text End -->
+        </div>
+        <div class="card-container">
+          <!-- Begin Card Repeater -->
+          <a href="" class="card">
+            <div class="content">
+              <!-- Single Line Text -->
+              <h3>Health Plans IP</h3>
+              <ul>
+                <!-- Begin List Item Repeater -->
+                <!-- Single Line Text -->
+                <li class="check">Member Management</li>
+                <!-- End List Item Repeater-->
+              </ul>
+            </div>
+            <!-- Drop Down List to Select from all Technology Pages-->
+            <span href="#" class="button">Learn More</span>
+          </a>
+          <!-- End Card Repeater-->
         </div>
       </div>
     </section>
 
-    <section class="three-columns-list">
+    <section class="hero hero-text">
       <div class="container">
-        <!-- Begin Repeater -->
-        <div class="card">
-          <!-- Text - Single Line-->
-          <h3>Header</h3>
-          <hr />
-          <!-- Rich text Start-->
-          <ul>
-            <li>List 1</li>
-            <li>List 2</li>
-            <li>List 3</li>
-          </ul>
-          <!-- Rich Text End -->
-        </div>
+        <!-- Single Line Text-->
+        <h1>Thought Leadership</h1>
+        <!-- Multi Line Text-->
+        <p>
+          This is something impactful that will make people want to read the
+          blog.
+        </p>
       </div>
+      <div class="hero-fader"></div>
     </section>
   </body>
   <script

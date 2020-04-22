@@ -8,7 +8,7 @@
     background-image: url('../images/png/related-resource-pattern.png');
     background-repeat: no-repeat;
     background-position: 100% 100%;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
 
     @include respond-to(desktop) {
       max-width: 1000px;

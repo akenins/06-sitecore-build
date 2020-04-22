@@ -18,6 +18,9 @@ function browserSync(done) {
   browsersync.init({
     server: {
       baseDir: './dist',
+      serveStaticOptions: {
+        extensions: ['html'],
+      },
     },
     port: 3000,
   })
@@ -94,7 +97,7 @@ let webpackConfig = {
   ],
 }
 
-const handleScriptBuildError = function(err) {
+const handleScriptBuildError = function (err) {
   console.error('-----------------------')
   console.error('ERROR Building JS Bundle!')
   console.error(err.message)

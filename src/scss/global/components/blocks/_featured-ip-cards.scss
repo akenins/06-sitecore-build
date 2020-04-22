@@ -44,7 +44,7 @@
       transition: all 0.3s ease-out;
 
       &:hover {
-        box-shadow: 0 8px 24px rgba(0, 0, 40, 0.25);
+        box-shadow: 0 24px 24px -24px rgba(0, 0, 40, 0.25);
         transform: translateY(-5px);
       }
 
@@ -61,6 +61,7 @@
       .content {
         width: 100%;
         flex: 1 0 auto;
+        color: $black;
       }
 
       ul {
@@ -68,6 +69,7 @@
 
         li {
           padding: 0.5rem 0.5rem 0 2rem;
+          font-weight: fw(regular);
 
           &:before {
             color: $green-500;
