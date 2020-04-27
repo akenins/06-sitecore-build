@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $('.main-carousel').flickity({
     cellAlign: 'left',
     contain: true,
@@ -12,12 +12,24 @@ $(document).ready(function() {
 
   $('.challenges').flickity({
     cellAlign: 'left',
-    contain: 'true',
+    contain: true,
   })
 
   $('.feature-container').flickity({
     cellAlign: 'left',
-    contain: 'true',
+    contain: true,
+  })
+
+  $('.timeline-container').flickity({
+    pageDots: false,
+    prevNextButtons: false,
+  })
+
+  $('.timeline-nav').flickity({
+    asNavFor: '.timeline-container',
+    prevNextButtons: false,
+    pageDots: false,
+    draggable: false,
   })
 
   const $carousel = $('.carousel')
@@ -32,7 +44,7 @@ $(document).ready(function() {
   }
 
   // add attributes and classes after navigation buttons have been initialized
-  $carousel.on('ready.flickity', function() {
+  $carousel.on('ready.flickity', function () {
     $prev.attr('disabled', 'disabled')
     $pagers.children(':first-child').addClass('is-selected')
   })
@@ -45,7 +57,7 @@ $(document).ready(function() {
   const flkty = $carousel.data('flickity')
   const $pager = $pagers.find('button')
 
-  $carousel.on('select.flickity', function() {
+  $carousel.on('select.flickity', function () {
     $pager.filter('.is-selected').removeClass('is-selected')
     $pager.eq(flkty.selectedIndex).addClass('is-selected')
 
@@ -62,18 +74,18 @@ $(document).ready(function() {
     }
   })
 
-  $cellButtonGroup.on('click', '.button', function() {
+  $cellButtonGroup.on('click', '.button', function () {
     const index = $(this).index()
     $carousel.flickity('select', index)
   })
 
   // previous
-  $prev.on('click', function() {
+  $prev.on('click', function () {
     $carousel.flickity('previous')
   })
 
   // next
-  $next.on('click', function() {
+  $next.on('click', function () {
     $carousel.flickity('next')
   })
 })

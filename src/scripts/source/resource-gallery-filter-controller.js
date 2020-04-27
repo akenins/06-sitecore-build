@@ -32,7 +32,7 @@ $(function () {
       if ($(this).val() === 'default') {
         return false
       } else {
-        window.location = `/resources-gallery?${params}`
+        window.location = `/resources?${params}`
       }
 
       // Uncomment once sorting by multiple tags is supported
