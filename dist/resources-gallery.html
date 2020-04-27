@@ -36,48 +36,54 @@
       <div class="container">
         <div class="filter-bar-grid">
           <div class="filter-column">
-            <select class="filter-dropdown">
-              <option value="ResourceType" selected="">Resource Type</option>
-              <option value="Article">Article</option>
-              <option value="CaseStudy">Customer Story</option>
-              <option value="DataSheet">Data Sheet</option>
-              <option value="eBook">eBook</option>
-              <option value="Event">Event</option>
-              <option value="Infographic">Infographic</option>
-              <option value="Offer">Offer</option>
-              <option value="Webinar">Webinar</option>
-              <option value="Whitepaper">Whitepaper</option>
+            <select class="filter-dropdown" id="resource-type">
+              <option value="default" selected="">Resource Type</option>
+              <option value="article">Article</option>
+              <option value="case-study">Customer Story</option>
+              <option value="data-sheet">Data Sheet</option>
+              <option value="ebook">eBook</option>
+              <option value="event">Event</option>
+              <option value="infographic">Infographic</option>
+              <option value="offer">Offer</option>
+              <option value="webinar">Webinar</option>
+              <option value="whitepaper">Whitepaper</option>
             </select>
           </div>
           <div class="filter-column">
-            <select class="filter-dropdown">
-              <option value="Industry" selected="">Industry</option>
-              <option value="Information">Consumer Packaged Goods</option>
-              <option value="Financial Services">Financial Services</option>
-              <option value="Health">Health Plans &amp; Providers</option>
-              <option value="Insurance">Insurance</option>
-              <option value="Manufacturing">Manufacturing</option>
-              <option value="Retail">Retail</option>
+            <select class="filter-dropdown" id="resource-industry">
+              <option value="default" selected="">Industry</option>
+              <option value="cpg">Consumer Packaged Goods</option>
+              <option value="financial services">Financial Services</option>
+              <option value="health">Health Plans &amp; Providers</option>
+              <option value="insurance">Insurance</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="retail">Retail</option>
             </select>
           </div>
           <div class="filter-column">
-            <select class="filter-dropdown">
-              <option value="Solution" selected="">Solution</option>
-              <option value="Information">Information</option>
-              <option value="Experience">Experience</option>
-              <option value="InfrastructureModernization"
+            <select class="filter-dropdown" id="resource-solution-area">
+              <option value="default" selected="">Solution</option>
+              <option value="information">Information</option>
+              <option value="experience">Experience</option>
+              <option value="infrastructure modernization"
                 >Infrastructure Modernization</option
               >
-              <option value="Innovation">Innovation</option>
-              <option value="Collaboration">Collaboration</option>
-              <option value="OperationalExcellence"
+              <option value="innovation">Innovation</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="operational-excellence"
                 >Operational Excellence</option
               >
             </select>
           </div>
-          <div class="filter-column">
+          <div class="filter-column" id="clear-filters"></div>
+          <div
+            class="filter-column"
+            id="active-filters"
+            style="width: auto;"
+          ></div>
+          <!-- <div class="filter-column">
             <a href="/resources-gallery" class="chip">Clear Filters</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

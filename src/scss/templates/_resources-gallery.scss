@@ -184,7 +184,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     @include respond-to(desktop) {
       flex-flow: row wrap;
@@ -195,13 +195,7 @@
     width: 100%;
 
     @include respond-to(desktop) {
-      width: auto;
-      margin-right: 10px;
-
-      &.search {
-        width: calc(50% - 10px);
-        margin-right: 0;
-      }
+      width: calc(33.333% - 10px);
     }
     .chip {
       margin: 0;
@@ -210,6 +204,13 @@
 
       @include respond-to(desktop) {
         margin: 0.5rem 0 0;
+      }
+
+      &.filter {
+        background-color: white;
+        border: 1px solid lightgrey;
+        margin-left: 10px;
+        text-transform: capitalize;
       }
     }
 
@@ -263,7 +264,7 @@
     }
 
     @include respond-to(desktop) {
-      min-width: 275px;
+      width: 100%;
     }
   }
 }
