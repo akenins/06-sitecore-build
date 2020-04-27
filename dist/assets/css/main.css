@@ -2856,6 +2856,12 @@ footer.body-footer .footer-logo-container img {
   border: 1px solid #c2c2c2;
   box-shadow: 0 4px 8px #e2e5e7;
   text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.industry-picker .industry-container .industry-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 24px -24px rgba(0, 0, 40, 0.25);
 }
 
 @media screen and (min-width: 1000px) {
@@ -2864,7 +2870,7 @@ footer.body-footer .footer-logo-container img {
   }
 }
 
-.industry-picker .industry-container .industry-card a {
+.industry-picker .industry-container .industry-card span {
   display: block;
   white-space: normal;
 }

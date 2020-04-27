@@ -27,13 +27,23 @@ $(function () {
     filter.on('change', function () {
       params.set('tag', $(this).val())
 
-      if (tags.length === 0) {
-        window.location = `${url}?${params}`
-      } else if ($(this).val() === 'default') {
+      // Swap for below once sorting by multiple tags is supported
+
+      if ($(this).val() === 'default') {
         return false
       } else {
-        window.location = `${url}&${params}`
+        window.location = `/resources-gallery?${params}`
       }
+
+      // Uncomment once sorting by multiple tags is supported
+      //
+      // if (tags.length === 0) {
+      //   window.location = `${url}?${params}`
+      // } else if ($(this).val() === 'default') {
+      //   return false
+      // } else {
+      //   window.location = `${url}&${params}`
+      // }
     })
   })
 })

@@ -76,12 +76,18 @@
       border: 1px solid color(borders);
       box-shadow: 0 4px 8px $blue-100;
       text-align: center;
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 24px 24px -24px rgba(0, 0, 40, 0.25);
+      }
 
       @include respond-to(desktop) {
         width: calc(33.333% - 15px);
       }
 
-      a {
+      span {
         display: block;
         white-space: normal;
       }
