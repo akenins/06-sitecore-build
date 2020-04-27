@@ -15,7 +15,7 @@ $(function () {
 
   if (tags.length !== 0) {
     $('#clear-filters').append(
-      `<a href="/resources-gallery" class="chip">Clear Filters</a>`
+      `<a href="/resources" class="chip">Clear Filters</a>`
     )
   }
 
