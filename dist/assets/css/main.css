@@ -3602,7 +3602,6 @@ footer.body-footer .footer-logo-container img {
 .timeline-carousel .container {
   width: 100%;
   margin-bottom: 4rem;
-  padding: 0 1rem;
 }
 
 @media screen and (min-width: 1000px) {
@@ -3628,7 +3627,6 @@ footer.body-footer .footer-logo-container img {
   height: 200px;
   text-align: center;
   line-height: 200px;
-  background-color: lightblue;
   border-radius: 16px;
 }
 
