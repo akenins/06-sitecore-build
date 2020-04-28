@@ -3631,6 +3631,7 @@ footer.body-footer .footer-logo-container img {
   flex-direction: column;
   justify-content: space-between;
   opacity: 0.25;
+  transition: opacity 0.3s ease-out;
 }
 
 .timeline-carousel .timeline-container .timeline-cell.is-selected {
@@ -3640,7 +3641,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 760px) {
   .timeline-carousel .timeline-container .timeline-cell {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 

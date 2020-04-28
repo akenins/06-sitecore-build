@@ -28,6 +28,7 @@
       flex-direction: column;
       justify-content: space-between;
       opacity: 0.25;
+      transition: opacity 0.3s ease-out;
 
       &.is-selected {
         opacity: 1;
@@ -35,7 +36,7 @@
 
       @include respond-to(medium) {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
       }
 
       .image,
