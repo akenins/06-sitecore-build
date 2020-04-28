@@ -22,7 +22,7 @@ $(document).ready(function () {
 
   $('.timeline-container').flickity({
     pageDots: false,
-    prevNextButtons: false,
+    prevNextButtons: true,
   })
 
   $('.timeline-nav').flickity({

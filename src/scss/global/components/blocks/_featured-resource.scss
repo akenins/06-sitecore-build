@@ -29,7 +29,7 @@
       margin: 0 auto;
       background-color: $white;
       border: 1px solid color(borders);
-      border-radius: 16px;
+      border-radius: 8px;
       padding: 1rem;
       display: flex;
       flex-direction: column;
@@ -41,7 +41,11 @@
     }
 
     .logo {
-      margin-right: 1.25rem;
+      margin: 1.25rem 0 0;
+
+      @include respond-to(desktop) {
+        margin: 0 1.25rem 0 0;
+      }
 
       img {
         max-width: 225px;
