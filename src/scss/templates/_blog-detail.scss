@@ -117,6 +117,13 @@
         @include respond-to(desktop) {
           margin: 0 0 1.25rem;
         }
+
+        img {
+          max-width: 225px;
+          max-height: 150px;
+          width: auto;
+          height: auto;
+        }
       }
 
       .description {

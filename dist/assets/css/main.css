@@ -5191,6 +5191,13 @@ footer.body-footer .footer-logo-container img {
   }
 }
 
+.blog-post .post-content .featured-resource-card .image img {
+  max-width: 225px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+}
+
 .blog-post .post-content .featured-resource-card .description {
   color: #707070;
   line-height: 26px;
