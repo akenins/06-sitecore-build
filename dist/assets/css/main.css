@@ -3650,6 +3650,10 @@ footer.body-footer .footer-logo-container img {
   padding: 0.5rem 0;
 }
 
+.timeline-carousel .timeline-container .timeline-cell .image {
+  margin-bottom: 2rem;
+}
+
 @media screen and (min-width: 760px) {
   .timeline-carousel .timeline-container .timeline-cell .image {
     text-align: center;
