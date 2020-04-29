@@ -1,14 +1,17 @@
-let SocialLinkHelper = (function($) {
+let SocialLinkHelper = (function ($) {
   const popupWidth = 768
   const popupHeight = popupWidth / (16 / 9)
   let popoverLinkSelector = '.share',
     popoverLink,
     socialShareLinkSelector = '.social-share-link',
-    socialShareLink
+    socialShareLink,
+    sharePopoverSelector = '.share-popover',
+    sharePopover
 
   function onDocumentReady() {
     popoverLink = $(popoverLinkSelector)
     socialShareLink = $(socialShareLinkSelector)
+    sharePopover = $(sharePopoverSelector)
   }
 
   function activate() {
@@ -34,12 +37,12 @@ let SocialLinkHelper = (function($) {
   }
 
   function showSocialLinkPopover() {
-    popoverLink.find('.share-popover').fadeToggle(100)
+    $(this).find(sharePopover).fadeToggle(100)
   }
 
-  jQuery(document).mouseup(function(e) {
+  jQuery(document).mouseup(function (e) {
     if (!popoverLink.is(e.target) && popoverLink.has(e.target).length === 0) {
-      popoverLink.find('.share-popover').fadeOut(100)
+      popoverLink.find(sharePopover).fadeOut(100)
     }
   })
 
