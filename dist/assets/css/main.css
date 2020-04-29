@@ -3630,9 +3630,9 @@ footer.body-footer .footer-logo-container img {
 }
 
 .timeline-carousel .timeline-container .timeline-cell {
-  width: 50%;
+  width: 75%;
   margin: 0;
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3642,6 +3642,12 @@ footer.body-footer .footer-logo-container img {
 
 .timeline-carousel .timeline-container .timeline-cell.is-selected {
   opacity: 1;
+}
+
+@media screen and (min-width: 760px) {
+  .timeline-carousel .timeline-container .timeline-cell {
+    width: 50%;
+  }
 }
 
 .timeline-carousel .timeline-container .timeline-cell .image,
