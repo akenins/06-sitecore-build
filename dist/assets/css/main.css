@@ -3657,6 +3657,8 @@ footer.body-footer .footer-logo-container img {
 }
 
 .timeline-carousel .timeline-container .timeline-cell .image {
+  display: flex;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
@@ -4719,14 +4721,21 @@ footer.body-footer .footer-logo-container img {
 .hero-text .container {
   width: 100%;
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   z-index: 40;
   padding: 0 1rem;
 }
 
 @media screen and (min-width: 1000px) {
   .hero-text .container {
-    width: 75%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-text .container {
+    max-width: 1200px;
   }
 }
 

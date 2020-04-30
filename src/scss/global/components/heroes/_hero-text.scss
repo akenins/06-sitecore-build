@@ -5,12 +5,17 @@
   .container {
     width: 100%;
     position: relative;
-    margin: 0 auto;
+    margin: 0;
     z-index: 40;
     padding: 0 1rem;
 
     @include respond-to(desktop) {
-      width: 75%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
     }
   }
 
