@@ -22,12 +22,21 @@
   }
 
   .heading-container {
-    margin-top: 90px;
+    width: 100%;
+    margin-top: 60px;
+    padding: 2rem;
     background-color: $grey-100;
-    padding: 4rem;
-    width: calc(60% - 20px);
     align-self: center;
     box-shadow: 0 12px 24px rgba(0, 0, 40, 0.12);
+
+    @include respond-to(medium) {
+      padding: 4rem;
+    }
+
+    @include respond-to(desktop) {
+      margin-top: 90px;
+      width: calc(60% - 20px);
+    }
 
     h1 {
       max-width: 100%;
@@ -45,8 +54,13 @@
   }
 
   .solution-icon-container {
-    margin-top: 90px;
-    width: calc(40% - 20px);
+    display: none;
+
+    @include respond-to(desktop) {
+      display: block;
+      margin-top: 90px;
+      width: calc(40% - 20px);
+    }
 
     .solution-icon {
       position: relative;

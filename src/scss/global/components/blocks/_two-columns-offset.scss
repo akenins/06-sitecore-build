@@ -37,10 +37,14 @@
     justify-content: space-between;
     align-items: center;
 
-    @include respond-to(desktop) {
+    @include respond-to(medium) {
+      max-width: 768px;
       margin: 0 auto;
-      max-width: 1000px;
       flex-direction: row;
+    }
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
     }
 
     @include respond-to(large-desktop) {
@@ -51,7 +55,7 @@
       width: 100%;
       margin-bottom: 2rem;
 
-      @include respond-to(desktop) {
+      @include respond-to(medium) {
         width: calc(37.5% - 20px);
         text-align: center;
         margin: 0;
@@ -66,9 +70,12 @@
     .content {
       width: 100%;
 
-      @include respond-to(desktop) {
+      @include respond-to(medium) {
         width: calc(62.5% - 20px);
         margin: 0;
+      }
+
+      @include respond-to(desktop) {
         display: flex;
         flex-direction: column;
         justify-content: center;

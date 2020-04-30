@@ -41,7 +41,7 @@
     }
 
     .logo {
-      margin: 1.25rem 0 0;
+      margin: 0 0 1.25rem 0;
 
       @include respond-to(desktop) {
         margin: 0 1.25rem 0 0;
