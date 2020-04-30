@@ -36,10 +36,12 @@
 
     .image {
       width: 100%;
+      padding-bottom: 2rem;
 
       @include respond-to(desktop) {
         width: calc(37.5% - 20px);
         text-align: center;
+        padding: 0;
       }
 
       img {
@@ -91,15 +93,6 @@
 
       @include respond-to(desktop) {
         width: 350px;
-      }
-    }
-
-    .image,
-    .content {
-      padding: 0.5rem 0;
-
-      @include respond-to(desktop) {
-        padding: 0;
       }
     }
   }

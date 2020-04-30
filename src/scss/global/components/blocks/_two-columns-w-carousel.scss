@@ -23,7 +23,7 @@
 
   .content {
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0 0 2rem;
 
     @include respond-to(desktop) {
       width: calc(66.666% - 20px);
@@ -34,12 +34,10 @@
 
   .carousel-container {
     width: 100%;
-    padding: 0.5rem 0;
 
     @include respond-to(desktop) {
       width: calc(33.333% - 20px);
       margin: 0;
-      padding: 0;
     }
 
     h5 {
