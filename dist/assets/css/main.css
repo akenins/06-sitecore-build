@@ -3201,6 +3201,7 @@ footer.body-footer .footer-logo-container img {
 .team-highlight-carousel .container {
   width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 @media screen and (min-width: 1000px) {
@@ -4436,7 +4437,7 @@ footer.body-footer .footer-logo-container img {
   align-self: center;
   width: 100%;
   padding: 0;
-  margin-top: 60px;
+  margin: 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -4542,7 +4543,7 @@ footer.body-footer .footer-logo-container img {
 
 .hero-level-3 .heading-container {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 90px;
   padding: 2rem;
   background-color: #f5f5f5;
   align-self: center;
@@ -4557,7 +4558,6 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .hero-level-3 .heading-container {
-    margin-top: 90px;
     width: calc(60% - 20px);
   }
 }

@@ -23,7 +23,7 @@
 
   .heading-container {
     width: 100%;
-    margin-top: 60px;
+    margin-top: 90px;
     padding: 2rem;
     background-color: $grey-100;
     align-self: center;
@@ -34,7 +34,6 @@
     }
 
     @include respond-to(desktop) {
-      margin-top: 90px;
       width: calc(60% - 20px);
     }
 
