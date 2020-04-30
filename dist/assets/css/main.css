@@ -2137,6 +2137,7 @@ footer.body-footer #secondary-container {
   flex-direction: column;
   align-items: center;
   margin: 1rem auto;
+  padding: 0 1rem;
 }
 
 @media screen and (min-width: 1000px) {

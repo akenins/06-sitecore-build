@@ -88,6 +88,7 @@ footer.body-footer {
     flex-direction: column;
     align-items: center;
     margin: 1rem auto;
+    padding: 0 1rem;
 
     @include respond-to(desktop) {
       flex-direction: row;
