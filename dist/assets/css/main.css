@@ -2044,14 +2044,15 @@ footer.body-footer .nav-container {
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  margin: 1rem 0.625rem;
-  padding: 0 1rem;
+  margin: 0;
+  padding: 2rem 1rem;
 }
 
 @media screen and (min-width: 760px) {
   footer.body-footer .nav-container {
     max-width: 760px;
-    margin: 4rem auto 3rem;
+    margin: 0 auto;
+    padding: 4rem 1rem 3rem;
   }
 }
 
@@ -2068,7 +2069,13 @@ footer.body-footer .nav-container {
 }
 
 footer.body-footer .nav-container .nav-column {
-  width: 50%;
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  footer.body-footer .nav-container .nav-column {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 1000px) {
