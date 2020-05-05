@@ -1,6 +1,6 @@
-let NavController = (function($) {
+let NavController = (function ($) {
   let mainMenu,
-    mainMenuSelector = '.menu.nav-items, .menu.utility-nav-items',
+    mainMenuSelector = '.menu.nav-items, .utility-nav',
     itemSelector = 'li.has-dropdown',
     subItemSelector = '.menu-item.sub-item',
     searchForm,
@@ -23,10 +23,10 @@ let NavController = (function($) {
     searchForm = $(searchFormSelector)
 
     $(subItemSelector).hover(
-      function() {
+      function () {
         $(this).addClass('active')
       },
-      function() {
+      function () {
         $(this).removeClass('active')
       }
     )
@@ -83,7 +83,7 @@ let NavController = (function($) {
   }
 
   function onClickDisplaySearch() {
-    searchForm.fadeIn(null, function() {
+    searchForm.fadeIn(null, function () {
       $('#site-search-keyword').focus()
     })
   }
@@ -107,14 +107,14 @@ let NavController = (function($) {
   function onMouseEnterItem(e) {
     var item = $(e.currentTarget)
     clearTimeout(hideItemTimeout)
-    showItemTimeout = setTimeout(function() {
+    showItemTimeout = setTimeout(function () {
       setActiveItem(item)
     }, showItemDelay)
   }
 
   function onMouseLeaveItem(e) {
     clearTimeout(showItemTimeout)
-    hideItemTimeout = setTimeout(function() {
+    hideItemTimeout = setTimeout(function () {
       setActiveItem(null)
     }, hideItemDelay)
   }
@@ -125,17 +125,11 @@ let NavController = (function($) {
     if (activeItem !== menuItem) {
       if (activeItem) {
         activeItem.find('.primary-link').removeClass('active')
-        activeItem
-          .find('.dropdown')
-          .stop(true, false)
-          .fadeOut(fadeOptions)
+        activeItem.find('.dropdown').stop(true, false).fadeOut(fadeOptions)
       }
       if (menuItem) {
         menuItem.find('.primary-link').addClass('active')
-        menuItem
-          .find('.dropdown')
-          .stop(true, false)
-          .fadeIn(fadeOptions)
+        menuItem.find('.dropdown').stop(true, false).fadeIn(fadeOptions)
       }
       activeItem = menuItem
     }

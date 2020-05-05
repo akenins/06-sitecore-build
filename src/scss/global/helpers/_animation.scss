@@ -23,6 +23,15 @@
   }
 }
 
+@keyframes headerSlideDownMini {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes slideDown {
   0% {
     transform: translateY(-75%);
@@ -80,27 +89,6 @@
   100% {
     opacity: 0;
     transform: scale3d(1.6, 1.6, 1);
-  }
-}
-
-@keyframes carousel-swipe {
-  0% {
-    opacity: 0;
-    transform: translateX(0) rotate(20deg);
-  }
-  16% {
-    opacity: 1;
-  }
-  22% {
-    opacity: 1;
-  }
-  28% {
-    opacity: 0;
-    transform: translateX(-80px) rotate(0deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-80px) rotate(0deg);
   }
 }
 

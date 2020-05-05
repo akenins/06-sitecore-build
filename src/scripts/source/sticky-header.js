@@ -1,18 +1,26 @@
-function stickyHeader() {
-  let header = document.getElementById('global-header')
-  let headroomOptions = {
-    offset: 0,
-    tolerance: 10,
-    classes: {
-      initial: 'headroom animated',
-      pinned: 'headroom--pinned',
-      unpinned: 'headroom--unpinned',
-    },
+let stickyHeader = (function ($) {
+  let headroom,
+    header = document.getElementById('global-header')
+
+  function init() {
+    initHeadroom()
   }
 
-  let headroom = new Headroom(header, headroomOptions)
+  function initHeadroom() {
+    headroom = new Headroom(header, {
+      offset: 50,
+      tolerance: 10,
+      classes: {
+        initial: 'headroom animated',
+        pinned: 'headroom--pinned',
+        unpinned: 'headroom--unpinned',
+      },
+    })
 
-  headroom.init()
-}
+    headroom.init()
+  }
 
-document.addEventListener('DOMContentLoaded', stickyHeader)
+  document.addEventListener('DOMContentLoaded', init, false)
+})(jQuery)
+
+export default stickyHeader

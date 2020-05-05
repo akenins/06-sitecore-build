@@ -48,6 +48,15 @@
   }
 }
 
+@keyframes headerSlideDownMini {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes slideDown {
   0% {
     transform: translateY(-75%);
@@ -105,27 +114,6 @@
   100% {
     opacity: 0;
     transform: scale3d(1.6, 1.6, 1);
-  }
-}
-
-@keyframes carousel-swipe {
-  0% {
-    opacity: 0;
-    transform: translateX(0) rotate(20deg);
-  }
-  16% {
-    opacity: 1;
-  }
-  22% {
-    opacity: 1;
-  }
-  28% {
-    opacity: 0;
-    transform: translateX(-80px) rotate(0deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-80px) rotate(0deg);
   }
 }
 
@@ -1619,7 +1607,6 @@ a.text-button {
 }
 
 .global-header {
-  background-color: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
   z-index: 60;
   position: fixed;
@@ -1628,18 +1615,12 @@ a.text-button {
 
 @media screen and (min-width: 1000px) {
   .global-header {
-    background-color: transparent;
     box-shadow: none;
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .global-header .nav-container {
-    padding: 0 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-shadow: none;
-  }
+.global-header .nav-container {
+  width: 100%;
 }
 
 .global-header .hitachi-solutions-logo {
@@ -1649,17 +1630,90 @@ a.text-button {
   height: 20px;
 }
 
-.global-header .primary-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem;
+.global-header .utility-nav-container {
+  display: none;
+  width: 100%;
+  background-color: rgba(226, 229, 231, 0.5);
 }
 
 @media screen and (min-width: 1000px) {
-  .global-header .primary-nav {
-    padding: 1rem 0;
+  .global-header .utility-nav-container {
+    display: block;
   }
+}
+
+.global-header .utility-nav-container .utility-nav {
+  max-width: 1200px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.global-header .utility-nav-container .utility-nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.global-header .utility-nav-container .utility-nav ul .utility-nav-item {
+  margin-left: 1rem;
+  font-size: 0.75rem;
+  line-height: 30px;
+}
+
+.global-header .utility-nav-container .utility-nav ul .utility-nav-item a {
+  color: #707070;
+  font-weight: 300;
+}
+
+.global-header .utility-nav-container .utility-nav ul .utility-nav-item a:hover {
+  color: #1e4799;
+}
+
+.global-header .utility-nav-container .utility-nav ul .utility-nav-item a i {
+  opacity: 0.5;
+}
+
+.global-header .utility-nav-container .region-item {
+  position: relative;
+}
+
+.global-header .utility-nav-container .region-item .region-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  left: auto;
+  width: auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+.global-header .utility-nav-container .region-item .region-dropdown-items {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.global-header .utility-nav-container .region-item .region-dropdown-items li a {
+  display: block;
+  color: #111;
+  padding: 0.25rem 1rem;
+  transition: background-color 0.3s ease-out;
+}
+
+.global-header .utility-nav-container .region-item .region-dropdown-items li a:hover {
+  background-color: #e2e5e7;
+}
+
+.global-header .primary-nav {
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .global-header .primary-nav .nav-items {
@@ -1674,27 +1728,18 @@ a.text-button {
   }
 }
 
-.global-header .primary-nav .utility-nav-items {
+.global-header .primary-nav .contact-item {
   display: none;
 }
 
 @media screen and (min-width: 1000px) {
-  .global-header .primary-nav .utility-nav-items {
+  .global-header .primary-nav .contact-item {
     display: flex;
   }
 }
 
-.global-header .primary-nav .utility-nav-items .dropdown {
-  top: 38px;
-  left: auto;
-  right: 8px;
-  width: 100%;
-}
-
-.global-header .primary-nav .utility-nav-items .header-search {
-  color: #111;
-  font-weight: 400;
-  cursor: pointer;
+.global-header .primary-nav .contact-item a {
+  font-weight: 500;
 }
 
 .global-header .primary-nav .logo-items {
@@ -1706,6 +1751,10 @@ a.text-button {
   padding: 1rem;
   font-weight: 400;
   color: #111;
+}
+
+.global-header .primary-nav .primary-link.text-button {
+  padding: 0;
 }
 
 .global-header .primary-nav .active {
@@ -1848,7 +1897,7 @@ a.text-button {
 .global-header .global-site-search {
   display: none;
   position: absolute;
-  top: 52px;
+  top: 30px;
   left: 0;
   margin: 0;
   padding: 2.5rem;
@@ -1856,6 +1905,7 @@ a.text-button {
   background: #fff;
   width: 100%;
   text-align: center;
+  z-index: 80;
 }
 
 .global-header .global-site-search button {
@@ -1909,8 +1959,10 @@ a.text-button {
   width: 20px;
 }
 
-.global-header.animated.alert.headroom--pinned {
-  animation-name: headerSlideDownMiniAlert;
+@media screen and (min-width: 1000px) {
+  .global-header.animated.headroom--pinned {
+    animation-name: headerSlideDownMini;
+  }
 }
 
 .global-header.animated.headroom--unpinned {
@@ -1922,8 +1974,25 @@ a.text-button {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
 }
 
+@media screen and (min-width: 1000px) {
+  .global-header.animated.headroom--pinned.headroom--not-top {
+    top: -30px;
+  }
+}
+
+.global-header.headroom--top {
+  background-color: white;
+}
+
+@media screen and (min-width: 1000px) {
+  .global-header.headroom--top {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
 .global-header.headroom--not-top {
-  background-color: #fff;
+  background-color: white;
+  transition: background-color 0.5s ease-out;
 }
 
 .global-header .mobile-nav {
@@ -2681,7 +2750,7 @@ footer.body-footer .footer-logo-container img {
   margin: 0 0 1.25rem 0;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 760px) {
   .featured-resource .container .logo {
     margin: 0 1.25rem 0 0;
   }

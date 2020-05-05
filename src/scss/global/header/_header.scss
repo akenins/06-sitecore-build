@@ -1,22 +1,15 @@
 .global-header {
-  background-color: $white;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
   z-index: z(header-nav);
   position: fixed;
   width: 100%;
 
   @include respond-to(desktop) {
-    background-color: transparent;
     box-shadow: none;
   }
 
   .nav-container {
-    @include respond-to(desktop) {
-      padding: 0 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      box-shadow: none;
-    }
+    width: 100%;
   }
 
   .hitachi-solutions-logo {
@@ -26,15 +19,88 @@
     height: 20px;
   }
 
+  .utility-nav-container {
+    display: none;
+    width: 100%;
+    background-color: rgba(226, 229, 231, 0.5);
+
+    @include respond-to(desktop) {
+      display: block;
+    }
+
+    .utility-nav {
+      max-width: 1200px;
+      height: 30px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: flex-end;
+
+      ul {
+        display: flex;
+        justify-content: flex-end;
+
+        .utility-nav-item {
+          margin-left: 1rem;
+          font-size: 0.75rem;
+          line-height: 30px;
+
+          a {
+            color: $grey-700;
+            font-weight: fw(light);
+
+            &:hover {
+              color: $blue-500;
+            }
+
+            i {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+
+    .region-item {
+      position: relative;
+
+      .region-dropdown {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        left: auto; //overwriting value of main menu
+        width: auto;
+        padding: 1rem;
+        background-color: $white;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+      }
+
+      .region-dropdown-items {
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+
+        li a {
+          display: block;
+          color: $black;
+          padding: 0.25rem 1rem;
+          transition: background-color 0.3s ease-out;
+
+          &:hover {
+            background-color: $blue-100;
+          }
+        }
+      }
+    }
+  }
+
   .primary-nav {
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem;
-
-    @include respond-to(desktop) {
-      padding: 1rem 0;
-    }
 
     .nav-items {
       display: none;
@@ -46,24 +112,15 @@
       }
     }
 
-    .utility-nav-items {
+    .contact-item {
       display: none;
 
       @include respond-to(desktop) {
         display: flex;
       }
 
-      .dropdown {
-        top: 38px;
-        left: auto;
-        right: 8px;
-        width: 100%;
-      }
-
-      .header-search {
-        color: $black;
-        font-weight: fw(regular);
-        cursor: pointer;
+      a {
+        font-weight: fw(medium);
       }
     }
 
@@ -76,6 +133,10 @@
       padding: 1rem;
       font-weight: fw(regular);
       color: $black;
+
+      &.text-button {
+        padding: 0;
+      }
     }
 
     .active {
@@ -218,7 +279,7 @@
   .global-site-search {
     display: none;
     position: absolute;
-    top: 52px;
+    top: 30px;
     left: 0;
     margin: 0;
     padding: 2.5rem;
@@ -226,6 +287,7 @@
     background: $white;
     width: 100%;
     text-align: center;
+    z-index: z(overlay-content);
 
     button {
       outline: none;
@@ -277,8 +339,10 @@
     }
   }
 
-  &.animated.alert.headroom--pinned {
-    animation-name: headerSlideDownMiniAlert;
+  &.animated.headroom--pinned {
+    @include respond-to(desktop) {
+      animation-name: headerSlideDownMini;
+    }
   }
 
   &.animated.headroom--unpinned {
@@ -288,9 +352,21 @@
   &.animated.headroom--pinned.headroom--not-top {
     animation-name: headerSlideDown;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+
+    @include respond-to(desktop) {
+      top: -30px;
+    }
+  }
+
+  &.headroom--top {
+    background-color: transparentize($white, 0);
+    @include respond-to(desktop) {
+      background-color: transparentize($white, 1);
+    }
   }
 
   &.headroom--not-top {
-    background-color: $white;
+    background-color: transparentize($white, 0);
+    transition: background-color 0.5s ease-out;
   }
 }
