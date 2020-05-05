@@ -4419,7 +4419,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .hero-video .heading-container {
     max-width: 1000px;
-    margin: -60px auto 0;
+    margin: -30px auto 0;
   }
 }
 
@@ -4466,6 +4466,7 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .hero-video .video-container {
+    top: 90px;
     display: block;
     width: 825px;
     height: 464px;
@@ -4520,7 +4521,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .hero-level-2 .heading-container {
     max-width: 1000px;
-    margin: -60px auto 0;
+    margin: -30px auto 0;
   }
 }
 
@@ -4576,6 +4577,7 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .hero-level-2 .image-container {
+    top: 90px;
     display: block;
     width: 825px;
     height: 464px;
@@ -4635,6 +4637,7 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .hero-level-3 .heading-container {
+    margin-top: 120px;
     width: calc(60% - 20px);
   }
 }
@@ -4662,7 +4665,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .hero-level-3 .solution-icon-container {
     display: block;
-    margin-top: 90px;
+    margin-top: 120px;
     width: calc(40% - 20px);
   }
 }
