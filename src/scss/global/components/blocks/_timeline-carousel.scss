@@ -136,4 +136,15 @@
       }
     }
   }
+
+  .flickity-prev-next-button {
+    .arrow {
+      fill: $black;
+    }
+
+    @include respond-to(desktop) {
+      top: auto;
+      bottom: 0;
+    }
+  }
 }

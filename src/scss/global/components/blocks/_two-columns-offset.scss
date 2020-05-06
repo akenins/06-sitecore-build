@@ -1,17 +1,21 @@
 .two-columns-offset {
   width: 100%;
   margin-bottom: 4rem;
+  background-color: $blue-50;
+
+  @include respond-to(desktop) {
+    background-color: none;
+  }
 
   &.left {
-    background: linear-gradient(
-      to right,
-      $blue-50 0%,
-      $blue-50 80%,
-      $white 80%,
-      $white 100%
-    );
-
     @include respond-to(desktop) {
+      background-image: linear-gradient(
+        to right,
+        $blue-50 0%,
+        $blue-50 80%,
+        $white 80%,
+        $white 100%
+      );
       .container .image {
         order: 2;
       }
@@ -19,13 +23,15 @@
   }
 
   &.right {
-    background: linear-gradient(
-      to left,
-      $blue-50 0%,
-      $blue-50 80%,
-      $white 80%,
-      $white 100%
-    );
+    @include respond-to(desktop) {
+      background-image: linear-gradient(
+        to left,
+        $blue-50 0%,
+        $blue-50 80%,
+        $white 80%,
+        $white 100%
+      );
+    }
   }
 
   .container {

@@ -2089,6 +2089,11 @@ a.text-button {
   font-weight: 700;
 }
 
+.global-header .mobile-nav .search-form {
+  display: flex;
+  flex-direction: row;
+}
+
 .global-header .mobile-nav .search-submit {
   border: 0;
   background-color: transparent;
@@ -2096,7 +2101,7 @@ a.text-button {
 }
 
 .global-header .mobile-nav .search-input {
-  width: 90%;
+  flex-grow: 1;
   font-size: 1rem;
   border: 0;
   outline: 0;
@@ -3033,6 +3038,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .logo-bar .logo {
     max-width: calc(20% - 20px);
+    margin: 0;
   }
 }
 
@@ -3840,23 +3846,42 @@ footer.body-footer .footer-logo-container img {
   border-radius: 6px;
 }
 
-.two-columns-offset {
-  width: 100%;
-  margin-bottom: 4rem;
-}
-
-.two-columns-offset.left {
-  background: linear-gradient(to right, #f8f8f9 0%, #f8f8f9 80%, #fff 80%, #fff 100%);
+.timeline-carousel .flickity-prev-next-button .arrow {
+  fill: #111;
 }
 
 @media screen and (min-width: 1000px) {
+  .timeline-carousel .flickity-prev-next-button {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.two-columns-offset {
+  width: 100%;
+  margin-bottom: 4rem;
+  background-color: #f8f8f9;
+}
+
+@media screen and (min-width: 1000px) {
+  .two-columns-offset {
+    background-color: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .two-columns-offset.left {
+    background-image: linear-gradient(to right, #f8f8f9 0%, #f8f8f9 80%, #fff 80%, #fff 100%);
+  }
   .two-columns-offset.left .container .image {
     order: 2;
   }
 }
 
-.two-columns-offset.right {
-  background: linear-gradient(to left, #f8f8f9 0%, #f8f8f9 80%, #fff 80%, #fff 100%);
+@media screen and (min-width: 1000px) {
+  .two-columns-offset.right {
+    background-image: linear-gradient(to left, #f8f8f9 0%, #f8f8f9 80%, #fff 80%, #fff 100%);
+  }
 }
 
 .two-columns-offset .container {
@@ -4282,11 +4307,13 @@ footer.body-footer .footer-logo-container img {
 .hero-homepage {
   width: 100%;
   min-height: 450px;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 1000px) {
   .hero-homepage {
     min-height: 750px;
+    margin: 0;
   }
 }
 

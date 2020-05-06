@@ -92,6 +92,11 @@
       }
     }
 
+    .search-form {
+      display: flex;
+      flex-direction: row;
+    }
+
     .search-submit {
       border: 0;
       background-color: transparent;
@@ -99,7 +104,7 @@
     }
 
     .search-input {
-      width: 90%;
+      flex-grow: 1;
       font-size: 1rem;
       border: 0;
       outline: 0;

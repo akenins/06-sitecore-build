@@ -114,18 +114,6 @@ function buildWithWebpack(done) {
     .on('error', handleScriptBuildError)
 }
 
-// function scripts() {
-//   return gulp
-//     .src('./src/scripts/source/**/*.js')
-//     .pipe(sourcemaps.init())
-//     .pipe(concat('main.js'))
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest('./dist/assets/scripts/site/'))
-//     .pipe(rename({ suffix: '.min' }))
-//     .pipe(uglify())
-//     .pipe(gulp.dest('./dist/assets/scripts/site/'))
-// }
-
 // Watch files
 function watchFiles() {
   gulp.watch('./src/scss/**/*.scss', scss)
