@@ -2,8 +2,7 @@ const autoprefixer = require('autoprefixer')
 const browsersync = require('browser-sync').create()
 const cssnano = require('cssnano')
 const del = require('del')
-const concat = require('gulp-concat')
-const eslint = require('gulp-eslint')
+// const eslint = require('gulp-eslint')
 const gulp = require('gulp')
 const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
@@ -12,6 +11,8 @@ const sourcemaps = require('gulp-sourcemaps')
 
 const webpack = require('webpack')
 const gulpWebpack = require('gulp-webpack')
+
+const Gulpicon = require('./gulp-tasks/icons')
 
 // BrowserSync
 function browserSync(done) {
@@ -94,7 +95,7 @@ let webpackConfig = {
   ],
 }
 
-const handleScriptBuildError = function(err) {
+const handleScriptBuildError = function (err) {
   console.error('-----------------------')
   console.error('ERROR Building JS Bundle!')
   console.error(err.message)
@@ -111,17 +112,9 @@ function buildWithWebpack(done) {
     .on('error', handleScriptBuildError)
 }
 
-// function scripts() {
-//   return gulp
-//     .src('./src/scripts/source/**/*.js')
-//     .pipe(sourcemaps.init())
-//     .pipe(concat('main.js'))
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(gulp.dest('./dist/assets/scripts/site/'))
-//     .pipe(rename({ suffix: '.min' }))
-//     .pipe(uglify())
-//     .pipe(gulp.dest('./dist/assets/scripts/site/'))
-// }
+// Handle Icons
+// gulp.task('iconmin', Gulpicon.minify)
+// gulp.task('icons', ['iconmin'], Gulpicon.build)
 
 // Watch files
 function watchFiles() {
@@ -131,15 +124,17 @@ function watchFiles() {
 }
 
 // Define complex tasks
-//const js = gulp.series(scripts)
 const js = gulp.series(buildWithWebpack)
 const build = gulp.series(clean, gulp.parallel(scss, js))
 const watch = gulp.parallel(watchFiles, browserSync)
+const icons = gulp.series(Gulpicon.minify, Gulpicon.build)
 
 // export tasks
-exports.scss = scss
-exports.scripts = buildWithWebpack
-exports.clean = clean
 exports.build = build
+exports.clean = clean
+exports.icons = icons
+exports.scripts = buildWithWebpack
+exports.scss = scss
 exports.watch = watch
+
 exports.default = build
