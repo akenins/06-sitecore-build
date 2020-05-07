@@ -4366,7 +4366,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .hero-homepage .heading-container {
     max-width: 1000px;
-    margin: -25px auto 0;
+    margin: 0 auto;
   }
 }
 
