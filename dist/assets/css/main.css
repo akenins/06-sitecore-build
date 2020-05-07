@@ -4763,7 +4763,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .hero-resource .heading-container {
     max-width: 1000px;
-    margin: -60px auto 0;
+    margin: 0 auto;
   }
 }
 
