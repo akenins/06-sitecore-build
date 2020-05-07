@@ -1626,13 +1626,14 @@ a.text-button {
 .global-header .hitachi-solutions-logo {
   display: block;
   flex: 0 0 auto;
-  width: 171px;
-  height: 20px;
+  width: 190px;
+  height: 22px;
 }
 
 .global-header .utility-nav-container {
   display: none;
   width: 100%;
+  border-top: 3px solid #ed1b34;
   background-color: rgba(226, 229, 231, 0.5);
 }
 
@@ -1644,11 +1645,21 @@ a.text-button {
 
 .global-header .utility-nav-container .utility-nav {
   max-width: 1200px;
-  height: 30px;
+  height: 45px;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.global-header .utility-nav-container .utility-nav .utility-logo {
+  display: flex;
+  align-items: center;
+}
+
+.global-header .utility-nav-container .utility-nav .utility-logo img {
+  max-width: 90px;
+  height: auto;
 }
 
 .global-header .utility-nav-container .utility-nav ul {
@@ -1659,7 +1670,7 @@ a.text-button {
 .global-header .utility-nav-container .utility-nav ul .utility-nav-item {
   margin-left: 1rem;
   font-size: 0.75rem;
-  line-height: 30px;
+  line-height: 45px;
 }
 
 .global-header .utility-nav-container .utility-nav ul .utility-nav-item a {
@@ -1671,8 +1682,8 @@ a.text-button {
   color: #1e4799;
 }
 
-.global-header .utility-nav-container .utility-nav ul .utility-nav-item a i {
-  opacity: 0.5;
+.global-header .utility-nav-container .utility-nav ul .utility-nav-item.region-item ul li {
+  line-height: 30px;
 }
 
 .global-header .utility-nav-container .region-item {
@@ -1681,13 +1692,14 @@ a.text-button {
 
 .global-header .utility-nav-container .region-item .region-dropdown {
   position: absolute;
-  top: 30px;
+  top: 45px;
   right: 0;
   left: auto;
   width: auto;
   padding: 1rem;
   background-color: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+  z-index: 70;
 }
 
 .global-header .utility-nav-container .region-item .region-dropdown-items {
@@ -1725,6 +1737,7 @@ a.text-button {
     display: flex;
     position: relative;
     flex: 1 0 auto;
+    margin-left: 0.75rem;
   }
 }
 
@@ -1794,7 +1807,7 @@ a.text-button {
   padding: 2.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
   background: #fff;
-  width: 122%;
+  width: calc(100% + 108px);
 }
 
 .global-header .dropdown .dropdown-title {
@@ -4353,7 +4366,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .hero-homepage .heading-container {
     max-width: 1000px;
-    margin: -60px auto 0;
+    margin: -25px auto 0;
   }
 }
 
@@ -4446,7 +4459,6 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .hero-video .heading-container {
     max-width: 1000px;
-    margin: -30px auto 0;
   }
 }
 
@@ -4493,7 +4505,7 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .hero-video .video-container {
-    top: 90px;
+    top: 105px;
     display: block;
     width: 825px;
     height: 464px;
@@ -4548,7 +4560,6 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .hero-level-2 .heading-container {
     max-width: 1000px;
-    margin: -30px auto 0;
   }
 }
 
@@ -4604,7 +4615,7 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .hero-level-2 .image-container {
-    top: 90px;
+    top: 105px;
     display: block;
     width: 825px;
     height: 464px;
@@ -4664,7 +4675,7 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .hero-level-3 .heading-container {
-    margin-top: 120px;
+    margin-top: 135px;
     width: calc(60% - 20px);
   }
 }
@@ -4692,7 +4703,7 @@ footer.body-footer .footer-logo-container img {
 @media screen and (min-width: 1000px) {
   .hero-level-3 .solution-icon-container {
     display: block;
-    margin-top: 120px;
+    margin-top: 135px;
     width: calc(40% - 20px);
   }
 }
@@ -4823,7 +4834,7 @@ footer.body-footer .footer-logo-container img {
 .hero-resource .gradient-container {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 105px;
   right: 1rem;
   z-index: 30;
 }

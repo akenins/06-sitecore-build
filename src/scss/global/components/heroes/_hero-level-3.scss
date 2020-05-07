@@ -34,7 +34,7 @@
     }
 
     @include respond-to(desktop) {
-      margin-top: 120px;
+      margin-top: 135px;
       width: calc(60% - 20px);
     }
 
@@ -58,7 +58,7 @@
 
     @include respond-to(desktop) {
       display: block;
-      margin-top: 120px;
+      margin-top: 135px;
       width: calc(40% - 20px);
     }
 

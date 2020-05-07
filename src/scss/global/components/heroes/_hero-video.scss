@@ -29,7 +29,6 @@
 
     @include respond-to(desktop) {
       max-width: 1000px;
-      margin: -30px auto 0;
     }
 
     @include respond-to(large-desktop) {
@@ -68,7 +67,7 @@
     z-index: z(block-content);
 
     @include respond-to(desktop) {
-      top: 90px;
+      top: 105px;
       display: block;
       width: 825px;
       height: 464px;

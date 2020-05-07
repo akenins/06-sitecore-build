@@ -61,10 +61,20 @@
     type="text/javascript"
     src="./assets/scripts/libraries/grunticon.js"
   ></script>
-  <script
+  <script>
+    grunticon(
+      [
+        './assets/icons/icons.data.svg.css',
+        './assets/icons/icons.data.png.css',
+        './assets/icons/icons.fallback.css',
+      ],
+      grunticon.svgLoadedCORSCallback
+    )
+  </script>
+  <!-- <script
     type="text/javascript"
     src="./assets/scripts/libraries/headroom.min.js"
-  ></script>
+  ></script> -->
   <script
     type="text/javascript"
     src="./assets/scripts/libraries/flickity.pkgd.min.js"
