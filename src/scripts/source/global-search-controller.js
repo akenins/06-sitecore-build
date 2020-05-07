@@ -1,15 +1,18 @@
 $(document).ready(function () {
+  let $gSearch = $('.gsearch'),
+    $searchKeyword = $('#site-search-keyword')
+
   function pageRedirect(word) {
     window.location.href = window.location.origin + '/search?word=' + word
   }
 
-  $('.gsearch').on('click', function () {
-    pageRedirect($('#site-search-keyword').val())
+  $gSearch.on('click', function () {
+    pageRedirect($searchKeyword.val())
   })
 
-  $('#site-search-keyword').keypress(function (e) {
+  $searchKeyword.keypress(function (e) {
     if (e.which == 13) {
-      pageRedirect($('#site-search-keyword').val())
+      pageRedirect($searchKeyword.val())
     }
   })
 })
