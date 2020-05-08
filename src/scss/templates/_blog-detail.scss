@@ -3,6 +3,10 @@
   margin-bottom: 6rem;
   padding-top: 60px;
 
+  @include respond-to(desktop) {
+    padding-top: 105px;
+  }
+
   .container {
     width: 100%;
     position: relative;

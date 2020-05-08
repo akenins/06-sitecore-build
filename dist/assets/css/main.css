@@ -3721,6 +3721,7 @@ footer.body-footer .footer-logo-container img {
 
 .timeline-carousel {
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 .timeline-carousel .container {
@@ -4484,6 +4485,12 @@ footer.body-footer .footer-logo-container img {
 
 @media screen and (min-width: 1000px) {
   .hero-video .heading {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-video .heading {
     width: 50%;
   }
 }
@@ -5236,6 +5243,12 @@ footer.body-footer .footer-logo-container img {
   padding-top: 60px;
 }
 
+@media screen and (min-width: 1000px) {
+  .blog-post {
+    padding-top: 105px;
+  }
+}
+
 .blog-post .container {
   width: 100%;
   position: relative;
@@ -5463,8 +5476,14 @@ footer.body-footer .footer-logo-container img {
   box-shadow: 0 4px 16px rgba(17, 17, 17, 0.1);
   z-index: 30;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 760px) {
+  .resources-gallery .resource-card {
+    flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -5476,7 +5495,13 @@ footer.body-footer .footer-logo-container img {
 .resources-gallery .resource-card .image-container {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin: 0 0 1rem;
+}
+
+@media screen and (min-width: 760px) {
+  .resources-gallery .resource-card .image-container {
+    margin: 0 1rem 0 0;
+  }
 }
 
 .resources-gallery .resource-card .image-container img {
@@ -5513,74 +5538,6 @@ footer.body-footer .footer-logo-container img {
   justify-content: flex-end;
   flex-grow: 1;
   text-align: right;
-}
-
-.resources-gallery .pgn-button-row .pgn-button {
-  display: inline-block;
-  padding: 10px 16px;
-  margin: 0 4px;
-  font-size: 1rem;
-  border: 0;
-  background-color: transparent;
-  line-height: 0.825rem;
-  color: #c2c2c2;
-  transition: color 0.2s ease-out;
-}
-
-.resources-gallery .pgn-button-row .pgn-button:hover {
-  cursor: pointer;
-  color: #ed1b34;
-}
-
-.resources-gallery .pgn-button-row .pgn-button:focus {
-  outline: none;
-}
-
-.resources-gallery .pgn-button-row .pgn-button:disabled .arrow {
-  fill: #c2c2c2;
-}
-
-.resources-gallery .pgn-button-row .pgn-button.is-selected {
-  border: 1px solid #c2c2c2;
-  color: #111;
-}
-
-.resources-gallery .pgn-button-row .pgn-button svg {
-  width: 0.825rem;
-  height: 0.825rem;
-}
-
-.resources-gallery .pgn-button-row .pgn-button svg .arrow {
-  fill: #ed1b34;
-}
-
-.resources-gallery .pgn-button-row .pgn-button-group {
-  display: inline-block;
-  vertical-align: bottom;
-}
-
-.resources-gallery .pgn-button-row .pgn-button-group:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.resources-gallery .pgn-button-row .pgn-button-row {
-  text-align: center;
-}
-
-@media screen and (min-width: 1000px) {
-  .resources-gallery .pgn-button-row .pgn-button-row {
-    position: absolute;
-    top: -10px;
-    right: 0;
-  }
-}
-
-.resources-gallery .pgn-button-row .pgn-button-row .pgn-button--previous,
-.resources-gallery .pgn-button-row .pgn-button-row .pgn-button--next {
-  font-weight: 700;
-  color: #ed1b34;
 }
 
 .resource-filter-bar {
@@ -5636,46 +5593,26 @@ footer.body-footer .footer-logo-container img {
 }
 
 .resource-filter-bar .filter-column .chip {
-  margin: 0;
+  margin: 0.5rem 0;
   background-color: #f5f5f5;
   color: #707070;
 }
 
 @media screen and (min-width: 1000px) {
   .resource-filter-bar .filter-column .chip {
-    margin: 0.5rem 0 0;
+    margin: 0;
   }
 }
 
 .resource-filter-bar .filter-column .chip.filter {
   background-color: white;
   border: 1px solid lightgrey;
-  margin-left: 10px;
+  margin-right: 10px;
   text-transform: capitalize;
 }
 
-.resource-filter-bar .filter-column .search-wrapper {
-  border: 1px solid #c2c2c2;
-  position: relative;
-  height: 40px;
-}
-
-.resource-filter-bar .filter-column .search-wrapper input {
-  border: none;
-  display: block;
-  color: #111;
-  height: 38px;
-  line-height: 38px;
-  padding: 0 2.75rem 0 1rem;
-  outline: none;
-  font-size: 0.9375rem;
-  width: 100%;
-}
-
-.resource-filter-bar .filter-column .search-wrapper .icon {
-  position: absolute;
-  top: 0.7rem;
-  right: 1rem;
+.resource-filter-bar .filter-column#active-filters, .resource-filter-bar .filter-column#clear-filters {
+  width: auto;
 }
 
 .resource-filter-bar .filter-dropdown {
