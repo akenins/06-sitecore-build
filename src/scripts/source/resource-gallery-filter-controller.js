@@ -13,7 +13,9 @@ $(function () {
     $('#active-filters').append(`<span class="chip filter">${tag}</span>`)
   })
 
-  $('.select').each(function () {
+  const $resourceFilterSelect = $('.resource-filter-bar').find('.select') // Prevents solution picker from redirecting to Resource Center
+
+  $resourceFilterSelect.each(function () {
     const $selectOption = $(this).find('.select-options').children('li')
 
     $selectOption.on('click', function (e) {
