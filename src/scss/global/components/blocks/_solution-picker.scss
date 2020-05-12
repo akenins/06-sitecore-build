@@ -1,13 +1,18 @@
 .solution-picker {
   width: 100%;
   margin-bottom: 4rem;
-  background: linear-gradient(
-    to right,
-    $blue-50 0%,
-    $blue-50 80%,
-    $white 80%,
-    $white 100%
-  );
+  background-color: $blue-50;
+
+  @include respond-to(desktop) {
+    background-color: none;
+    background-image: linear-gradient(
+      to right,
+      $blue-50 0%,
+      $blue-50 80%,
+      $white 80%,
+      $white 100%
+    );
+  }
 
   @include respond-to(desktop) {
     .container .image {
@@ -72,27 +77,82 @@
       margin-top: 1.2rem;
     }
 
-    .solution-dropdown {
-      border: 1px solid color(borders);
-      outline: none;
-      width: auto;
+    .select-hidden {
+      display: none;
+      visibility: hidden;
+    }
+
+    .select {
+      display: inline-block;
       position: relative;
-      background-color: $white;
-      color: $blue-700;
+      cursor: pointer;
       font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1.25px;
-      font-weight: fw(bold);
-      padding: 0.75rem 1rem;
-      -webkit-appearance: none;
-      background-image: url('data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%205.52%209.22%22%3E%3Ctitle%20fill%3D%22%23edb134%22%3Earrow-button-meganav%3C%2Ftitle%3E%3Cpath%20d%3D%22M1.29%2C9.22%2C0%2C7.93%2C3.32%2C4.61%2C0%2C1.29%2C1.29%2C0l4%2C4a.91.91%2C0%2C0%2C1%2C0%2C1.29Z%22%20fill%3D%22%23ed1b34%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E'),
-        linear-gradient(to bottom, white 0%, white 100%);
-      background-repeat: no-repeat, repeat;
-      background-position: right 1rem top 50%, 0 0;
-      background-size: 0.4rem auto, 100%;
+      color: $blue-700;
+      width: 100%;
+      height: 42px;
 
       @include respond-to(desktop) {
         width: 350px;
+      }
+    }
+
+    .select-styled {
+      position: absolute;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 1.25px;
+      font-weight: 700;
+      top: 0;
+      left: 0;
+      background-color: $white;
+      padding: 0.75rem 1rem;
+      border: 1px solid color(borders);
+
+      &:after {
+        position: absolute;
+        right: 1rem;
+        top: 14px;
+        height: 12px;
+        width: 8px;
+        content: '';
+        transform: rotate(90deg);
+        background-image: url('data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%205.52%209.22%22%3E%3Ctitle%20fill%3D%22%23edb134%22%3Earrow-button-meganav%3C%2Ftitle%3E%3Cpath%20d%3D%22M1.29%2C9.22%2C0%2C7.93%2C3.32%2C4.61%2C0%2C1.29%2C1.29%2C0l4%2C4a.91.91%2C0%2C0%2C1%2C0%2C1.29Z%22%20fill%3D%22%23ed1b34%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease-out;
+      }
+
+      &.active:after {
+        transform: rotate(-90deg);
+      }
+    }
+
+    .select-options {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: calc(100% - 1px);
+      background-color: $white;
+      border-right: 1px solid color(borders);
+      border-bottom: 1px solid color(borders);
+      border-left: 1px solid color(borders);
+      z-index: 100;
+      padding: 0;
+
+      li {
+        padding: 0.5rem 0 0.5rem 1rem;
+        margin: 0.5rem 0 0;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          color: $blue-500;
+          background-color: $blue-100;
+        }
+
+        &:before {
+          content: '';
+          padding: 0;
+          margin: 0;
+        }
       }
     }
   }

@@ -1,11 +1,11 @@
-$(function() {
-  const $solutionPicker = $('#solution-picker')
+$(function () {
+  const $solutionPicker = $('.solution-picker')
+  const $selectOptions = $solutionPicker.find('.select-options')
+  const $selectOption = $selectOptions.children('li')
 
-  $('#solutions').show()
-
-  $solutionPicker.on('change', function() {
-    const $value = $(this).val()
+  $selectOption.on('click', function (e) {
+    let $value = $(this).attr('rel')
     $('div.solution-container').hide()
-    $('#' + $value).show()
+    $(`#${$value}`).show()
   })
 })
