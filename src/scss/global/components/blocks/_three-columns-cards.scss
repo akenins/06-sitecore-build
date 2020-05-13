@@ -30,6 +30,8 @@
     padding: 1.25rem 3rem;
     text-align: center;
     transition: all 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
       transform: translateY(-10px);
@@ -39,6 +41,10 @@
     @include respond-to(desktop) {
       width: calc(33.333% - 20px);
       margin: 10px;
+    }
+
+    .content {
+      flex: 1 0 auto;
     }
 
     img {
