@@ -1986,7 +1986,7 @@ a.text-button {
 }
 
 .global-header .mobile-nav-toggle span:nth-child(1) {
-  top: 15%;
+  top: 20%;
 }
 
 .global-header .mobile-nav-toggle span:nth-child(2) {
@@ -1998,7 +1998,7 @@ a.text-button {
 }
 
 .global-header .mobile-nav-toggle span:nth-child(4) {
-  top: 85%;
+  top: 80%;
 }
 
 .global-header .mobile-nav-toggle.toggled span:nth-child(1) {
