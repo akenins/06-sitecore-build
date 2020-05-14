@@ -72,33 +72,6 @@
       }
     }
 
-    .mobile-nav-toggle {
-      span {
-        display: block;
-        position: absolute;
-        height: 3px;
-        width: 100%;
-        background-color: color(brand);
-        border-radius: 3px;
-        opacity: 1;
-        left: 0;
-        transition: all 0.3s ease-out;
-
-        &:nth-child(1) {
-          top: 0;
-        }
-        &:nth-child(2) {
-          top: 50%;
-        }
-        &:nth-child(3) {
-          top: 50%;
-        }
-        &:nth-child(4) {
-          top: 100%;
-        }
-      }
-    }
-
     .mobile-dropdown {
       position: relative;
       display: none;

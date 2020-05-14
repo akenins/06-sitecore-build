@@ -1955,6 +1955,7 @@ a.text-button {
   position: relative;
   z-index: 70;
   text-align: center;
+  position: relative;
 }
 
 .global-header .mobile-nav-toggle:last-child {
@@ -2128,34 +2129,6 @@ a.text-button {
 .global-header .mobile-nav .mobile-nav-item .mobile-subnav-arrow .icon {
   width: 12px;
   height: 12px;
-}
-
-.global-header .mobile-nav .mobile-nav-toggle span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: #ed1b34;
-  border-radius: 3px;
-  opacity: 1;
-  left: 0;
-  transition: all 0.3s ease-out;
-}
-
-.global-header .mobile-nav .mobile-nav-toggle span:nth-child(1) {
-  top: 0;
-}
-
-.global-header .mobile-nav .mobile-nav-toggle span:nth-child(2) {
-  top: 50%;
-}
-
-.global-header .mobile-nav .mobile-nav-toggle span:nth-child(3) {
-  top: 50%;
-}
-
-.global-header .mobile-nav .mobile-nav-toggle span:nth-child(4) {
-  top: 100%;
 }
 
 .global-header .mobile-nav .mobile-dropdown {
