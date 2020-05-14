@@ -1,4 +1,4 @@
-let MobileNavController = (function($) {
+let MobileNavController = (function ($) {
   let mobileNav,
     mobileNavSelector = '#mobile-nav',
     mobileNavToggleButton,
@@ -42,6 +42,7 @@ let MobileNavController = (function($) {
     if (clicked.closest(mobileNavActiveAreaSelector).length === 0) {
       close()
       mobileNav.removeClass('mobile-nav-open')
+      mobileNavToggleButton.removeClass('toggled')
     }
   }
 
@@ -68,9 +69,11 @@ let MobileNavController = (function($) {
   function onClickMenuToggle(e) {
     if (mobileNav.hasClass(openClass)) {
       mobileNav.removeClass('mobile-nav-open')
+      mobileNavToggleButton.removeClass('toggled')
       close()
     } else {
       mobileNav.addClass('mobile-nav-open')
+      mobileNavToggleButton.addClass('toggled')
       open()
     }
 
