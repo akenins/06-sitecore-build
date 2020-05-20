@@ -624,6 +624,9 @@
             </li>
           </ul>
 
+          <button class="mobile-search-toggle" id="mobile-search-toggle">
+            <i class="icon icon-search"></i>
+          </button>
           <button class="mobile-nav-toggle" id="mobile-nav-toggle">
             <span></span>
             <span></span>
@@ -632,9 +635,9 @@
           </button>
         </nav>
 
-        <nav class="mobile-nav" id="mobile-nav">
-          <ul class="mobile-nav-items">
-            <li class="mobile-nav-item">
+        <div class="mobile-search" id="mobile-search">
+          <ul class="mobile-search-items">
+            <li class="mobile-search-item">
               <form role="search" method="get" class="search-form" action="#">
                 <button type="submit" class="search-submit" aria-label="Search">
                   <i class="icon icon-search"></i>
@@ -648,7 +651,11 @@
                 />
               </form>
             </li>
+          </ul>
+        </div>
 
+        <nav class="mobile-nav" id="mobile-nav">
+          <ul class="mobile-nav-items">
             <li class="mobile-nav-item has-mobile-dropdown">
               <a href="/">Industries</a>
               <button class="mobile-nav-arrow">

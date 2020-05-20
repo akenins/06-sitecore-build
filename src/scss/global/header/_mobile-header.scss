@@ -1,16 +1,20 @@
 .global-header {
-  .mobile-nav {
+  .mobile-nav,
+  .mobile-search {
     display: none;
 
-    .mobile-nav-item {
+    .mobile-nav-item,
+    .mobile-search-item {
       position: relative;
       text-transform: uppercase;
       padding: 1rem 1.5rem;
       border-top: 1px solid color(borders);
+    }
 
+    .mobile-nav-item {
       &:last-child {
         border: 0;
-        padding-top: 0;
+        padding: 0 1.5rem 1.5rem;
         text-align: center;
       }
 
@@ -20,6 +24,7 @@
 
       .button {
         margin: 0;
+        font-weight: 500;
       }
 
       a {
