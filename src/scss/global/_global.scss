@@ -50,48 +50,61 @@ $hitachi-deep-red: #991b1f;
 $inspire-red: #ed1b34;
 
 // Secondary
-$orange-900: #a53e23;
-$orange-700: #f26722;
-$orange-500: #fbaa23;
-$orange-300: #ffd500;
-$orange-100: #fee180;
+
+$red-900: #5c0012;
+$red-700: #910103;
+$red-500: #ed1b34;
+$red-300: #ff5854;
+$red-100: #f8978d;
+//$red-50: ???;
+$orange-900: #5c2004;
+$orange-700: #c23f00;
+$orange-500: #f26722;
+$orange-300: #f9a825;
+$orange-100: #fec315;
 $orange-50: #fff7df;
 $green-900: #1f4a23;
-$green-700: #429644;
-$green-500: #82c341;
-$green-300: #b7d433;
-$green-100: #e1ebae;
+$green-700: #196734;
+$green-500: #249644;
+$green-300: #82c341;
+$green-100: #b7d433;
 $green-50: #f7faeb;
-$blue-900: #111;
-$blue-700: #16214b;
-$blue-500: #1e4799;
-$blue-300: #2aa9e0;
-$blue-100: #e2e5e7;
+$blue-900: #111932;
+$blue-700: #0d47a1;
+$blue-500: #2ba9e1;
+$blue-300: #7cd2f3;
+$blue-100: #e2e6e8;
 $blue-50: #f8f8f9;
-$purple-900: #3a1126;
-$purple-700: #891d5a;
-$purple-500: #9c4a70;
-$purple-300: #f493ad;
-$purple-100: #f5d7d6;
+$teal-900: #115152;
+$teal-700: #308485;
+$teal-500: #4ca9a3;
+$teal-300: #86d1c9;
+$teal-100: #d2fff6;
+//$teal-50: ???;
+$purple-900: #1e000e;
+$purple-700: #571038;
+$purple-500: #8a1d5a;
+$purple-300: #f466a3;
+$purple-100: #f494ad;
 $purple-50: #fcf5f5;
 
 // Grey
 
-$grey-900: #303030;
-$grey-700: #707070;
+$grey-900: #2d2d2d;
+$grey-700: #737474;
 $grey-600: #a2a2a2;
-$grey-500: #c2c2c2;
-$grey-300: #e5e5e5;
-$grey-100: #f5f5f5;
+$grey-500: #b3b4b4;
+$grey-300: #dad9d9;
+$grey-100: #f2f3f3;
 
 // TO-DO: ADD ALL COLOR TOKENS
 $colors: (
   body-bg: $white,
   body-color: $black,
-  selection-bg: $blue-500,
+  selection-bg: $blue-700,
   selection-color: $white,
   brand: $inspire-red,
-  a-color: $blue-500,
+  a-color: $blue-700,
   a-hover: $blue-700,
   nav: $grey-900,
   borders: $grey-500,
