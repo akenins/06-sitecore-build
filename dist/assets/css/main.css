@@ -41,7 +41,7 @@
 
 @keyframes headerSlideUp {
   0% {
-    transform: translateY(-48px);
+    transform: translateY(0);
   }
   100% {
     transform: translateY(-100%);
@@ -50,10 +50,19 @@
 
 @keyframes headerSlideDownMini {
   0% {
-    transform: translateY(-48px);
+    transform: translateY(-100%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(-52px);
+  }
+}
+
+@keyframes headerSlideDownMiniAlert {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-88px);
   }
 }
 
@@ -1227,7 +1236,7 @@ section ul li.check:before {
 
 #alert-bar {
   background: #2d2d2d;
-  height: 40px;
+  padding: 0.75rem 1.875rem;
   position: relative;
 }
 
@@ -1237,7 +1246,6 @@ section ul li.check:before {
   font-weight: 300;
   max-width: 1200px;
   margin: 0 auto;
-  line-height: 40px;
 }
 
 #alert-bar .text {
@@ -2293,25 +2301,24 @@ a.text-button {
   width: 18px;
 }
 
-@media screen and (min-width: 1000px) {
-  .global-header.animated.headroom--pinned {
-    animation-name: headerSlideDownMini;
-  }
+.global-header.animated.headroom--pinned {
+  animation-name: headerSlideDownMini;
+}
+
+.global-header.animated.alert.headroom--pinned {
+  animation-name: headerSlideDownMiniAlert;
 }
 
 .global-header.animated.headroom--unpinned {
   animation-name: headerSlideUp;
 }
 
-.global-header.animated.headroom--pinned.headroom--not-top {
+.global-header.animated.headroom--pinned.headroom--top {
   animation-name: headerSlideDown;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
 }
 
-@media screen and (min-width: 1000px) {
-  .global-header.animated.headroom--pinned.headroom--not-top {
-    top: -48px;
-  }
+.global-header.animated.headroom--pinned.headroom--not-top {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
 }
 
 .global-header.headroom--top {

@@ -415,22 +415,23 @@
   }
 
   &.animated.headroom--pinned {
-    @include respond-to(desktop) {
-      animation-name: headerSlideDownMini;
-    }
+    animation-name: headerSlideDownMini;
+  }
+
+  &.animated.alert.headroom--pinned {
+    animation-name: headerSlideDownMiniAlert;
   }
 
   &.animated.headroom--unpinned {
     animation-name: headerSlideUp;
   }
 
-  &.animated.headroom--pinned.headroom--not-top {
+  &.animated.headroom--pinned.headroom--top {
     animation-name: headerSlideDown;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+  }
 
-    @include respond-to(desktop) {
-      top: -48px;
-    }
+  &.animated.headroom--pinned.headroom--not-top {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
   }
 
   &.headroom--top {

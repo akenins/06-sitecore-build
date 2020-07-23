@@ -1,4 +1,5 @@
 // import 'babel-polyfill'
+import './alert-bar'
 import './animation-controller'
 import './flickity-helper'
 import './form-controller'

@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="//b2c-msm.marketo.com/jsloader/c51e7679-1f1b-49c3-a8ff-c6e5226dcb20/loader.php.js"></script>
     <title>Stylesheet Example</title>
   </head>
   <body>
-    <header class="global-header" id="global-header">
+    <!-- "alert" class added to <header> -->
+    <header class="global-header alert" id="global-header">
+      <!-- New Component Start -->
       <div id="alert-bar">
         <div class="alert-text">
           <span class="text"
             >Hitachi Solutions wins 3 Microsoft Partner of the Year Awards</span
           >
+          <!-- Single line text -->
           <span class="splitter">&nbsp;|&nbsp;</span>
           <a href="#" class="link" target="_blank">Learn More</a>
+          <!-- Internal Link -->
         </div>
         <a href="#" class="alert-close"><i class="icon icon-close-1"></i></a>
       </div>
+      <!-- New Component End -->
       <div class="nav-container">
         <nav class="utility-nav-container">
           <div class="utility-nav">
@@ -792,12 +796,6 @@
         </nav>
       </div>
     </header>
-    <div style="padding: 12rem 0 4rem; max-width: 1200px; margin: 0 auto;">
-      <div
-        class="cf_widgetLoader cf_w_e248f231dc7941b8944fe18235d3c812_Poll"
-      ></div>
-    </div>
-    <div style="height: 2000px; background-color: palegreen;"></div>
   </body>
   <script
     type="text/javascript"

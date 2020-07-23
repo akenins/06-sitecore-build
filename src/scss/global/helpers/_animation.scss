@@ -16,7 +16,7 @@
 
 @keyframes headerSlideUp {
   0% {
-    transform: translateY(-48px);
+    transform: translateY(0);
   }
   100% {
     transform: translateY(-100%);
@@ -25,10 +25,19 @@
 
 @keyframes headerSlideDownMini {
   0% {
-    transform: translateY(-48px);
+    transform: translateY(-100%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(-52px);
+  }
+}
+
+@keyframes headerSlideDownMiniAlert {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-88px);
   }
 }
 
