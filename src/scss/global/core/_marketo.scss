@@ -38,7 +38,7 @@
   input[type='tel'],
   select,
   textarea {
-    font-size: 1rem;
+    font-size: 1rem !important;
     line-height: 1;
     padding: 1.5rem 0.75rem 0.5rem !important;
     font-family: 'Fira Sans', 'Trebuchet MS', 'Arial', sans-serif !important;
@@ -54,6 +54,11 @@
     min-height: 150px;
   }
 
+  label[for='confirminterest'] {
+    top: 0 !important;
+    padding: 0 !important;
+  }
+
   .mktoLabel {
     float: none;
     line-height: 1.5;
@@ -61,7 +66,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.15px;
     position: absolute;
-    top: 5%;
+    top: 4px !important;
     left: 12px;
     width: auto !important;
     transition: all 0.1s ease-out;
