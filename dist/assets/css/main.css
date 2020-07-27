@@ -1288,6 +1288,10 @@ section ul li.check:before {
   height: 20px;
 }
 
+header.alert .heading-container {
+  margin-top: 60px !important;
+}
+
 .button,
 a.button, .text-button,
 a.text-button {
@@ -4748,6 +4752,10 @@ footer.body-footer .footer-logo-container img {
   width: 100%;
   height: 210px;
   background-image: linear-gradient(rgba(255, 255, 255, 0), white);
+}
+
+.hero .heading-container.alert {
+  margin-top: 60px;
 }
 
 .hero-homepage {

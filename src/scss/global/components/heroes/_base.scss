@@ -16,4 +16,10 @@
       rgba(255, 255, 255, 1)
     );
   }
+
+  .heading-container {
+    &.alert {
+      margin-top: 60px;
+    }
+  }
 }
