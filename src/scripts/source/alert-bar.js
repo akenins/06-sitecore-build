@@ -3,16 +3,18 @@ let alertBar = $('#alert-bar'),
   alertCookie = Cookies.get('hitachi-alert'),
   header = document.getElementById('global-header'),
   hero = $('.hero .container .heading-container'),
+  blogHero = $('.blog-post'),
   initialHeight = header.offsetHeight
 
 function onDocumentReady() {
   //Hide alert bar if cookie is set.
-  $(header).addClass('alert')
   if (Cookies.set('hitachi-alert')) {
     alertBar.hide()
   } else {
     alertBar.show()
+    $(header).addClass('alert')
     hero.addClass('alert')
+    blogHero.addClass('alert')
   }
   resetHeaderHeight()
   console.log(hero)
@@ -20,8 +22,7 @@ function onDocumentReady() {
 
 function closeAlertBar() {
   alertBar.slideUp()
-  $(header).removeClass('alert')
-  hero.removeClass('alert')
+  removeAlertClasses()
 }
 
 function setAlertBarDisabledCookie() {
@@ -34,10 +35,10 @@ function setAlertBarDisabledCookie() {
   }
 }
 
-function resetHeaderHeight() {
-  initialHeight = header.offsetHeight
-  console.log(initialHeight)
-  $('').css('background-color', 'green')
+function removeAlertClasses() {
+  $(header).removeClass('alert')
+  hero.removeClass('alert')
+  blogHero.removeClass('alert')
 }
 
 alertBarCloseButton.on('click', function (e) {

@@ -5680,12 +5680,19 @@ footer.body-footer .footer-logo-container img {
 .blog-post {
   width: 100%;
   margin-bottom: 6rem;
-  padding-top: 60px;
+  padding-top: 80px;
+}
+
+.blog-post.alert {
+  padding-top: 120px;
 }
 
 @media screen and (min-width: 1000px) {
   .blog-post {
     padding-top: 105px;
+  }
+  .blog-post.alert {
+    padding-top: 145px;
   }
 }
 
@@ -5793,7 +5800,7 @@ footer.body-footer .footer-logo-container img {
   border-radius: 8px;
   padding: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 16px 16px -16px rgba(0, 0, 0, 0.25);
 }
@@ -5802,7 +5809,6 @@ footer.body-footer .footer-logo-container img {
   .blog-post .post-content .featured-resource-card {
     width: calc(33.333% - 20px);
     position: sticky;
-    flex-direction: column;
   }
 }
 
