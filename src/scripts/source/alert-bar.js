@@ -2,22 +2,18 @@ let alertBar = $('#alert-bar'),
   alertBarCloseButton = $('#alert-bar .alert-close'),
   alertCookie = Cookies.get('hitachi-alert'),
   header = document.getElementById('global-header'),
-  hero = $('.hero .container .heading-container'),
+  hero = $('.hero'),
   blogHero = $('.blog-post'),
   initialHeight = header.offsetHeight
 
 function onDocumentReady() {
   //Hide alert bar if cookie is set.
-  if (Cookies.set('hitachi-alert')) {
-    alertBar.hide()
-  } else {
+  if (!Cookies.set('hitachi-alert')) {
     alertBar.show()
     $(header).addClass('alert')
     hero.addClass('alert')
     blogHero.addClass('alert')
   }
-  resetHeaderHeight()
-  console.log(hero)
 }
 
 function closeAlertBar() {

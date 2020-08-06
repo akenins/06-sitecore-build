@@ -1240,6 +1240,7 @@ section ul li.check:before {
 }
 
 #alert-bar {
+  display: none;
   background: #2d2d2d;
   padding: 0.75rem 1.875rem;
   position: relative;
@@ -1286,10 +1287,6 @@ section ul li.check:before {
 #alert-bar .alert-close .icon {
   width: 20px;
   height: 20px;
-}
-
-header.alert .heading-container {
-  margin-top: 60px !important;
 }
 
 .button,
@@ -4754,8 +4751,8 @@ footer.body-footer .footer-logo-container img {
   background-image: linear-gradient(rgba(255, 255, 255, 0), white);
 }
 
-.hero .heading-container.alert {
-  margin-top: 60px;
+.hero.alert {
+  padding-top: 40px;
 }
 
 .hero-homepage {
