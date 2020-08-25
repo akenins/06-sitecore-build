@@ -10,9 +10,7 @@ function onDocumentReady() {
   //Hide alert bar if cookie is set.
   if (!Cookies.set('hitachi-alert')) {
     alertBar.show()
-    $(header).addClass('alert')
-    hero.addClass('alert')
-    blogHero.addClass('alert')
+    addAlertClasses()
   }
 }
 
@@ -29,6 +27,12 @@ function setAlertBarDisabledCookie() {
       alertBar.addClass('disabled')
     }, 500)
   }
+}
+
+function addAlertClasses() {
+  $(header).addClass('alert')
+  hero.addClass('alert')
+  blogHero.addClass('alert')
 }
 
 function removeAlertClasses() {

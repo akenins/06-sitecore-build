@@ -220,12 +220,6 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-
-      &.solution {
-        .column:nth-child(-n + 3) {
-          margin-bottom: 3rem;
-        }
-      }
     }
 
     .column {
@@ -234,34 +228,8 @@
       margin-right: 20px;
       display: flex;
 
-      &.block {
-        min-width: calc(66.666% - 20px);
-        width: calc(66.666% - 20px);
-
-        ul {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: flex-start;
-
-          li {
-            width: 50%;
-          }
-        }
-      }
-
-      &.three {
-        min-width: 100%;
-        width: 100%;
-
-        ul {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: flex-start;
-
-          li {
-            width: 33.333%;
-          }
-        }
+      &.first-row {
+        margin-bottom: 3rem;
       }
     }
 

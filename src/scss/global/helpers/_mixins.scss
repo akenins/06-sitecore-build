@@ -1,0 +1,5 @@
+// Convert Illustrator, InDesign and Photoshop tracking into CSS letter-spacing
+
+@function tracking($target) {
+  @return ($target / 1000) * 1em;
+}

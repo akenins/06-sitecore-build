@@ -9,15 +9,12 @@ h1 {
   }
 }
 
-h2 {
-  font-weight: fw(light);
-}
-
 h4,
 h6 {
   font-weight: fw(regular);
 }
 
+h2,
 h3,
 h5 {
   font-weight: fw(medium);
@@ -39,7 +36,6 @@ h1,
 h2,
 .h2 {
   margin: 1.2rem 0 0.4rem;
-  font-weight: fw(medium);
   font-size: 34px;
   line-height: 42px;
   letter-spacing: -0.5px;
@@ -61,18 +57,13 @@ h4,
 }
 
 h5,
-.h5 {
-  margin: 1.8rem 0 0.4rem;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
-}
-
+.h5,
 h6,
 .h6 {
   margin: 1.8rem 0 0.4rem;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 0.15px;
 }
 
 h1:first-child,
