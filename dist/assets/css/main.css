@@ -918,6 +918,11 @@ section ol li {
   line-height: 1.75;
 }
 
+section ul li ul,
+section ol li ul {
+  padding: 0;
+}
+
 section ol {
   padding-left: 2rem;
 }
