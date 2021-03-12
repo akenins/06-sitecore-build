@@ -7,6 +7,12 @@
     "type": "git",
     "url": "https://github.com/akenins/06-sitecore-build.git"
   },
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  },
   "config": {
     "dist": "dist",
     "scripts": "src/scripts/source",
