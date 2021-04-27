@@ -99,7 +99,7 @@
   }
 
   .arrow {
-    fill: color(brand);
+    fill: $blue-900;
   }
 }
 
@@ -120,7 +120,7 @@
   .dot {
     width: 10px;
     height: 10px;
-    background: $black;
+    background: $blue-900;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;

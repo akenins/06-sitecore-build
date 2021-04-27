@@ -23,6 +23,7 @@
 
     .card {
       border: 1px solid color(borders);
+      box-shadow: 0 8px 24px -8px rgba(0, 0, 40, 0.12);
       border-radius: 8px;
       padding: 2rem;
       display: flex;

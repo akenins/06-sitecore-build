@@ -24,8 +24,7 @@
       justify-content: space-between;
       width: 100%;
       padding: 3.5rem 3.5rem 4.5rem;
-      background-color: $blue-50;
-      border-radius: 16px;
+      background-color: $white;
 
       @include respond-to(desktop) {
         padding: 3.5rem 4rem 4.5rem;
@@ -96,34 +95,29 @@
 
   .flickity-prev-next-button {
     z-index: z(block);
-    height: 16px;
-    width: 16px;
+    height: 100px;
+    width: 100px;
   }
   .flickity-prev-next-button.previous {
-    top: 90.25%;
-    left: 40%;
+    top: 40%;
+    left: 0%;
     @include respond-to(desktop) {
-      top: 88%;
-      left: 44%;
+      top: 50%;
+      left: -6%;
     }
   }
   .flickity-prev-next-button.next {
-    top: 90.25%;
-    right: 40%;
+    top: 40%;
+    right: 0%;
     @include respond-to(desktop) {
-      top: 88%;
-      right: 44%;
+      top: 50%;
+      right: -6%;
     }
   }
   .flickity-page-dots {
     bottom: 9%;
     @include respond-to(desktop) {
-      bottom: 10.75%;
-    }
-
-    .dot {
-      width: 5px;
-      height: 5px;
+      bottom: 9%;
     }
   }
 }

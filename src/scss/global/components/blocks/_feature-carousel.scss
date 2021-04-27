@@ -15,7 +15,7 @@
     }
 
     .feature-cell {
-      width: 100%;
+      width: 99%;
       margin: 0;
       padding: 3rem 1rem;
       display: flex;
@@ -64,18 +64,16 @@
     }
     .flickity-prev-next-button {
       z-index: z(block);
-      height: 16px;
-      width: 16px;
-      top: auto;
+      height: 100px;
+      width: 100px;
       transform: translateY(0);
     }
+
     .flickity-prev-next-button.previous {
-      bottom: 0;
-      left: 40%;
+      left: -5%;
     }
     .flickity-prev-next-button.next {
-      bottom: 0;
-      right: 40%;
+      right: -5%;
     }
 
     .flickity-prev-next-button.previous,
@@ -86,11 +84,6 @@
     }
     .flickity-page-dots {
       bottom: 0;
-    }
-
-    .dot {
-      width: 5px;
-      height: 5px;
     }
   }
 }

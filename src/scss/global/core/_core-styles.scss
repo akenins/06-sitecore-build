@@ -249,12 +249,49 @@ section {
       &:before {
         content: '';
         font-size: 1rem;
-        height: 1rem;
-        width: 1rem;
+        height: 18px;
+        width: 18px;
         background-image: url('../images/png/green-check.png'); // PNG Fallback
         background-image: url('../images/svg/green-check.svg');
         background-size: contain;
         background-repeat: no-repeat;
+      }
+
+      &.cpg {
+        &:before {
+          background-image: url('../images/png/check-cpg.png'); // PNG Fallback
+          background-image: url('../images/svg/check-cpg.svg');
+        }
+      }
+      &.financial-services {
+        &:before {
+          background-image: url('../images/png/check-financial-services.png'); // PNG Fallback
+          background-image: url('../images/svg/check-financial-services.svg');
+        }
+      }
+      &.health-plans {
+        &:before {
+          background-image: url('../images/png/check-health-plans.png'); // PNG Fallback
+          background-image: url('../images/svg/check-health-plans.svg');
+        }
+      }
+      &.insurance {
+        &:before {
+          background-image: url('../images/png/check-insurance.png'); // PNG Fallback
+          background-image: url('../images/svg/check-insurance.svg');
+        }
+      }
+      &.manufacturing {
+        &:before {
+          background-image: url('../images/png/check-manufacturing.png'); // PNG Fallback
+          background-image: url('../images/svg/check-manufacturing.svg');
+        }
+      }
+      &.retail {
+        &:before {
+          background-image: url('../images/png/check-retail.png'); // PNG Fallback
+          background-image: url('../images/svg/check-retail.svg');
+        }
       }
     }
   }

@@ -52,7 +52,8 @@
       margin: 0 1rem 1rem;
       border-radius: 8px;
       border: 1px solid color(borders);
-      transition: background-color 0.3s ease-out;
+      box-shadow: 0 8px 24px -8px rgba(0, 0, 40, 0.12);
+      transition: all 0.3s ease-out;
 
       @include respond-to(medium) {
         width: calc(50% - 20px);
@@ -64,19 +65,12 @@
       }
 
       &:hover {
-        background-color: $blue-50;
+        transform: translateY(-10px);
+        box-shadow: 0 24px 24px -24px rgba(0, 0, 40, 0.25);
       }
 
       img {
         margin: 1.5rem;
-      }
-
-      a.button {
-        border-color: $black;
-
-        &:hover {
-          border-color: color(brand);
-        }
       }
 
       .content {

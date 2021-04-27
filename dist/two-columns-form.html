@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" async="" src="//munchkin.marketo.net/159/munchkin.js"></script>
     <title>Stylesheet Example</title>
   </head>
   <body>
@@ -36,22 +37,37 @@
           <h4>Continue the Conversation</h4>
           <!-- Form embed begins -->
           <script src="//app-ab35.marketo.com/js/forms2/js/forms2.min.js"></script>
-          <form id="mktoForm_1102"></form>
+          <form id="mktoForm_1477"></form>
           <script>
-            MktoForms2.loadForm(
-              '//app-ab35.marketo.com',
-              '786-IUV-128',
-              1102,
+            MktoForms2.loadForm("//app-ab35.marketo.com", "786-IUV-128", 1477,
               function(form) {
-                let checkboxElement = document.getElementById('confirminterest')
-                let checkbox = document.createElement('span')
-                checkbox.className += 'checkmark'
-                checkboxElement.insertAdjacentElement('afterend', checkbox)
+                form.onSuccess(function(vals, thankYouURL) {
 
-                let url = $('#mktoForm_1102 [name="websiteForm"]')
-                url.val(`${location.host}${location.pathname}`)
+                  setTimeout(function() {document.location.href = thankYouURL}, 3000)
+                  console.log(thankYouURL)
+                  return false
+                })
               }
             )
+
+            function readCookie(name) {
+              let cookiename = name + '='
+              let ca = document.cookie.split(';')
+              for(let i=0;i < ca.length;i++) {
+                let c = ca[i]
+                while (c.charAt(0)==' ') c = c.substring(1,c.length)
+                if (c.indexOf(cookiename) == 0) return c.substring(cookiename.length,c.length)
+              }
+              return null
+            }
+
+            let value = readCookie('_mkto_trk')
+            console.log(value)
+              
+            fetch('https://global.hitachi-solutions.com/-/media/Files/sample.json')
+              .then(response => response.json())
+              .then(data => console.log(data))
+
           </script>
           <!-- Form embed ends-->
         </div>

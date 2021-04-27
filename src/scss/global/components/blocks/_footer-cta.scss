@@ -2,20 +2,20 @@
   width: 100%;
   padding: 0 1rem;
   position: relative;
+  margin-bottom: 4rem;
 
   .container {
     width: 100%;
     margin: 0 auto 6rem;
     padding: 2rem;
-    background-color: $blue-50;
+    border: 1px solid color(borders);
     border-radius: 8px;
-    box-shadow: 0 24px 24px -24px rgba(0, 0, 30, 0.25);
+    box-shadow: 0 8px 24px -8px rgba(0, 0, 40, 0.12);
     text-align: center;
 
     @include respond-to(desktop) {
       max-width: 768px;
       margin: 0 auto;
-      transform: translateY(1.75rem);
     }
 
     @include respond-to(large-desktop) {
