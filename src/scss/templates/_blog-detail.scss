@@ -3,16 +3,8 @@
   margin-bottom: 6rem;
   padding-top: 80px;
 
-  &.alert {
-    padding-top: 120px;
-  }
-
   @include respond-to(desktop) {
     padding-top: 105px;
-
-    &.alert {
-      padding-top: 145px;
-    }
   }
 
   .container {

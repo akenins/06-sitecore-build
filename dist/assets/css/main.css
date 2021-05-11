@@ -4881,10 +4881,6 @@ footer.body-footer .footer-logo-container img {
   background-image: linear-gradient(rgba(255, 255, 255, 0), white);
 }
 
-.hero.alert {
-  padding-top: 40px;
-}
-
 .hero-homepage {
   width: 100%;
   min-height: 450px;
@@ -5853,16 +5849,9 @@ footer.body-footer .footer-logo-container img {
   padding-top: 80px;
 }
 
-.blog-post.alert {
-  padding-top: 120px;
-}
-
 @media screen and (min-width: 1000px) {
   .blog-post {
     padding-top: 105px;
-  }
-  .blog-post.alert {
-    padding-top: 145px;
   }
 }
 
