@@ -5,9 +5,12 @@
   margin-bottom: 4rem;
 
   .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
     margin: 0 auto 6rem;
-    padding: 2rem;
+    padding: 2rem 6rem;
     border: 1px solid color(borders);
     border-radius: 8px;
     box-shadow: 0 8px 24px -8px rgba(0, 0, 40, 0.12);
@@ -20,6 +23,14 @@
 
     @include respond-to(large-desktop) {
       max-width: 968px;
+    }
+
+    .image {
+      width: 25%;
+    }
+
+    .content {
+      flex: 1;
     }
 
     a.button {

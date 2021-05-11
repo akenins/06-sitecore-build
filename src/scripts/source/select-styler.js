@@ -28,13 +28,13 @@ $(function () {
     $styledSelect.on('click', function (e) {
       e.stopPropagation()
 
-      $('div.styled-select.active')
+      $('div.select-styled.active')
         .not(this)
         .each(function () {
           $(this).removeClass('active').next('ul.select-options').hide()
         })
 
-      $(this).toggleClass('active').next('ul.select-options').toggle()
+      $(this).toggleClass('active').next('ul.select-options').slideToggle(100)
     })
 
     $listItems.click(function (e) {

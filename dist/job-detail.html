@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Stylesheet Example</title>
+  </head>
+  <script>
+    $.get(
+      'https://api.smartrecruiters.com/v1/companies/HitachiSolutions/postings/743999745743902',
+      function (res) {
+        console.log(res)
+        $('.job-heading').append(`<h1>${res.name}</h1>`)
+        $('.job-description').append(
+          `<h2>${res.jobAd.sections.jobDescription.title}</h2>${res.jobAd.sections.jobDescription.text}`
+        )
+        $('.qualifications').append(
+          `<h2>${res.jobAd.sections.qualifications.title}</h2>${res.jobAd.sections.qualifications.text}`
+        )
+        $('.additional-information').append(
+          `<h2>${res.jobAd.sections.additionalInformation.title}</h2>${res.jobAd.sections.additionalInformation.text}`
+        )
+        $('.apply').append(
+          `<a href="${res.applyUrl}" class="button">Apply Now</a>`
+        )
+        $('.location').append(`<h3>Location</h3>${res.location.country}`)
+        $('.team').append(`<h3>Team</h3>${res.department.label}`)
+        $('.about-hitachi').append(
+          `<h3>About Hitachi Solutions</h3>${res.jobAd.sections.companyDescription.text}`
+        )
+      }
+    )
+  </script>
+  <body>
+    <div class="job-detail">
+      <div class="container">
+        <div class="job-heading"></div>
+        <div class="job-content">
+          <div class="job-body">
+            <div class="job-description"></div>
+            <div class="qualifications"></div>
+            <div class="additional-information"></div>
+          </div>
+          <div class="job-sidebar">
+            <div class="apply"></div>
+            <div class="location"></div>
+            <div class="team"></div>
+            <div class="about-hitachi"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/headroom.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/flickity.pkgd.min.js"
+  ></script>
+  <script type="text/javascript" src="./assets/scripts/site/main.js"></script>
+</html>

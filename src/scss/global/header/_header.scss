@@ -450,9 +450,9 @@
     animation-name: headerSlideDownMini;
   }
 
-  &.animated.alert.headroom--pinned {
-    animation-name: headerSlideDownMiniAlert;
-  }
+  // &.animated.alert.headroom--pinned {
+  //   animation-name: headerSlideDownMiniAlert;
+  // }
 
   &.animated.headroom--unpinned {
     animation-name: headerSlideUp;

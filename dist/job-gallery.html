@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Stylesheet Example</title>
+  </head>
+  <body>
+    <section class="hero hero-topographic">
+      <div class="container">
+        <h1>Careers</h1>
+        <p>
+          Are you who we're looking for? Check out the openings below, you may
+          just find your dream job!
+        </p>
+      </div>
+    </section>
+    <div class="job-gallery">
+      <div class="container">
+        <div class="job-picker">
+          <form>
+            <div class="job-filters">
+              <div class="country-picker">
+                <select id="country-picker" class="country-dropdown">
+                  <option value="">Select Location</option>
+                </select>
+              </div>
+              <div class="department-picker">
+                <select id="department-picker" class="department-dropdown">
+                  <option>Select Team</option>
+                </select>
+              </div>
+              <input type="search" placeholder="Search by keyword..." />
+              <button id="job-search" class="text-button" role="submit">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="filter-results"></div>
+        <div class="posting-headings">
+          <div class="remote">Remote</div>
+          <div class="position">Postition</div>
+          <div class="team">Team</div>
+          <div class="location">Location</div>
+        </div>
+        <div class="job-container"></div>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/headroom.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/flickity.pkgd.min.js"
+  ></script>
+  <script type="text/javascript" src="./assets/scripts/site/main.js"></script>
+</html>

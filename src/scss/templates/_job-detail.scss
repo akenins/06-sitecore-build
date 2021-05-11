@@ -1,0 +1,92 @@
+.job-detail {
+  background: url('../images/png/topographic-background.png') no-repeat top;
+  margin-bottom: 6rem;
+
+  .container {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    @include respond-to(desktop) {
+      max-width: 1000px;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  .job-heading {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+  }
+
+  .job-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
+
+    .job-body {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      @include respond-to(desktop) {
+        width: calc(75% - 20px);
+      }
+
+      .job-description,
+      .qualifications,
+      .additional-information {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .job-sidebar {
+      width: 100%;
+      align-self: start;
+      position: relative;
+      top: calc(1rem + 60px);
+      background-color: $white;
+      border-left: 1px solid color(borders);
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include respond-to(desktop) {
+        width: calc(25% - 20px);
+        position: sticky;
+      }
+
+      .button {
+        border: none;
+        background-color: $red-700;
+        color: $white;
+        box-shadow: 0 8px 24px rgba(92, 0, 18, 0.25);
+        text-align: center;
+        margin: 0;
+      }
+
+      .location,
+      .team {
+        border-bottom: 1px solid color(borders);
+        padding: 1.5rem 0;
+      }
+      .about-hitachi {
+        color: $grey-700;
+        font-size: 12px;
+        padding: 2rem 0;
+
+        h3 {
+          color: $black;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.hero-topographic {
+  background-image: url('../images/png/topographic-background.png');
+  background-repeat: no-repeat;
+  background-position: top;
+
+  .container {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    z-index: 40;
+    padding: 0 1rem 4rem;
+
+    @include respond-to(desktop) {
+      padding: 0 1rem 6rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @include respond-to(large-desktop) {
+      max-width: 1200px;
+    }
+  }
+
+  h1 {
+    padding-top: 7rem;
+    text-align: center;
+
+    @include respond-to(medium) {
+      padding-top: 10rem;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}

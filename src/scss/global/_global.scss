@@ -96,7 +96,8 @@ $grey-700: #737474;
 $grey-600: #a2a2a2;
 $grey-500: #b3b4b4;
 $grey-300: #dad9d9;
-$grey-100: #f2f3f3;
+$grey-100: #efefef;
+$grey-50: #f2f3f3;
 
 // TO-DO: ADD ALL COLOR TOKENS
 $colors: (
@@ -108,7 +109,7 @@ $colors: (
   a-color: $blue-700,
   a-hover: $blue-700,
   nav: $grey-900,
-  borders: $grey-500,
+  borders: $grey-100,
   divider: $grey-100,
   select: $blue-700,
 );
