@@ -108,6 +108,7 @@ $(function () {
               `<div class="chip" data-value="${optionValue}">${optionLabel}<i class="icon icon-close-1"></i></div>`
             )
             filters.push(optionValue)
+            console.log(filters)
           } else {
             return false
           }
