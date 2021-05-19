@@ -42,26 +42,31 @@ $(function () {
           departmentSet.add(el.id)
           return !duplicate
         })
-        countries.filter(getUniqueValues).map((country) => {
-          let countryString = country.toString().toUpperCase()
-          $('<option />', {
-            value: country,
-            text: regionNames.of(countryString),
-          }).appendTo($('#country-picker'))
-          $('<li />', {
-            text: regionNames.of(countryString),
-            rel: country,
-            class: 'select-option',
-          }).appendTo($('#country-picker').next('.select-styled').next('ul'))
-        })
+        countries
+          .sort()
+          .filter(getUniqueValues)
+          .map((country) => {
+            let countryString = country.toString().toUpperCase()
+            $('<option />', {
+              value: country,
+              text: regionNames.of(countryString),
+            }).appendTo($('#country-picker'))
+            $('<li />', {
+              text: regionNames.of(countryString),
+              rel: country,
+              class: 'select-option',
+            }).appendTo($('#country-picker').next('.select-styled').next('ul'))
+          })
         uniqueDepartments.map((department) => {
-          $('<option />', {
-            value: department.id,
-            text: department.label,
-          }).appendTo($('#department-picker'))
-          $('#department-picker + .select-styled + ul').append(
-            `<li rel=${department.id} class="select-option">${department.label}</li>`
-          )
+          if (department.id) {
+            $('<option />', {
+              value: department.id,
+              text: department.label,
+            }).appendTo($('#department-picker'))
+            $('#department-picker + .select-styled + ul').append(
+              `<li rel=${department.id} class="select-option">${department.label}</li>`
+            )
+          }
         })
 
         const $countryPicker = $('.country-picker')
