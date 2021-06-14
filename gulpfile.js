@@ -71,6 +71,7 @@ let webpackConfig = {
   },
   output: {
     path: '/dist/assets/scripts/site',
+    // path: '/scripts',
     filename: 'main.js',
     sourceMapFilename: 'main.js.map',
   },

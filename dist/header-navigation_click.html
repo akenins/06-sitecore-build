@@ -1,0 +1,196 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/icons/grunticon.js"></script>
+    <script>
+      grunticon(
+        [
+          './assets/icons/icons.data.svg.css',
+          './assets/icons/icons.data.png.css',
+          './assets/icons/icons.fallback.css',
+        ],
+        grunticon.svgLoadedCallback
+      )
+    </script>
+    <noscript
+      ><link href="/dist/assets//icons/icons.fallback.css" rel="stylesheet"
+    /></noscript>
+    <title>Stylesheet Example</title>
+  </head>
+
+  <body>
+    <header class="global-header" id="global-header">
+      <div class="nav-container">
+        <nav class="utility-nav-container">
+          <div class="utility-nav">
+            <div class="utility-logo">
+              <img
+                src="./assets/images/svg/hitachi-logo.svg"
+                alt="Hitachi Inspire the Next Logo"
+              />
+            </div>
+            <ul class="menu utility-nav-items">
+              <li class="utility-nav-item"><a href="">日本語</a></li>
+              <li class="utility-nav-item">
+                <a
+                  href="javascript:void(0)"
+                  class="header-search open-global-search"
+                  ><i class="icon icon-search"></i>&nbsp; Search</a
+                >
+                <form
+                  class="global-site-search"
+                  id="global-site-search"
+                  role="search"
+                  method="get"
+                >
+                  <button
+                    class="search-form-submit"
+                    type="submit"
+                    aria-label="search"
+                  >
+                    <i class="icon icon-search gsearch"></i>
+                  </button>
+                  <input
+                    type="text"
+                    id="site-search-keyword"
+                    class="search-form-field"
+                    placeholder="What can we help you find?"
+                  />
+                  <button class="close-global-search">
+                    <i class="icon icon-close"></i>
+                  </button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="primary-nav">
+          <ul class="menu logo-items">
+            <li class="logo">
+              <a href="/" class="hitachi-solutions-logo"
+                ><img
+                  src="./assets/images/svg/hitachi-solutions-logo.svg"
+                  alt="Hitachi Solutions Logo"
+              /></a>
+            </li>
+          </ul>
+          <ul class="menu clicky-nav-items no-js">
+            <li>
+              <a href="/solutions"
+                >Get Started
+                <svg aria-hidden="true" width="16" height="16">
+                  <use xlink:href="#arrow" />
+                </svg>
+              </a>
+              <ul>
+                <li><a href="#">Information &amp; Insights</a></li>
+                <li><a href="#">Differentiated Experience</a></li>
+                <li><a href="#">Unified Operations</a></li>
+                <li><a href="#">Enhanced Capabilities</a></li>
+                <li><a href="#">Organizational Productivity</a></li>
+                <li><a href="#">Modern Infrastructure</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/industry"
+                >Industries
+                <svg aria-hidden="true" width="16" height="16">
+                  <use xlink:href="#arrow" />
+                </svg>
+              </a>
+              <ul>
+                <li><a href="#">Consumer Packaged Goods</a></li>
+                <li><a href="#">Financial Services</a></li>
+                <li><a href="#">Health Plans &amp; Providers</a></li>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Manufacturing</a></li>
+                <li><a href="#">Retail</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/technology"
+                >Technology
+                <svg aria-hidden="true" width="16" height="16">
+                  <use xlink:href="#arrow" />
+                </svg>
+              </a>
+              <ul>
+                <li><a href="#">Microsoft Azure</a></li>
+                <li><a href="#">Microsoft Power Platform</a></li>
+                <li><a href="#">Microsoft Dynamics 365</a></li>
+                <li><a href="#">Our Products and Accelerators</a></li>
+                <li><a href="#">Microsoft 365</a></li>
+                <li><a href="#">Strategic Alliances</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/resources"
+                >Resources
+                <svg aria-hidden="true" width="16" height="16">
+                  <use xlink:href="#arrow" />
+                </svg>
+              </a>
+              <ul>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Thought Leadersip</a></li>
+                <li><a href="#">Hitachi Solutions Braintrust</a></li>
+                <li><a href="#">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/about"
+                >About Us
+                <svg aria-hidden="true" width="16" height="16">
+                  <use xlink:href="#arrow" />
+                </svg>
+              </a>
+              <ul>
+                <li><a href="#">Our Approach</a></li>
+                <li><a href="#">Our Culture</a></li>
+                <li><a href="#">Our Customers</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="menu contact-item">
+            <li>
+              <a href="/" class="text-button primary-link" style="margin: 0"
+                >contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <img
+      src="./assets/images/svg/digi-jetpack.svg"
+      style="padding: 8rem; width: 600px; height: 600px"
+    />
+  </body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+    <symbol id="arrow" viewbox="0 0 16 16">
+      <polyline
+        points="4 6, 8 10, 12 6"
+        stroke="#000"
+        stroke-width="2"
+        fill="transparent"
+        stroke-linecap="round"
+      />
+    </symbol>
+  </svg>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/headroom.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="./assets/scripts/libraries/flickity.pkgd.min.js"
+  ></script>
+  <script type="text/javascript" src="./assets/scripts/site/main.js"></script>
+</html>
