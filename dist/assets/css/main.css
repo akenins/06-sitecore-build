@@ -2249,13 +2249,18 @@ a.text-button {
 }
 
 .global-header .clicky-nav-items ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   min-width: 100%;
   width: 12em;
   margin-top: 0.25em;
   padding: 0;
   list-style: none;
-  background-color: #eee;
-  border-radius: 3px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #efefef;
+  box-shadow: 0 8px 12px rgba(12, 12, 12, 0.2);
 }
 
 .global-header .clicky-nav-items ul[aria-hidden='false'] {
@@ -2263,6 +2268,42 @@ a.text-button {
   position: absolute;
   width: auto;
   flex: 0 0 auto;
+}
+
+.global-header .clicky-nav-items ul li {
+  width: 50%;
+  padding: 0.5rem;
+}
+
+.global-header .clicky-nav-items ul li .submenu-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.global-header .clicky-nav-items ul li .submenu-box.insights:hover {
+  background-color: lightcoral;
+}
+
+.global-header .clicky-nav-items ul li .submenu-box .icon-container {
+  min-height: 48px;
+  min-width: 48px;
+  margin-right: 12px;
+  background-color: teal;
+}
+
+.global-header .clicky-nav-items ul li .submenu-box .label h4,
+.global-header .clicky-nav-items ul li .submenu-box .label span {
+  font-size: 14px;
+}
+
+.global-header .clicky-nav-items ul li .submenu-box .label h4 {
+  font-weight: 500;
+}
+
+.global-header .clicky-nav-items ul li .submenu-box .label span {
+  color: #2d2d2d;
 }
 
 .global-header .clicky-nav-items ul a {

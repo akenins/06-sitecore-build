@@ -1,7 +1,7 @@
 // import 'babel-polyfill'
 // import './alert-bar'
 import './animation-controller'
-// import './clicky-header-controller'
+import './clicky-header-controller'
 import './flickity-helper'
 import './form-controller'
 //import './global-controller'

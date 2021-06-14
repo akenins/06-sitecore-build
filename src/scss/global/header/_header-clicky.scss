@@ -329,13 +329,18 @@
   }
 
   .clicky-nav-items ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     min-width: 100%;
     width: 12em;
     margin-top: 0.25em;
     padding: 0;
     list-style: none;
-    background-color: #eee;
-    border-radius: 3px;
+    background-color: $white;
+    border-radius: 8px;
+    border: 1px solid color(borders);
+    box-shadow: 0 8px 12px rgba(12, 12, 12, 0.2);
   }
 
   .clicky-nav-items ul[aria-hidden='false'] {
@@ -343,6 +348,43 @@
     position: absolute;
     width: auto;
     flex: 0 0 auto;
+  }
+
+  .clicky-nav-items ul li {
+    width: 50%;
+    padding: 0.5rem;
+
+    .submenu-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0.5rem 0.5rem 0.5rem 1rem;
+
+      &.insights:hover {
+        background-color: lightcoral;
+      }
+
+      .icon-container {
+        min-height: 48px;
+        min-width: 48px;
+        margin-right: 12px;
+        background-color: teal;
+      }
+      .label {
+        h4,
+        span {
+          font-size: 14px;
+        }
+
+        h4 {
+          font-weight: 500;
+        }
+
+        span {
+          color: $grey-900;
+        }
+      }
+    }
   }
 
   .clicky-nav-items ul a {

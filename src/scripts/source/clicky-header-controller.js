@@ -76,8 +76,9 @@ function ClickyMenus(menu) {
   function menuSetup() {
     menu.classList.remove('no-js')
 
-    menu.querySelectorAll('ul').forEach((submenu) => {
+    menu.querySelectorAll('.submenu').forEach((submenu) => {
       const menuItem = submenu.parentElement
+      console.log(menuItem)
 
       if ('undefined' !== typeof submenu) {
         let button = convertLinkToButton(menuItem)
